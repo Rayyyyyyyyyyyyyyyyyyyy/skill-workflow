@@ -1,0 +1,17 @@
+{
+  "policy_ref": "policy://P00@1.0.0",
+  "job_id": "JOB-17",
+  "attempt_id": "ATT-17-2",
+  "subject_ref": "artifact://JOB-17/evaluation.json",
+  "verdict": "UNVERIFIED",
+  "claims": [{
+    "claim_id": "C1",
+    "statement": "Demand may justify development",
+    "kind": "ASSUMPTION",
+    "confidence": "LOW",
+    "evidence_refs": [],
+    "limitations": ["No observed payment data"]
+  }],
+  "unknowns": ["Willingness to pay is unverified"],
+  "material_contradictions": []
+}

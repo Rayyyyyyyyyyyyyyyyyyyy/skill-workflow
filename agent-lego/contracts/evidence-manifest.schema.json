@@ -1,0 +1,21 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"https://example.invalid/agent-lego/evidence-manifest.v1.schema.json",
+ "title":"Evidence Manifest v1",
+ "type":"object","additionalProperties":false,
+ "required":["v","manifest_id","brief_id","job_id","attempt_id","fence_generation","repo","subject_sha","artifact_refs","checks","created_at"],
+ "properties":{
+  "v":{"const":"1"},"manifest_id":{"$ref":"#/$defs/ref"},"brief_id":{"$ref":"#/$defs/id"},"job_id":{"$ref":"#/$defs/id"},"attempt_id":{"$ref":"#/$defs/id"},"fence_generation":{"type":"integer","minimum":1},"repo":{"$ref":"#/$defs/id"},
+  "subject_sha":{"$ref":"#/$defs/sha"},"artifact_refs":{"$ref":"#/$defs/refs"},
+  "checks":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/check"}},"created_at":{"type":"string","format":"date-time"}
+ },
+ "$defs":{
+  "id":{"type":"string","minLength":1,"maxLength":128},"ref":{"type":"string","minLength":1,"maxLength":512},
+  "sha":{"type":"string","pattern":"^(?:[a-f0-9]{40}|[a-f0-9]{64})$"},
+  "refs":{"type":"array","minItems":1,"maxItems":128,"uniqueItems":true,"items":{"$ref":"#/$defs/ref"}},
+  "check":{"type":"object","additionalProperties":false,"required":["kind","status","subject_sha","evidence_ref","checker_id"],"properties":{
+   "kind":{"enum":["TDD","CI","STANDARDS_REVIEW","SPEC_REVIEW","SECURITY","SCOPE_SEMANTIC","E2E","PERFORMANCE"]},
+   "status":{"enum":["PASS","FAIL","SKIPPED","BLOCKED"]},"subject_sha":{"$ref":"#/$defs/sha"},"evidence_ref":{"$ref":"#/$defs/ref"},"checker_id":{"$ref":"#/$defs/id"}
+  }}
+ }
+}

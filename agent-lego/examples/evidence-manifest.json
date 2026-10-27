@@ -1,0 +1,13 @@
+{
+ "v":"1","manifest_id":"artifact://manifest/01","brief_id":"BRIEF-01","job_id":"JOB-01",
+ "attempt_id":"ATT-01-2","fence_generation":2,"repo":"example/product",
+ "subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","artifact_refs":["commit://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],
+ "created_at":"2026-10-21T08:00:00Z",
+ "checks":[
+  {"kind":"TDD","status":"PASS","subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","evidence_ref":"artifact://proof/tdd","checker_id":"WORKER-7"},
+  {"kind":"CI","status":"PASS","subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","evidence_ref":"artifact://proof/ci","checker_id":"gitlab-ci"},
+  {"kind":"STANDARDS_REVIEW","status":"PASS","subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","evidence_ref":"artifact://proof/standards","checker_id":"QA-standard"},
+  {"kind":"SPEC_REVIEW","status":"PASS","subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","evidence_ref":"artifact://proof/spec","checker_id":"QA-spec"},
+  {"kind":"SCOPE_SEMANTIC","status":"PASS","subject_sha":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","evidence_ref":"artifact://proof/scope","checker_id":"QA-scope"}
+ ]
+}

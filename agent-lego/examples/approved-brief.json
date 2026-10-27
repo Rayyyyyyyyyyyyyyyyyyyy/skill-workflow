@@ -1,0 +1,30 @@
+{
+  "v": "1",
+  "brief_id": "BRIEF-01",
+  "decision_ref": "decision://01",
+  "decision_state": "APPROVE",
+  "issuer_id": "policy-issuer",
+  "authorization_ref": "approval://receipt-01",
+  "policy_version": "POLICY-1",
+  "issued_at": "2026-10-21T00:00:00Z",
+  "expires_at": "2027-10-21T00:00:00Z",
+  "repo": "example/product",
+  "scope_ids": [
+    "REQ-01"
+  ],
+  "acceptance_ids": [
+    "AC-01"
+  ],
+  "allowed_paths": [
+    "src/orders/",
+    "tests/orders/"
+  ],
+  "allowed_operations": [
+    "READ_REPO",
+    "WRITE_WORKTREE",
+    "PUSH_BRANCH",
+    "CREATE_MR"
+  ],
+  "budget_usd": 20,
+  "risk_tier": "NORMAL"
+}

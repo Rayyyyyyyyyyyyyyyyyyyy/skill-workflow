@@ -1,0 +1,25 @@
+{
+  "v": "1",
+  "kind": "JOB",
+  "job_id": "JOB-01",
+  "brief_id": "BRIEF-01",
+  "ticket_id": "TICKET-01",
+  "repo": "example/product",
+  "scope_ids": [
+    "REQ-01"
+  ],
+  "acceptance_ids": [
+    "AC-01"
+  ],
+  "allowed_paths": [
+    "src/orders/",
+    "tests/orders/"
+  ],
+  "budget_usd": 3,
+  "status": "RUNNING",
+  "current_attempt_id": "ATT-01-2",
+  "fence_generation": 2,
+  "requested_operations": [
+    "WRITE_WORKTREE"
+  ]
+}

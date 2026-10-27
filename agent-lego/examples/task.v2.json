@@ -1,0 +1,1 @@
+{"v":"2","type":"TASK","job_id":"JOB-01","attempt_id":"ATT-01-2","fence_generation":2,"role":"ENG.worker","scope_ref":"approval://receipt-01","input_refs":["ticket://TICKET-01"],"acceptance_ref":"criteria://AC-01","policy_ref":"policy://POLICY-1"}

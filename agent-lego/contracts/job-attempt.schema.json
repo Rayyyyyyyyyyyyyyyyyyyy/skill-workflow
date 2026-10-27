@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/agent-lego/job-attempt.v1.schema.json",
+  "title": "Job / Attempt v1",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/job"
+    },
+    {
+      "$ref": "#/$defs/attempt"
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "ids": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "paths": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "v",
+        "kind",
+        "job_id",
+        "brief_id",
+        "ticket_id",
+        "repo",
+        "scope_ids",
+        "acceptance_ids",
+        "allowed_paths",
+        "requested_operations",
+        "budget_usd",
+        "status",
+        "current_attempt_id",
+        "fence_generation"
+      ],
+      "properties": {
+        "v": {
+          "const": "1"
+        },
+        "kind": {
+          "const": "JOB"
+        },
+        "job_id": {
+          "$ref": "#/$defs/id"
+        },
+        "brief_id": {
+          "$ref": "#/$defs/id"
+        },
+        "ticket_id": {
+          "$ref": "#/$defs/id"
+        },
+        "repo": {
+          "$ref": "#/$defs/id"
+        },
+        "scope_ids": {
+          "$ref": "#/$defs/ids"
+        },
+        "acceptance_ids": {
+          "$ref": "#/$defs/ids"
+        },
+        "allowed_paths": {
+          "$ref": "#/$defs/paths"
+        },
+        "budget_usd": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "status": {
+          "enum": [
+            "READY",
+            "RUNNING",
+            "BLOCKED",
+            "FAILED",
+            "DONE",
+            "CANCELLED"
+          ]
+        },
+        "current_attempt_id": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fence_generation": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "requested_operations": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "READ_REPO",
+              "WRITE_WORKTREE",
+              "PUSH_BRANCH",
+              "CREATE_MR",
+              "DEPLOY_STAGING",
+              "DEPLOY_PRODUCTION"
+            ]
+          }
+        }
+      }
+    },
+    "attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "v",
+        "kind",
+        "attempt_id",
+        "job_id",
+        "sequence",
+        "fence_generation",
+        "worker_id",
+        "workspace_id",
+        "state",
+        "write_access"
+      ],
+      "properties": {
+        "v": {
+          "const": "1"
+        },
+        "kind": {
+          "const": "ATTEMPT"
+        },
+        "attempt_id": {
+          "$ref": "#/$defs/id"
+        },
+        "job_id": {
+          "$ref": "#/$defs/id"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fence_generation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "worker_id": {
+          "$ref": "#/$defs/id"
+        },
+        "workspace_id": {
+          "$ref": "#/$defs/id"
+        },
+        "state": {
+          "enum": [
+            "QUEUED",
+            "RUNNING",
+            "CANCEL_REQUESTED",
+            "EXITED",
+            "SUCCEEDED",
+            "FAILED",
+            "TIMED_OUT",
+            "CANCELLED"
+          ]
+        },
+        "write_access": {
+          "type": "boolean"
+        },
+        "process_exited": {
+          "type": "boolean"
+        },
+        "cancel_requested_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

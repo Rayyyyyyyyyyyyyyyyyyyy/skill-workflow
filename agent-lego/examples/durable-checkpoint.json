@@ -1,0 +1,11 @@
+{
+  "v": "1", "job_id": "J-API", "attempt_id": "A-0001", "fence_generation": 1,
+  "approved_brief_ref": "brief://approved-1",
+  "completed_step_ids": ["read-spec", "write-failing-test"],
+  "pending_step_ids": ["implement-fix", "run-tests"],
+  "next_action": "Implement smallest change to make failing test pass",
+  "repo_sha_map": {"repo://api": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+  "artifact_refs": ["artifact://failing-test-log"], "known_blockers": [],
+  "last_confirmed_evidence_refs": ["ci://test-red-1"],
+  "patch_ref": "artifact://checkpoint-patch-1"
+}

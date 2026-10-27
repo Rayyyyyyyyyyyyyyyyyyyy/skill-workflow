@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClaimEvidence artifact v1 — P00",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["policy_ref", "job_id", "attempt_id", "subject_ref", "verdict", "claims", "unknowns", "material_contradictions"],
+  "properties": {
+    "policy_ref": {"const": "policy://P00@1.0.0"},
+    "job_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "attempt_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "subject_ref": {"type": "string", "minLength": 1, "maxLength": 512},
+    "verdict": {"enum": ["SUPPORTED", "DISPUTED", "UNVERIFIED", "REFUTED"]},
+    "claims": {"type": "array", "maxItems": 100, "items": {"$ref": "#/$defs/claim"}},
+    "unknowns": {"type": "array", "maxItems": 50, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "material_contradictions": {"type": "array", "maxItems": 50, "items": {"type": "string", "minLength": 1}}
+  },
+  "$defs": {
+    "ref": {"type": "string", "minLength": 1, "maxLength": 512},
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["claim_id", "statement", "kind", "confidence", "evidence_refs", "limitations"],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "statement": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["FACT", "INFERENCE", "ASSUMPTION", "UNKNOWN"]},
+        "confidence": {"enum": ["HIGH", "MEDIUM", "LOW", "NOT_APPLICABLE"]},
+        "evidence_refs": {"type": "array", "maxItems": 32, "uniqueItems": true, "items": {"$ref": "#/$defs/ref"}},
+        "limitations": {"type": "array", "maxItems": 20, "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"enum": ["FACT", "INFERENCE"]}}, "required": ["kind"]}, "then": {"properties": {"evidence_refs": {"minItems": 1}}}},
+        {"if": {"properties": {"kind": {"const": "UNKNOWN"}}, "required": ["kind"]}, "then": {"properties": {"confidence": {"const": "NOT_APPLICABLE"}}}}
+      ]
+    }
+  }
+}

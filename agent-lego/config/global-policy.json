@@ -1,0 +1,28 @@
+{
+  "version": "1",
+  "required_policies": [
+    {
+      "policy_id": "P00",
+      "policy_version": "1.0.0",
+      "policy_ref": "policy://P00@1.0.0",
+      "source_path": "policies/P00-GROUNDED-ANSWER.md",
+      "mandatory": true,
+      "applies_to": "ALL_LLM_AGENTS",
+      "bootstrap_owner": "B23",
+      "durability_owner": "B22",
+      "enforcement_owner": "GOVERNANCE_NON_LLM",
+      "decision_artifact_schema": "contracts/claim-evidence.schema.json",
+      "policy_sha256": "44aeaae7ec5bf1f687a2b3cf09e9dd312505d2c4609111e18f9397f8023b2adf"
+    }
+  ],
+  "evidence_required_for": [
+    "RESEARCH_EVALUATION",
+    "COUNCIL",
+    "BUSINESS_DECISION",
+    "QA_GATE",
+    "RELEASE_GATE",
+    "COST_CLAIM"
+  ],
+  "failure_mode": "BLOCK_CRITICAL_OR_UNKNOWN_NONCRITICAL",
+  "agent_override_allowed": false
+}

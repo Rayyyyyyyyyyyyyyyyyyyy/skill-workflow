@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Durable Agent Session Binding v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["v", "agent_id", "role_id", "profile_ref", "session_id", "job_id", "attempt_id", "fence_generation", "state"],
+  "properties": {
+    "v": {"const": "1"},
+    "agent_id": {"type": "string", "minLength": 1},
+    "role_id": {"type": "string", "minLength": 1},
+    "profile_ref": {"type": "string", "minLength": 1},
+    "skill_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "session_id": {"type": "string", "minLength": 1},
+    "job_id": {"type": "string", "minLength": 1},
+    "attempt_id": {"type": "string", "minLength": 1},
+    "fence_generation": {"type": "integer", "minimum": 1},
+    "state": {"enum": ["RUNNING", "CLOSED", "EXPIRED", "SUPERSEDED"]},
+    "checkpoint_ref": {"type": ["string", "null"]},
+    "policy_ref": {"type": "string", "minLength": 1}
+  }
+}

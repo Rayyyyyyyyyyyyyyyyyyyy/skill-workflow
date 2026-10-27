@@ -1,0 +1,1 @@
+{"v":"2","type":"RESULT","job_id":"JOB-01","attempt_id":"ATT-01-2","fence_generation":2,"state":"DONE","artifact_refs":["commit://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],"check_refs":["artifact://proof/tdd"]}

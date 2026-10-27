@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://example.invalid/agent-lego/approved-brief.v1.schema.json",
+  "title":"Approved Brief v1",
+  "type":"object","additionalProperties":false,
+  "required":["v","brief_id","decision_ref","decision_state","issuer_id","authorization_ref","policy_version","issued_at","expires_at","repo","scope_ids","acceptance_ids","allowed_paths","allowed_operations","budget_usd","risk_tier"],
+  "properties":{
+    "v":{"const":"1"},"brief_id":{"$ref":"#/$defs/id"},"decision_ref":{"$ref":"#/$defs/ref"},
+    "decision_state":{"const":"APPROVE"},"issuer_id":{"$ref":"#/$defs/id"},
+    "authorization_ref":{"$ref":"#/$defs/ref"},"policy_version":{"$ref":"#/$defs/id"},
+    "issued_at":{"type":"string","format":"date-time"},"expires_at":{"type":"string","format":"date-time"},
+    "repo":{"$ref":"#/$defs/id"},"scope_ids":{"$ref":"#/$defs/ids"},"acceptance_ids":{"$ref":"#/$defs/ids"},
+    "allowed_paths":{"$ref":"#/$defs/paths"},
+    "allowed_operations":{"type":"array","minItems":1,"uniqueItems":true,"items":{"enum":["READ_REPO","WRITE_WORKTREE","PUSH_BRANCH","CREATE_MR","DEPLOY_STAGING","DEPLOY_PRODUCTION"]}},
+    "budget_usd":{"type":"number","exclusiveMinimum":0},"risk_tier":{"enum":["LOW","NORMAL","HIGH","CRITICAL"]}
+  },
+  "$defs":{
+    "id":{"type":"string","minLength":1,"maxLength":128},
+    "ref":{"type":"string","minLength":1,"maxLength":512},
+    "ids":{"type":"array","minItems":1,"maxItems":128,"uniqueItems":true,"items":{"$ref":"#/$defs/id"}},
+    "paths":{"type":"array","minItems":1,"maxItems":128,"uniqueItems":true,"items":{"type":"string","minLength":1,"maxLength":256}}
+  }
+}

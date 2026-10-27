@@ -1,0 +1,14 @@
+{
+  "v": "1", "workflow_id": "W1", "approved_brief_ref": "brief://approved-1",
+  "release_cohort_id": "COHORT-1",
+  "repos": [
+    {"repo_id": "repo://api", "remote_ref": "gitlab://myorg/api", "base_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "allowed_paths": ["src/api/**"]},
+    {"repo_id": "repo://web", "remote_ref": "gitlab://myorg/web", "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "allowed_paths": ["app/**"]},
+    {"repo_id": "repo://docs", "remote_ref": "gitlab://myorg/docs", "base_sha": "cccccccccccccccccccccccccccccccccccccccc", "allowed_paths": ["docs/**"]}
+  ],
+  "jobs": [
+    {"job_id": "J-API", "repo_id": "repo://api", "role_id": "ENG.backend", "depends_on": []},
+    {"job_id": "J-WEB", "repo_id": "repo://web", "role_id": "ENG.frontend", "depends_on": ["J-API"]},
+    {"job_id": "J-DOC", "repo_id": "repo://docs", "role_id": "ENG.docs", "depends_on": []}
+  ]
+}

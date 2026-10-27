@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Durable Agent Checkpoint v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["v", "job_id", "attempt_id", "fence_generation", "approved_brief_ref", "completed_step_ids", "pending_step_ids", "next_action", "repo_sha_map", "artifact_refs", "known_blockers", "last_confirmed_evidence_refs"],
+  "properties": {
+    "v": {"const": "1"},
+    "job_id": {"type": "string", "minLength": 1},
+    "attempt_id": {"type": "string", "minLength": 1},
+    "fence_generation": {"type": "integer", "minimum": 1},
+    "approved_brief_ref": {"type": "string", "minLength": 1},
+    "completed_step_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "pending_step_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "next_action": {"type": "string", "minLength": 1},
+    "repo_sha_map": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[a-fA-F0-9]{40}$"}},
+    "artifact_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "known_blockers": {"type": "array", "items": {"type": "string"}},
+    "last_confirmed_evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "patch_ref": {"type": "string", "minLength": 1}
+  }
+}

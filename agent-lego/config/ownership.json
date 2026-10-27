@@ -1,0 +1,83 @@
+{
+  "version": "1",
+  "roles": {
+    "DECISION.matt": {
+      "role_source": "custom",
+      "skills": [],
+      "rights": [
+        "DECIDE_ONLY"
+      ]
+    },
+    "AUTH.issuer": {
+      "role_source": "custom-non-llm",
+      "skills": [],
+      "rights": [
+        "ISSUE_APPROVAL"
+      ]
+    },
+    "ENG.foreman": {
+      "role_source": "agency:agents-orchestrator",
+      "skills": [
+        "ask:agent-workflows",
+        "matt:to-tickets",
+        "matt:implement-spec"
+      ],
+      "rights": [
+        "DISPATCH_APPROVED"
+      ]
+    },
+    "ENG.git": {
+      "role_source": "agency:git-workflow-master",
+      "skills": [
+        "matt:pr"
+      ],
+      "rights": [
+        "INTEGRATE_BOUNDED"
+      ]
+    },
+    "ENG.worker": {
+      "role_source": "agency:engineering-frontend-developer",
+      "skills": [
+        "matt:tdd",
+        "ponytail",
+        "a2a-compact"
+      ],
+      "rights": [
+        "WRITE_WORKTREE_ONLY"
+      ]
+    },
+    "QA.coordinator": {
+      "role_source": "custom",
+      "skills": [
+        "matt:code-review"
+      ],
+      "rights": [
+        "REVIEW_DISPATCH"
+      ]
+    },
+    "QA.standard": {
+      "role_source": "agency:engineering-code-reviewer",
+      "skills": [],
+      "rights": [
+        "READ_AND_REVIEW"
+      ]
+    },
+    "QA.spec": {
+      "role_source": "agency:testing-reality-checker",
+      "skills": [],
+      "rights": [
+        "READ_AND_REVIEW"
+      ]
+    }
+  },
+  "mode_note": "M0 reviewer coordinator invokes matt:code-review once; M1 foreman invokes implement-spec once, which internally owns code-review; QA coordinator only validates receipts, cannot invoke the same review again.",
+  "skill_owners_by_mode": {
+    "M0": {
+      "matt:code-review": "QA.coordinator"
+    },
+    "M1": {
+      "matt:implement-spec": "ENG.foreman",
+      "matt:code-review": "ENG.foreman"
+    }
+  }
+}

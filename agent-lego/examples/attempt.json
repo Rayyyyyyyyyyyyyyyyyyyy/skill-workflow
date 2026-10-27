@@ -1,0 +1,4 @@
+{
+ "v":"1","kind":"ATTEMPT","attempt_id":"ATT-01-2","job_id":"JOB-01","sequence":2,
+ "fence_generation":2,"worker_id":"WORKER-7","workspace_id":"sandbox://ws-02","state":"RUNNING","write_access":true
+}
