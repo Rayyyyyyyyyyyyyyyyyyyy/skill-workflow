@@ -1,0 +1,41 @@
+{
+  "id": "deliver",
+  "version": 1,
+  "purpose": "依足夠且固定的工作契約完成可驗收的工程或文件成果，並保存下游可使用的版本與證據。",
+  "applies_when": "原始要求、交付終點、必要決策、範圍、輸入與驗收依據足夠；工程選 implementer，文件選 writer。",
+  "roles": ["implementer", "writer"],
+  "required_inputs": ["原始要求及可驗收的工作契約", "固定的輸入成果與適用決策", "允許的工作範圍、操作與驗證方法"],
+  "stages": [
+    {
+      "id": "inspect",
+      "action": "閱讀契約與已有成果；工程追查受影響的呼叫者、測試與設定，文件確認讀者、用途與事實來源。",
+      "outputs": ["修改範圍與驗證方法", "可重用內容及必要缺口"],
+      "stop_when": "關鍵輸入、驗收依據或必要權限不足時，保留已有輸入並等待，不自行改定要求。"
+    },
+    {
+      "id": "produce",
+      "action": "完成最小但完整的交付；工程保留資料、安全、錯誤處理與相容性，文件保留意圖、事實、來源與必要限制。",
+      "outputs": ["工作範圍內的成果", "實際改動與重要決策"],
+      "stop_when": "需要擴充目標、改變驗收或執行外部動作時，保存候選變更交由控制層處理。"
+    },
+    {
+      "id": "verify",
+      "action": "執行對應需求與風險的最小有效查核；工程非平凡邏輯保留可檢查行為的測試，文件核對覆蓋、事實、連結或適用的版面。",
+      "outputs": ["實際查核命令或方法、環境、結果與證據", "未執行與失敗項目"],
+      "stop_when": "必要查核受工具、環境或授權阻擋時保存未完成原因；不得把未執行改成通過。"
+    },
+    {
+      "id": "submit",
+      "action": "提交指定版本、證據與可接手資訊；補件產生新版本，保留舊交付與查核歷史。",
+      "outputs": ["版本化交付清單", "逐項驗收依據與下游接手包"],
+      "stop_when": "成果或必要證據保存失敗時保留工作區，不自報正式接受或完成整條 Flow。"
+    }
+  ],
+  "required_criteria": [
+    {"id": "requirements", "description": "成果逐項滿足原始要求與固定交付終點，沒有遺漏必要項或擅自擴充範圍。", "method": "independent_review"},
+    {"id": "integrity", "description": "工程保留既有資料、安全、相容介面與必要錯誤處理；文件保留可查核事實、來源與使用者意圖；不適用項有具體理由。", "method": "independent_review"},
+    {"id": "verification", "description": "適用的必要查核已對指定成果版本執行，證據可追查；非平凡行為有有效測試，失敗與未執行範圍完整揭露。", "method": "independent_review"},
+    {"id": "handoff", "description": "下游能取得正確成果版本、使用或執行方式、已完成事項、限制、未解問題與下一步，不依賴作者聊天才能接手。", "method": "independent_review"}
+  ],
+  "handoff_fields": ["requirements", "decisions", "artifacts", "usage", "verification", "limitations", "unknowns", "next_action"]
+}

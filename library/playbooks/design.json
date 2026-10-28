@@ -1,0 +1,47 @@
+{
+  "id": "design",
+  "version": 1,
+  "purpose": "綜合 UI UX Pro Max 與 Taste，交付工程能接手的產品流程、必要操作狀態與一致介面方向。",
+  "applies_when": "需求涉及新介面或既有設計不足。既有設計足以覆蓋需求時保存適用依據，直接安排交付工作。",
+  "roles": ["designer"],
+  "required_inputs": ["產品目標、主要使用者與核心任務", "平台、內容、資料及操作需求", "已有介面、品牌、限制與必要決策"],
+  "stages": [
+    {
+      "id": "context",
+      "action": "理解產品、核心操作、平台、品牌與已有介面；新產品明記為新設計。",
+      "outputs": ["設計問題、使用情境與限制"],
+      "stop_when": "會改變主要流程或平台的必要決策缺失時，保存問題並等待。"
+    },
+    {
+      "id": "references",
+      "action": "查閱實際相關參考，保留來源、查看日期、可辨識版本及採用或捨棄理由；遵守當次瀏覽器限制。",
+      "outputs": ["參考依據與適用限制"],
+      "stop_when": "必要來源無法取得時明列缺口，不以固定案例庫或查看日期宣稱當代趨勢。"
+    },
+    {
+      "id": "flow",
+      "action": "定義核心任務、資訊結構、畫面轉移與資料契約，涵蓋等待、空結果、錯誤、恢復、成功與重複操作。",
+      "outputs": ["流程與必要狀態", "導覽、資料與互動規則"],
+      "stop_when": "流程需要超出現有範圍的操作或權限時，回報候選變更，不自行擴充工作。"
+    },
+    {
+      "id": "direction",
+      "action": "將兩份 Skill 收斂成一套構圖、字體、密度、Tokens 與素材方向，保留品牌、平台與無障礙要求。",
+      "outputs": ["一致的介面方向及取捨", "必要的文字、圖、Tokens、素材或原型"],
+      "stop_when": "重大設計衝突未解時提出決策，不交付互相競爭的設計系統。"
+    },
+    {
+      "id": "handoff",
+      "action": "對照原始要求檢查流程、狀態與交接資料，交付工程所需版本及尚未實際操作驗證的範圍。",
+      "outputs": ["工程接手包", "驗證紀錄與未驗證範圍"],
+      "stop_when": "必要操作或視覺驗收缺少環境、工具或明確授權時保持未完成；不擅自啟動瀏覽器。"
+    }
+  ],
+  "required_criteria": [
+    {"id": "workflow", "description": "核心任務、畫面轉移、資料需求及必要操作狀態逐項對應原始要求。", "method": "independent_review"},
+    {"id": "direction", "description": "UI UX Pro Max 與 Taste 產生同一套可實作方向，並保存參考、取捨、品牌、平台與無障礙依據。", "method": "independent_review"},
+    {"id": "verification", "description": "設計交付與操作實測分開記錄；必要但未執行的驗收保持未完成，沒有以靜態閱讀冒充操作證據。", "method": "independent_review"},
+    {"id": "handoff", "description": "工程 Agent 能從指定版本取得流程、狀態、資料、介面規則、素材位置、限制與自己的驗收要求。", "method": "independent_review"}
+  ],
+  "handoff_fields": ["product_context", "flows", "states", "data_contracts", "design_direction", "references", "artifacts", "proof", "unknowns", "next_action"]
+}

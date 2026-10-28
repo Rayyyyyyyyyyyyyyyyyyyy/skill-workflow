@@ -1,0 +1,21 @@
+{
+  "base_commit": "c670ae2dc345f3e2d870b60b57bf6840eee53c7c",
+  "source_commits": [
+    "7b9267b8faf1a478eb7e8b7bb62f4402da88fb1c",
+    "f7b223684d8be17a7a813d2f95e2c6651a26cb5b",
+    "03c4d759b9ed255ed6d3d7f8a8a4b5ea6c138736",
+    "6f0e5477e9800a24140aee1531b2e38053d11900"
+  ],
+  "integration_commit": "b1f3e18af1d779ac07050940d4358f4f7c750347",
+  "integration_worktree": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/integration-v2",
+  "branch": "codex/workflow-hub/bootstrap-integration-v2",
+  "method": "host-controlled local cherry-pick into a third worktree; source repo HEAD/index not modified",
+  "requires": "combined-version tests and independent second-round Proof before acceptance",
+  "tested_code_commit": "b1f3e18af1d779ac07050940d4358f4f7c750347",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+    "count": 48,
+    "result": "PASS",
+    "log": "projects/workflow-hub/records/test-output-v2.txt"
+  }
+}

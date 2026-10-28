@@ -1,0 +1,65 @@
+{
+  "review_id": "db2905af3e7b48fbae7f7d5a65b90d0c",
+  "HANDOFF_sha256": "b311b6e6a5eb4bf8c3f32fc2ae7277b6195af6c074b3240ea3e2ebf7746819e6",
+  "manifest_digest_verified": true,
+  "handoff_commit": "c3c19e1d3ed9c3b6c2f78b5af655c5268379e720",
+  "review_detached": true,
+  "accepted_build": {
+    "at": "2026-10-28T08:13:23.598760+00:00",
+    "review_digest": "6a2e324f59437f81bb26501b1b58a8c10886cf06d98d15e6198507dee800f6ea",
+    "submission_digest": "c9a51be8d5856c0e13e1eef5f5deed77f88456cdfc3f63a4f95b18bf1f555339"
+  },
+  "build_commit": "d75e09c36a945c6d82d4b59de2f6365f1743367c",
+  "accepted_build_checks": 11,
+  "accepted_review_all_PASS": true,
+  "referenced_proof_blobs_verified": true,
+  "links": [
+    {
+      "target": "../../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "target": "../../../docs/WORKFLOW.md",
+      "exists": true
+    },
+    {
+      "target": "../../../library/README.md",
+      "exists": true
+    },
+    {
+      "target": "../../../library/roles.json",
+      "exists": true
+    },
+    {
+      "target": "../../../library/",
+      "exists": true
+    },
+    {
+      "target": "test-output-v2.txt",
+      "exists": true
+    },
+    {
+      "target": "git-integration-v2.json",
+      "exists": true
+    },
+    {
+      "target": "source-apply-v2.json",
+      "exists": true
+    },
+    {
+      "target": "VALIDATION-v2.md",
+      "exists": true
+    }
+  ],
+  "fixed_entry_file_hashes_verified": true,
+  "help_exit": 0,
+  "status_exit": 0,
+  "observed_status": {
+    "project": "AWAITING_REVIEW",
+    "build": "DONE",
+    "handoff": "AWAITING_REVIEW",
+    "handoff_round": 1
+  },
+  "verifier_correction": "Initial verifier incorrectly searched blob hashes in report.evidence path strings; corrected to the controller-sealed evidence hash map. No artifact defect was found.",
+  "no_browser_or_suite": true
+}

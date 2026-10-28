@@ -1,0 +1,118 @@
+{
+  "review_id": "66cef08e6dd040cfb30dfd2452d56f4f",
+  "round": 1,
+  "reviewer": "/root/independent_review",
+  "submission_digest": "68ecc05e5c8ba6417d683ee854f8a9139469f6a9d6f2f2980ed2397964a59fc5",
+  "contract_digest": "8846d1784bcf8b2c375c931388637fda8954f51ad49221fec06654bc8568044d",
+  "baseline_digest": "5ba4fa11c8f7f9bb3fffc66ccb7a7fa222c254f87d450b068167fddf93a5f8be",
+  "stopped": false,
+  "evidence": {
+    "E-review": "projects/workflow-hub/records/build-review-v1.md",
+    "E-tests": "projects/workflow-hub/records/build-review-test-v1.txt",
+    "E-concurrency": "projects/workflow-hub/records/build-review-concurrency-v1.json"
+  },
+  "checks": [
+    {
+      "acceptance_id": "AC-R1",
+      "status": "PASS",
+      "reason": "new拒絕同名覆寫、slug/檔案越界；SQLite保存原始idea與狀態。已封存REQUEST及真實workflow-hub packet保留原始需求；獨立重跑同名保全/持久化/CLI測試通過。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R2",
+      "status": "PASS",
+      "reason": "AGENTS/WORKFLOW及clarify/research/design/deliver適用條件保留成熟度選路；程式要求routing理由並阻擋missing_inputs；prepare接受後仍等待delivery。對應公開測試獨立通過，未冒稱CLI可理解自然語言。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R3",
+      "status": "PASS",
+      "reason": "五份Playbook有必要輸入/階段/停止/criteria/交接；plan驗證DAG與原始要求映射並附入最低項，dispatch只使用已DONE上游固定submission。獨立測試確認未接受上游不能解鎖。共享資源安全缺陷另列PB-build-integrity，不能由DAG合法推定安全。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R4",
+      "status": "PASS",
+      "reason": "正式packet及supporting內容具有實際原生Role/Skill/P00快照，非虛構角色摘要；作者VALIDATION聲明完整載入，Reviewer實讀packet完整角色/政策。來源變動後仍使用pin及缺來源拒絕測試獨立通過，未把fixture當角色語意評測。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R5",
+      "status": "PASS",
+      "reason": "submission manifest、baseline與25檔Digest核實；review綁定6欄、每acceptance恰一check及實際evidence，accept重算manifest/成果/review證據，只在全PASS才DONE；自審/歷史貢獻者/缺件/舊版本/竄改/兩輪測試獨立通過。此判定支持機制，本輪仍須由控制者接受。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R6",
+      "status": "PASS",
+      "reason": "checkpoint/pause/resume保持檔案及舊Attempt失效；UNKNOWN同review/版本恢復且已知FAIL不能改寫；2輪/2重試/4作者上限跨重啟保留。准入FAIL去重與跨plan保留亦由公開測試確認。host停止紀錄屬可信本機收據，未冒稱OS強制終止。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "AC-R7",
+      "status": "PASS",
+      "reason": "AGENTS自然語言入口、README、WORKFLOW完整命令與CLI可用，封存包含程式/library/tests/REQUEST/DESIGN/VALIDATION/逐命令log與manifest。build只交可接手版本，實際HANDOFF尚待build接受後驗收，作者未虛報下游或整體完成。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    },
+    {
+      "acceptance_id": "PB-build-requirements",
+      "status": "FAIL",
+      "reason": "六步與R1-R7有實作對應，但共享工作區可同時派兩個作者，違反原規格同一資源不得雙寫及MVP有界順序執行要求；此安全缺口未被可信同OS限制豁免。詳D1反例。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests",
+        "E-concurrency"
+      ]
+    },
+    {
+      "acceptance_id": "PB-build-integrity",
+      "status": "FAIL",
+      "reason": "D1：dispatch第354–375行只鎖定單一task，未排除同工作區另一RUNNING作者。合法無依賴tasks可同時RUNNING且workspace相同；獨立反例中第二作者覆寫artifact.txt後，第一task提交封存了第二作者內容，有資料覆寫及來源歸屬風險。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests",
+        "E-concurrency"
+      ]
+    },
+    {
+      "acceptance_id": "PB-build-verification",
+      "status": "FAIL",
+      "reason": "獨立從封存副本執行40個測試皆通過，作者log與限制可追查；但新確認D1正常控制入口反例未通過且缺對應回歸，必要共享資源完整性仍未解決，不能以既有40tests全部通過取代。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests",
+        "E-concurrency"
+      ]
+    },
+    {
+      "acceptance_id": "PB-build-handoff",
+      "status": "PASS",
+      "reason": "指定版本封存清單包含操作入口/控制程式/五份契約/roles設定/tests/原始要求/設計/准入歷史/驗證與未解範圍，下游可以依blob Digest取得，無須作者聊天。交接必須攜帶D1缺陷及本次FAIL，不能將其當成已接受版本。",
+      "evidence_refs": [
+        "E-review",
+        "E-tests"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "plan_hash": "5b4107dd13aefa0e47ad2d8023e36509d8a79bebf6cf3b5412ef35fba054e636",
+  "reviewer": "/root/independent_review",
+  "status": "FAIL",
+  "reason": "build AC-R7要求依賴尚不能啟動的handoff實際產物，形成驗收循環；正式計畫聲明重用的原始要求、兩份規格與前期設計/初稿未固定為可定位的supporting_sources。需修正後重新存入計畫並以新hash查核。",
+  "evidence": "projects/workflow-hub/records/plan-review-v1.md"
+}

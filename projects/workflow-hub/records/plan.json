@@ -1,0 +1,244 @@
+{
+  "scope": "deliver",
+  "planner": "/root",
+  "workspace": ".",
+  "allowed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "workbench.py",
+    "library",
+    "tests",
+    "docs/WORKFLOW.md",
+    "projects/workflow-hub/records"
+  ],
+  "routing": {
+    "maturity": "ready",
+    "reason": "使用者已逐項確認六步目標並授權agents討論及完成；三位agents已對齊可信本機範圍、Playbook/Role/Skill/Proof分層，現有初稿可重用，剩餘工作為整合、行為驗證、獨立驗收與下游接手。",
+    "missing_inputs": []
+  },
+  "operations": [
+    "local"
+  ],
+  "limits": {
+    "max_rounds": 2,
+    "review_retries": 2,
+    "max_attempts": 4
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "接收想法並建立或接續Project，保存原始目標與已有輸入，不覆寫既有資料"
+    },
+    {
+      "id": "R2",
+      "text": "依成熟度選Flow；清楚就直接執行，缺關鍵資訊才釐清、研究或原型"
+    },
+    {
+      "id": "R3",
+      "text": "Flow組合具體Playbooks及依賴，保留最低工作與交接契約"
+    },
+    {
+      "id": "R4",
+      "text": "以實際Agent Role與Skills執行，保存來源內容及版本，責任和權限分開"
+    },
+    {
+      "id": "R5",
+      "text": "依原始要求與指定版本的實際Proof獨立驗收，通過才接受及交給下游"
+    },
+    {
+      "id": "R6",
+      "text": "中斷、缺資料及驗收失敗時保存成果/原因/下一步，重啟和換Agent不重置上限"
+    },
+    {
+      "id": "R7",
+      "text": "交付可直接使用的自然語言入口、標準庫CLI、測試與下一工作階段可接手的說明，真實走完作者/Reviewer/下游鏈"
+    }
+  ],
+  "constraints": [
+    "禁止啟動或操作瀏覽器進行檢測",
+    "保留使用者既有刪檔，不恢復workflow-mvp",
+    "不得把參考測試或fixture通過當成完整流程已驗收",
+    "前期bootstrap討論及初稿發生於本工具完成前；現在明示重用已有成果，再固定契約完成剩餘整合與驗證",
+    "同OS可信本機協作；角色ID/停止是host控制者登記，不宣稱OS隔離或強認證"
+  ],
+  "inputs": [
+    "明確固定於各task.supporting_sources的原始需求、設計採用決定、原規格及bootstrap初稿；此列表僅索引，實際內容以snapshot為準"
+  ],
+  "tasks": [
+    {
+      "id": "build",
+      "playbook": "deliver",
+      "role": "implementer",
+      "depends_on": [],
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7"
+      ],
+      "acceptance": [
+        {
+          "id": "AC-R1",
+          "requirement_ids": [
+            "R1"
+          ],
+          "description": "接收想法並建立或接續Project，保存原始目標與已有輸入，不覆寫既有資料",
+          "method": "檢查new/status/list命令及資料保全/重啟測試，實際建立此Project"
+        },
+        {
+          "id": "AC-R2",
+          "requirement_ids": [
+            "R2"
+          ],
+          "description": "依成熟度選Flow；清楚就直接執行，缺關鍵資訊才釐清、研究或原型",
+          "method": "檢查routing理由、clarify/research/design/deliver契約與清楚/缺輸入/prepare測試"
+        },
+        {
+          "id": "AC-R3",
+          "requirement_ids": [
+            "R3"
+          ],
+          "description": "Flow組合具體Playbooks及依賴，保留最低工作與交接契約",
+          "method": "讀取5份Playbooks，執行需求覆蓋、最低驗收項、DAG與accepted上游測試"
+        },
+        {
+          "id": "AC-R4",
+          "requirement_ids": [
+            "R4"
+          ],
+          "description": "以實際Agent Role與Skills執行，保存來源內容及版本，責任和權限分開",
+          "method": "檢查dispatch中的原生角色、Skill與政策完整快照及來源變動測試"
+        },
+        {
+          "id": "AC-R5",
+          "requirement_ids": [
+            "R5"
+          ],
+          "description": "依原始要求與指定版本的實際Proof獨立驗收，通過才接受及交給下游",
+          "method": "對封存產物逐項審查；測試自審、假證據、舊版本、缺驗收、竄改及兩輪分支"
+        },
+        {
+          "id": "AC-R6",
+          "requirement_ids": [
+            "R6"
+          ],
+          "description": "中斷、缺資料及驗收失敗時保存成果/原因/下一步，重啟和換Agent不重置上限",
+          "method": "執行checkpoint、pause/resume、持久化、UNKNOWN、取消、重試與author上限測試"
+        },
+        {
+          "id": "AC-R7",
+          "requirement_ids": [
+            "R7"
+          ],
+          "description": "交付可直接使用的自然語言入口、標準庫CLI、測試與可供下游接手的已封存成果；build只驗證接手所需資訊是否足夠，實際下游鏈由handoff節點驗收",
+          "method": "核對AGENTS/README/WORKFLOW的入口與命令、CLI smoke、角色快照及可重現測試；確認封存包含下游所需資料，不要求尚未啟動的HANDOFF產物"
+        }
+      ],
+      "supporting_sources": [
+        {
+          "path": "projects/workflow-hub/records/REQUEST.md",
+          "format": "text"
+        },
+        {
+          "path": "projects/workflow-hub/records/DESIGN.md",
+          "format": "text"
+        },
+        {
+          "path": "docs/playbook/PLAYBOOK_MVP_ARCHITECTURE_PROPOSAL.md",
+          "format": "text"
+        },
+        {
+          "path": "docs/playbook/PLAYBOOK_MVP_EXECUTION_FLOW.md",
+          "format": "text"
+        },
+        {
+          "path": "workbench.py",
+          "format": "text"
+        },
+        {
+          "path": "AGENTS.md",
+          "format": "text"
+        },
+        {
+          "path": "README.md",
+          "format": "text"
+        },
+        {
+          "path": "docs/WORKFLOW.md",
+          "format": "text"
+        },
+        {
+          "path": "tests/test_workbench.py",
+          "format": "text"
+        },
+        {
+          "path": "library/README.md",
+          "format": "text"
+        },
+        {
+          "path": "library/playbooks/clarify.json",
+          "format": "text"
+        },
+        {
+          "path": "library/playbooks/deliver.json",
+          "format": "text"
+        },
+        {
+          "path": "library/playbooks/design.json",
+          "format": "text"
+        },
+        {
+          "path": "library/playbooks/research.json",
+          "format": "text"
+        },
+        {
+          "path": "library/playbooks/review.json",
+          "format": "text"
+        },
+        {
+          "path": "library/roles.json",
+          "format": "text"
+        }
+      ]
+    },
+    {
+      "id": "handoff",
+      "playbook": "deliver",
+      "role": "writer",
+      "depends_on": [
+        "build"
+      ],
+      "requirement_ids": [
+        "R7"
+      ],
+      "acceptance": [
+        {
+          "id": "AC-HANDOFF",
+          "requirement_ids": [
+            "R7"
+          ],
+          "description": "下一個工作階段可以只憑HANDOFF說明和已接受的build版本找到入口、命令、成果、限制與下一步；實際接手檢查不可依作者口頭摘要",
+          "method": "下游作者讀取已接受build封存產物與記錄，產生HANDOFF.md；獨立Reviewer核對使用步驟與版本參照"
+        }
+      ],
+      "supporting_sources": [
+        {
+          "path": "projects/workflow-hub/records/REQUEST.md",
+          "format": "text"
+        },
+        {
+          "path": "projects/workflow-hub/records/DESIGN.md",
+          "format": "text"
+        }
+      ]
+    }
+  ],
+  "contributors": [
+    "/root/flow_design",
+    "/root/playbook_roles",
+    "/root/proof_review"
+  ]
+}

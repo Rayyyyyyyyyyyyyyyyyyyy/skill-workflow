@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "roles": {
+    "planner": {
+      "description": "將原始想法整理成有來源、範圍、交付終點與驗收依據的工作契約；把關鍵決策交回使用者。",
+      "source": {"path": "~/.codex/agents/product-manager.toml", "format": "toml"},
+      "skills": [
+        {"path": "~/.codex/skills/grilling/SKILL.md"},
+        {"path": "~/.codex/skills/domain-modeling/SKILL.md"}
+      ]
+    },
+    "researcher": {
+      "description": "依原始問題追查一手證據，區分事實、推論、假設與未知，交付可追溯研究。",
+      "source": {"path": "~/.codex/agents/research-synthesist.toml", "format": "toml"},
+      "skills": [{"path": "~/.codex/skills/research/SKILL.md"}]
+    },
+    "designer": {
+      "description": "依產品情境產生可由工程接手的流程、操作狀態、資訊結構與一致視覺方向。",
+      "source": {"path": "~/.codex/agents/ui-designer.toml", "format": "toml"},
+      "skills": [
+        {"path": "~/.agents/skills/ui-ux-pro-max/SKILL.md"},
+        {"path": "~/.agents/skills/design-taste-frontend/SKILL.md"}
+      ]
+    },
+    "implementer": {
+      "description": "在指定工作範圍完成工程交付，保留既有資料與介面，使用對應行為與風險的最小有效驗證。",
+      "source": {"path": "~/.codex/agents/minimal-change-engineer.toml", "format": "toml"},
+      "skills": [{"path": "~/.codex/plugins/cache/ponytail/ponytail/5.3.2/skills/ponytail/SKILL.md"}]
+    },
+    "writer": {
+      "description": "依受眾與使用情境完成文件交付，保留原始意圖、可查核事實、來源與限制。",
+      "source": {"path": "~/.codex/agents/technical-writer.toml", "format": "toml"},
+      "skills": [{"path": "~/.codex/skills/humanizer/SKILL.md"}]
+    },
+    "reviewer": {
+      "description": "在獨立上下文逐項查核指定成果與證據；回報符合、缺陷與未知，不修改作者成果或自行批准交付。",
+      "source": {"path": "~/.codex/agents/code-reviewer.toml", "format": "toml"},
+      "skills": []
+    },
+    "integrator": {
+      "description": "在獨立 Git task worktree 整合已接受的固定提交，保留來源與衝突，對整合版本重新驗證，安全回寫時保護來源既有修改。",
+      "source": {"path": "~/.codex/agents/git-workflow-master.toml", "format": "toml"},
+      "skills": []
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "research",
+  "version": 1,
+  "purpose": "針對明確問題取得可追溯證據，交付足以支持下一步決策的研究及其限制。",
+  "applies_when": "下一步受缺少事實、來源、技術可行性或比較依據阻擋；已有合適研究時先檢查版本與適用性。",
+  "roles": ["researcher"],
+  "required_inputs": ["研究問題與用途", "範圍、限制與所需時效", "已有資料及允許的來源與工具"],
+  "stages": [
+    {
+      "id": "frame",
+      "action": "固定待回答問題、會影響決策的主張、來源要求與搜尋邊界。",
+      "outputs": ["問題與證據需求清單"],
+      "stop_when": "問題方向或必要資料的使用權不明時，保存缺口並等待。"
+    },
+    {
+      "id": "investigate",
+      "action": "優先追查一手來源，保留出處、日期、實際觀察與反證；本機資料也需標明檔案與版本。",
+      "outputs": ["來源清單與原始證據位置", "主張、依據、矛盾與未知"],
+      "stop_when": "來源不可取得或必要查核受阻時記錄限制；不得虛構結果或以來源存在代替內容支持。"
+    },
+    {
+      "id": "synthesize",
+      "action": "依證據回答原問題，區分 FACT、INFERENCE、ASSUMPTION、UNKNOWN，保留能改變結論的限制與下一步。",
+      "outputs": ["有引用的研究交付", "可接手的決策依據與未解問題"],
+      "stop_when": "無法得到肯定結論時保持 UNKNOWN；研究交付完成不代表商機、效果或需求已證實。"
+    }
+  ],
+  "required_criteria": [
+    {"id": "coverage", "description": "交付逐項回答研究問題，未回答項有具體原因及其影響。", "method": "independent_review"},
+    {"id": "sources", "description": "關鍵事實及推論有可取得、與主張相符的一手證據或明列來源限制，並保存日期與版本。", "method": "independent_review"},
+    {"id": "calibration", "description": "事實、推論、假設與未知分開，重大反證、矛盾及適用範圍沒有被省略。", "method": "independent_review"},
+    {"id": "handoff", "description": "下游能找到來源與交付版本，理解結論可以支持的決策、不能支持的推廣及下一步。", "method": "independent_review"}
+  ],
+  "handoff_fields": ["questions", "findings", "sources", "claims", "contradictions", "limitations", "artifacts", "next_action"]
+}

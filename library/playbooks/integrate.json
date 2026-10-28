@@ -1,0 +1,87 @@
+{
+  "id": "integrate",
+  "version": 1,
+  "purpose": "將多個已接受的小任務提交整合成新的固定 Git 版本，提供整體 Proof 與可安全回寫的交付。",
+  "applies_when": "兩個以上獨立 task 的成果需要組成共同交付，或固定計畫明列需要獨立 Git 整合。",
+  "roles": [
+    "integrator"
+  ],
+  "required_inputs": [
+    "原始要求與整體驗收契約",
+    "來源 task 的接受紀錄、固定 base/commit/tree 與整合順序",
+    "受控 Git 基線、獨立整合 worktree、可修改及可回寫範圍"
+  ],
+  "stages": [
+    {
+      "id": "bind",
+      "action": "讀取原始契約與每個來源接受紀錄，核對固定 Git commit、共同基線及差異範圍，使用控制程式提供的獨立整合 worktree。",
+      "outputs": [
+        "固定整合來源清單與順序",
+        "基線與允許範圍"
+      ],
+      "stop_when": "來源尚未接受、版本不符或必要輸入缺失時等待，不改用作者可變分支HEAD。"
+    },
+    {
+      "id": "merge",
+      "action": "按固定順序整合已接受來源提交，保存來源 provenance 與實際差異；只在隔離整合 worktree 操作。",
+      "outputs": [
+        "整合後內容與來源對照",
+        "衝突與處理紀錄"
+      ],
+      "stop_when": "合併衝突或實際範圍超出契約時保存工作樹與原因，等待處理；不reset、不stash、不覆寫主工作樹。"
+    },
+    {
+      "id": "verify",
+      "action": "對整合後版本執行必要回歸與需求查核；即使各小任務個別通過，也要確認組合後行為及交接正確。",
+      "outputs": [
+        "整體驗證的命令、環境、結果及實際證據",
+        "整合後Git版本與未驗證範圍"
+      ],
+      "stop_when": "必要驗證失敗或受阻時保存缺陷與未知，不將個別task的PASS當作整體通過。"
+    },
+    {
+      "id": "submit",
+      "action": "提交固定整合commit、tree、差異、來源接受清單及Proof，交由不同作者的Reviewer查核；接受後再由控制命令執行逐檔基線比對的安全回寫。",
+      "outputs": [
+        "整合版本與來源清單",
+        "Proof及安全回寫條件"
+      ],
+      "stop_when": "來源工作樹已變動或回寫前提不成立時等待，不覆蓋使用者修改；提交與Review完成不自動等於Project已回寫完成。"
+    }
+  ],
+  "required_criteria": [
+    {
+      "id": "sources",
+      "description": "整合只使用已接受來源的固定base/commit/tree及差異，來源與順序可追溯，未讀取可變作者HEAD冒充已驗收版本。",
+      "method": "independent_review"
+    },
+    {
+      "id": "integrity",
+      "description": "整合限定受控Git worktree與允許範圍，衝突保留且未覆寫來源工作樹；主repo的HEAD、index及既有未提交修改/刪檔受到保護。",
+      "method": "independent_review"
+    },
+    {
+      "id": "verification",
+      "description": "適用整體測試與原始要求已對固定整合版本查核，Proof區分PASS/FAIL/UNKNOWN，不以小任務個別通過代替整體驗收。",
+      "method": "independent_review"
+    },
+    {
+      "id": "handoff",
+      "description": "交付包含整合commit/tree、來源接受紀錄、實際差異、使用方式、限制、未解問題及逐檔CAS安全回寫條件。",
+      "method": "independent_review"
+    }
+  ],
+  "handoff_fields": [
+    "requirements",
+    "accepted_sources",
+    "base_commit",
+    "integration_commit",
+    "tree",
+    "changed_paths",
+    "verification",
+    "conflicts",
+    "apply_conditions",
+    "limitations",
+    "next_action"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "project": "workflow-hub",
+  "state": "DONE",
+  "plan_hash": "adea5330090998bb349a270db5661a416814c1b5fd198a12d64da6fca99d9b34",
+  "plan_review_failures": 1,
+  "tasks": {
+    "build": {
+      "state": "DONE",
+      "generation": 2,
+      "round": 2,
+      "accepted": {
+        "at": "2026-10-28T08:13:23.598760+00:00",
+        "review_digest": "6a2e324f59437f81bb26501b1b58a8c10886cf06d98d15e6198507dee800f6ea",
+        "submission_digest": "c9a51be8d5856c0e13e1eef5f5deed77f88456cdfc3f63a4f95b18bf1f555339"
+      },
+      "git": {
+        "base_commit": "c670ae2dc345f3e2d870b60b57bf6840eee53c7c",
+        "branch": "codex/workflow-hub/bootstrap-integration-v2",
+        "changed_paths": [
+          "AGENTS.md",
+          "README.md",
+          "docs/WORKFLOW.md",
+          "library/README.md",
+          "library/git_tasks.py",
+          "library/playbooks/integrate.json",
+          "library/roles.json",
+          "projects/workflow-hub/records/USER_GIT_TASKS.md",
+          "projects/workflow-hub/records/VALIDATION-v2.md",
+          "projects/workflow-hub/records/build-files-v2.json",
+          "projects/workflow-hub/records/build-host-receipt-v2.json",
+          "projects/workflow-hub/records/git-bootstrap.json",
+          "projects/workflow-hub/records/git-integration-v2.json",
+          "projects/workflow-hub/records/git-role-source.toml",
+          "projects/workflow-hub/records/source-apply-v2.json",
+          "projects/workflow-hub/records/test-output-v2.txt",
+          "tests/fixtures/workbench-pre-git.py",
+          "tests/test_workbench.py",
+          "workbench.py"
+        ],
+        "commit": "d75e09c36a945c6d82d4b59de2f6365f1743367c",
+        "repo": "/Users/ray.shao/workflow/projects/workflow-hub/.workflow/git",
+        "tree": "8980fffa679aad0b3a3a45d304859289fa425731",
+        "workspace": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/integration-v2"
+      }
+    },
+    "handoff": {
+      "state": "DONE",
+      "generation": 1,
+      "round": 1,
+      "accepted": {
+        "at": "2026-10-28T08:54:40.014699+00:00",
+        "review_digest": "9f0a9dd88c42a5bbf19ec15c34d858eb29e154029815295b36a58a64c8dfd818",
+        "submission_digest": "57c3ac42f660d63eba2454ead69581a2e78f5f46f2a101f72c30416b5c184ea0"
+      },
+      "git": {
+        "base_commit": "d75e09c36a945c6d82d4b59de2f6365f1743367c",
+        "branch": "codex/workflow-hub/handoff-a313617b05b246d0b0f6e88309479a35",
+        "changed_paths": [
+          "projects/workflow-hub/records/HANDOFF.md"
+        ],
+        "commit": "c3c19e1d3ed9c3b6c2f78b5af655c5268379e720",
+        "repo": "/Users/ray.shao/workflow/projects/workflow-hub/.workflow/git",
+        "tree": "ba3933c5095e8c9d8da5f1b156cfd57bd7eb1dc8",
+        "workspace": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/handoff-a313617b05b246d0b0f6e88309479a35"
+      }
+    }
+  },
+  "applied": {
+    "at": "2026-10-28T08:54:40.629378+00:00",
+    "commit": "c3c19e1d3ed9c3b6c2f78b5af655c5268379e720",
+    "paths": [
+      "AGENTS.md",
+      "README.md",
+      "docs/WORKFLOW.md",
+      "library/README.md",
+      "library/git_tasks.py",
+      "library/playbooks/integrate.json",
+      "library/roles.json",
+      "projects/workflow-hub/records/HANDOFF.md",
+      "projects/workflow-hub/records/USER_GIT_TASKS.md",
+      "projects/workflow-hub/records/VALIDATION-v2.md",
+      "projects/workflow-hub/records/build-files-v2.json",
+      "projects/workflow-hub/records/build-host-receipt-v2.json",
+      "projects/workflow-hub/records/git-bootstrap.json",
+      "projects/workflow-hub/records/git-integration-v2.json",
+      "projects/workflow-hub/records/git-role-source.toml",
+      "projects/workflow-hub/records/source-apply-v2.json",
+      "projects/workflow-hub/records/test-output-v2.txt",
+      "tests/fixtures/workbench-pre-git.py",
+      "tests/test_workbench.py",
+      "workbench.py"
+    ],
+    "plan_hash": "adea5330090998bb349a270db5661a416814c1b5fd198a12d64da6fca99d9b34"
+  },
+  "verification": {
+    "new_behavior_tests": 48,
+    "build_checks_passed": 11,
+    "handoff_checks_passed": 5,
+    "legacy_reference_tests": 41,
+    "legacy_tests_scope": "separate reference-only evidence, not added to new tests"
+  },
+  "source_head_preserved": true,
+  "source_index_preserved": true,
+  "discarded_implementations_not_restored": true,
+  "finished_at": "2026-10-28T08:54:40.643216+00:00",
+  "scope": "Trusted local Codex agents + Python/Git control. No browser, deployment, payment, hostile-worker isolation, or cross-host recovery verification."
+}

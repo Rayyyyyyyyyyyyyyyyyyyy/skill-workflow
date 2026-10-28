@@ -1,0 +1,12 @@
+{
+  "case": "Both READY tasks use same default workspace; second dispatch while first RUNNING should be rejected for sequential MVP",
+  "first_workspace": "/private/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-test-wqptf4u6/projects/small-project/workspace",
+  "second_workspace": "/private/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-test-wqptf4u6/projects/small-project/workspace",
+  "same_workspace": true,
+  "states_before_submission": {
+    "build": "RUNNING",
+    "document": "RUNNING"
+  },
+  "first_task_sealed_content_after_second_author_write": "author-two output\n",
+  "observed": "Second dispatch succeeded and first task submission sealed second author content. No author bypassed controller or used outside permissions."
+}

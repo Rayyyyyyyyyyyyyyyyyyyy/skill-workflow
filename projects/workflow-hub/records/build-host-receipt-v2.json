@@ -1,0 +1,14 @@
+{
+  "actors": {
+    "/root/proof_review": "completed; runtime commit f7b223684d8be17a7a813d2f95e2c6651a26cb5b, clean worktree, all commands exited",
+    "/root/flow_design": "completed; docs/tests commit 6f0e5477e9800a24140aee1531b2e38053d11900, clean worktree, all commands exited"
+  },
+  "controller": "/root",
+  "observed_at": "2026-10-28T08:04:00.556134+00:00",
+  "host_sources": [
+    "collaboration FINAL_ANSWER completion messages",
+    "local git rev-parse HEAD and git status --porcelain"
+  ],
+  "integration": "separate third worktree; combined 48 tests passed; no background jobs or live writer remain",
+  "scope": "host bootstrap after explicit user Git task instruction; metadata receipts do not provide hostile OS isolation"
+}

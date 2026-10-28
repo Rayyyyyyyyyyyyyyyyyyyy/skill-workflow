@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "c670ae2dc345f3e2d870b60b57bf6840eee53c7c",
+  "installed_working_commit": "fd6277c4acbe8215f418f56c17ff30b92e57e839",
+  "changed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "docs/WORKFLOW.md",
+    "library/README.md",
+    "library/git_tasks.py",
+    "library/playbooks/integrate.json",
+    "library/roles.json",
+    "projects/workflow-hub/records/USER_GIT_TASKS.md",
+    "projects/workflow-hub/records/VALIDATION-v2.md",
+    "projects/workflow-hub/records/build-files-v2.json",
+    "projects/workflow-hub/records/git-bootstrap.json",
+    "projects/workflow-hub/records/git-integration-v2.json",
+    "projects/workflow-hub/records/git-role-source.toml",
+    "projects/workflow-hub/records/test-output-v2.txt",
+    "tests/fixtures/workbench-pre-git.py",
+    "tests/test_workbench.py",
+    "workbench.py"
+  ],
+  "source_head_unchanged": true,
+  "source_index_unchanged": true,
+  "method": "all-path baseline/target preflight then per-file replacement; no source git reset/stash/stage; installation is still pending independent second-round Proof"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "review",
+  "version": 1,
+  "purpose": "以獨立上下文對指定成果版本逐項查核，產生 Proof 與可定位缺陷，供控制層接受或退回。",
+  "applies_when": "作者已提交固定成果及必要證據，或候選契約需要原始需求覆蓋與必要驗收完整性查核。",
+  "roles": ["reviewer"],
+  "required_inputs": ["原始要求與固定驗收契約", "指定成果、輸入及必要基準版本", "逐項驗收清單、作者證據與允許的查核工具"],
+  "stages": [
+    {
+      "id": "bind",
+      "action": "讀取原始要求、固定契約、成果及基準；核對查核對象與證據版本，在不同於作者的上下文工作。",
+      "outputs": ["查核對象、範圍與環境紀錄"],
+      "stop_when": "必要平台輸入缺失、版本不符或無法完成獨立查核時回報受阻；不改查可變的同名檔案。"
+    },
+    {
+      "id": "check",
+      "action": "逐項檢查證據有效、契約符合與原始目標達成；工程要讀實際變更及相連程式，研究要核對主張與來源。",
+      "outputs": ["每個 acceptance_id 的 PASS、FAIL 或 UNKNOWN", "證據、觀察與可定位缺陷"],
+      "stop_when": "作者應交付的必要證據已確認缺失時判 FAIL；工具或環境使判定受阻才記 UNKNOWN，不用文字信心代替證據。"
+    },
+    {
+      "id": "report",
+      "action": "提交完整查核、缺陷、未知及恢復條件，維持成果和基準不變，由控制層依固定輪次與條件判定後續。",
+      "outputs": ["版本綁定的逐項查核報告", "缺陷包或完整通過依據"],
+      "stop_when": "查核未齊或必要未知仍在時，不宣稱全部通過；不自行修改成果、增加輪次或批准發布。"
+    }
+  ],
+  "required_criteria": [
+    {"id": "binding", "description": "報告綁定正確需求、契約、基準與成果版本；查核者及上下文與作者分開。", "method": "independent_review"},
+    {"id": "coverage", "description": "每個必要驗收項都有判定、具體觀察與證據；原始要求或 Playbook 最低要求未被漏掉或弱化。", "method": "independent_review"},
+    {"id": "calibration", "description": "FAIL 與查核受阻的 UNKNOWN 原因清楚分開，已知缺陷不被未知覆蓋，必要未驗證項不冒充 PASS。", "method": "independent_review"},
+    {"id": "authority", "description": "查核報告只提供可追查判定，未修改作者成果或正式驗收基準，也未把查核完成當成發布或外部操作授權。", "method": "independent_review"}
+  ],
+  "handoff_fields": ["subject_version", "contract_version", "baseline_version", "acceptance_results", "evidence", "defects", "unknowns", "recovery_conditions"]
+}

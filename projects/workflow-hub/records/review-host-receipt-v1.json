@@ -1,0 +1,8 @@
+{
+  "actor": "/root/independent_review",
+  "host_state": "completed",
+  "observed_at": "2026-10-28T07:24:34.532264+00:00",
+  "host_tool": "collaboration.list_agents",
+  "confirmation": "all review commands exited; no background processes or pending tools",
+  "result": "FAIL; one necessary workspace-isolation defect"
+}

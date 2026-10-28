@@ -1,0 +1,7 @@
+{
+  "plan_hash": "adea5330090998bb349a270db5661a416814c1b5fd198a12d64da6fca99d9b34",
+  "reviewer": "/root/independent_review",
+  "status": "PASS",
+  "reason": "已核實v1兩項缺口解除：build與實際下游驗收分離且根R7保留；需求、設計、規格與重用初稿已固定並驗證18筆來源參照。六步要求、最低criteria、Role/Skill/P00、有限次數與可信本機限制保持完整。本PASS僅為計畫准入查核，不證明實作或整體交付通過。",
+  "evidence": "projects/workflow-hub/records/plan-review-v2.md"
+}

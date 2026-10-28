@@ -1,0 +1,48 @@
+{
+  "submission": {
+    "base_commit": "c670ae2dc345f3e2d870b60b57bf6840eee53c7c",
+    "commit": "d75e09c36a945c6d82d4b59de2f6365f1743367c",
+    "tree": "8980fffa679aad0b3a3a45d304859289fa425731",
+    "changed_paths": [
+      "AGENTS.md",
+      "README.md",
+      "docs/WORKFLOW.md",
+      "library/README.md",
+      "library/git_tasks.py",
+      "library/playbooks/integrate.json",
+      "library/roles.json",
+      "projects/workflow-hub/records/USER_GIT_TASKS.md",
+      "projects/workflow-hub/records/VALIDATION-v2.md",
+      "projects/workflow-hub/records/build-files-v2.json",
+      "projects/workflow-hub/records/build-host-receipt-v2.json",
+      "projects/workflow-hub/records/git-bootstrap.json",
+      "projects/workflow-hub/records/git-integration-v2.json",
+      "projects/workflow-hub/records/git-role-source.toml",
+      "projects/workflow-hub/records/source-apply-v2.json",
+      "projects/workflow-hub/records/test-output-v2.txt",
+      "tests/fixtures/workbench-pre-git.py",
+      "tests/test_workbench.py",
+      "workbench.py"
+    ]
+  },
+  "authors": {
+    "git-runtime": {
+      "workspace": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/git-runtime",
+      "branch": "codex/workflow-hub/git-runtime-1",
+      "head": "f7b223684d8be17a7a813d2f95e2c6651a26cb5b"
+    },
+    "git-tests-docs": {
+      "workspace": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/git-tests-docs",
+      "branch": "codex/workflow-hub/git-tests-docs-1",
+      "head": "6f0e5477e9800a24140aee1531b2e38053d11900"
+    }
+  },
+  "review_worktree": "/Users/ray.shao/workflow/projects/workflow-hub/tasks/build-review-25143b5ba30d45b8be53647392a9a68b",
+  "review_head": "d75e09c36a945c6d82d4b59de2f6365f1743367c",
+  "review_detached": true,
+  "source_HEAD_unchanged": true,
+  "source_index_unchanged": true,
+  "source_index_sha256": "eaea3723534e75eb55e9949b25d01b2efe8a7a05595aae4f9647ce48ea1525e9",
+  "tree_and_changed_paths_verified": true,
+  "git_worktrees": "worktree /Users/ray.shao/workflow/projects/workflow-hub/.workflow/git\nbare\n\nworktree /Users/ray.shao/workflow/projects/workflow-hub/tasks/build-review-25143b5ba30d45b8be53647392a9a68b\nHEAD d75e09c36a945c6d82d4b59de2f6365f1743367c\ndetached\n\nworktree /Users/ray.shao/workflow/projects/workflow-hub/tasks/git-runtime\nHEAD f7b223684d8be17a7a813d2f95e2c6651a26cb5b\nbranch refs/heads/codex/workflow-hub/git-runtime-1\n\nworktree /Users/ray.shao/workflow/projects/workflow-hub/tasks/git-tests-docs\nHEAD 6f0e5477e9800a24140aee1531b2e38053d11900\nbranch refs/heads/codex/workflow-hub/git-tests-docs-1\n\nworktree /Users/ray.shao/workflow/projects/workflow-hub/tasks/integration-v2\nHEAD d75e09c36a945c6d82d4b59de2f6365f1743367c\nbranch refs/heads/codex/workflow-hub/bootstrap-integration-v2"
+}

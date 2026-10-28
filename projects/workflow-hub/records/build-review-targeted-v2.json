@@ -1,0 +1,20 @@
+[
+  {
+    "case": "conflict resolution resumes original Attempt and integrated Proof/apply",
+    "result": "PASS",
+    "same_attempt": true,
+    "project_state": "DONE"
+  },
+  {
+    "case": "first FAIL repair branches from rejected fixed commit and keeps two rounds",
+    "result": "PASS",
+    "round": 2,
+    "submissions": 2
+  },
+  {
+    "case": "prepare accepted leaf and receipt carried into next delivery plan",
+    "result": "PASS",
+    "fixed_previous_commit": "f2be3f4ba74cce023d9e49193d9ec12bf783c44c",
+    "input_receipt_present": true
+  }
+]

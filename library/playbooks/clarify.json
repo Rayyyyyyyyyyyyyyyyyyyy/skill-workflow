@@ -1,0 +1,34 @@
+{
+  "id": "clarify",
+  "version": 1,
+  "purpose": "把仍有關鍵歧義的原始想法整理成下一步可接手的需求契約。",
+  "applies_when": "目標、範圍、交付終點或驗收存在會改變方向的未知。需求已足夠時直接選用適用工作，不重複訪談。",
+  "roles": ["planner"],
+  "required_inputs": ["原始想法及來源", "已有資料與決策", "已知限制與允許的工作範圍"],
+  "stages": [
+    {
+      "id": "understand",
+      "action": "閱讀原始要求與已有資料，找出真正阻擋下一步的決策；可自行查明的事實由 Agent 查明。",
+      "outputs": ["原始要求清單與來源位置", "已有決策、假設與關鍵缺口"],
+      "stop_when": "原始來源不可取得或互相衝突時，保存可定位缺口並等待。"
+    },
+    {
+      "id": "resolve",
+      "action": "按決策依賴提出必要問題，記錄使用者的回答；需要研究或原型時只提出有範圍的候選工作，由控制層安排。",
+      "outputs": ["有來源的決策紀錄", "未解問題及下一步候選"],
+      "stop_when": "需要使用者決定的方向、範圍或授權尚未有答案；不代替使用者回答。"
+    },
+    {
+      "id": "handoff",
+      "action": "交付原始要求映射、交付終點、限制、驗收方法與必要輸入，標出已確認項與仍待決項。",
+      "outputs": ["可接手的需求 brief", "後續工作的建議與理由"],
+      "stop_when": "必要決策未定時只交付釐清結果與缺口，不宣稱後續工作已可開工。"
+    }
+  ],
+  "required_criteria": [
+    {"id": "source", "description": "brief 逐項保留原始要求與來源，沒有把假設寫成使用者決定。", "method": "independent_review"},
+    {"id": "decisions", "description": "方向性決策可追溯至使用者回答；未解問題有影響、負責決策者與恢復條件。", "method": "independent_review"},
+    {"id": "handoff", "description": "交付包含目標、範圍、限制、終點、驗收依據及下一步所需資料；缺口明列且未被自動補成既定需求。", "method": "independent_review"}
+  ],
+  "handoff_fields": ["original_requirements", "decisions", "assumptions", "constraints", "acceptance_basis", "unknowns", "next_action"]
+}

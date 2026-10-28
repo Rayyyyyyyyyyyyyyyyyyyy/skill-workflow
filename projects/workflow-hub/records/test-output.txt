@@ -1,0 +1,246 @@
+WORKFLOW HUB BUILD VALIDATION
+Actor: /root/proof_review (author/integrator, not independent reviewer)
+Working directory: /Users/ray.shao/workflow
+Default interpreter: /Library/Frameworks/Python.framework/Versions/3.14/bin/python3
+Python version: 3.14.0 (v3.14.0:ebf955df7a8, Oct  7 2025, 08:20:14) [Clang 16.0.0 (clang-1600.0.26.6)]
+
+CHECK: new workbench public behavior suite
+CWD: /Users/ray.shao/workflow
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+
+STDERR:
+test_attempt_budget_must_be_positive_bounded_and_an_integer (test_workbench.WorkbenchTests.test_attempt_budget_must_be_positive_bounded_and_an_integer) ... ok
+test_author_and_contributors_cannot_review_their_submission (test_workbench.WorkbenchTests.test_author_and_contributors_cannot_review_their_submission) ... ok
+test_author_must_be_host_confirmed_stopped_before_submission (test_workbench.WorkbenchTests.test_author_must_be_host_confirmed_stopped_before_submission) ... ok
+test_cancelled_project_cannot_accept_a_late_pass (test_workbench.WorkbenchTests.test_cancelled_project_cannot_accept_a_late_pass) ... ok
+test_checkpoint_survives_pause_and_old_attempt_cannot_submit (test_workbench.WorkbenchTests.test_checkpoint_survives_pause_and_old_attempt_cannot_submit) ... ok
+test_clear_request_completes_only_after_independent_proof_acceptance (test_workbench.WorkbenchTests.test_clear_request_completes_only_after_independent_proof_acceptance) ... ok
+test_cli_help_new_list_and_status_work_from_another_directory (test_workbench.WorkbenchTests.test_cli_help_new_list_and_status_work_from_another_directory) ... ok
+test_dispatch_uses_pinned_role_and_skill_contents_after_source_changes (test_workbench.WorkbenchTests.test_dispatch_uses_pinned_role_and_skill_contents_after_source_changes) ... ok
+test_dispatch_uses_pinned_supporting_source_after_original_changes (test_workbench.WorkbenchTests.test_dispatch_uses_pinned_supporting_source_after_original_changes) ... ok
+test_duplicate_project_creation_preserves_existing_idea_and_files (test_workbench.WorkbenchTests.test_duplicate_project_creation_preserves_existing_idea_and_files) ... ok
+test_fabricated_evidence_cannot_satisfy_acceptance (test_workbench.WorkbenchTests.test_fabricated_evidence_cannot_satisfy_acceptance) ... ok
+test_failed_plan_reviews_are_saved_deduplicated_and_survive_replanning_and_restart (test_workbench.WorkbenchTests.test_failed_plan_reviews_are_saved_deduplicated_and_survive_replanning_and_restart) ... ok
+test_malformed_plan_shapes_are_rejected_without_changing_project_state (test_workbench.WorkbenchTests.test_malformed_plan_shapes_are_rejected_without_changing_project_state) ... ok
+test_malformed_reports_files_and_contributor_shapes_are_rejected (test_workbench.WorkbenchTests.test_malformed_reports_files_and_contributor_shapes_are_rejected) ... ok
+test_missing_input_is_saved_without_starting_an_author (test_workbench.WorkbenchTests.test_missing_input_is_saved_without_starting_an_author) ... ok
+test_missing_role_or_skill_source_prevents_plan_admission (test_workbench.WorkbenchTests.test_missing_role_or_skill_source_prevents_plan_admission) ... ok
+test_missing_supporting_source_prevents_plan_admission (test_workbench.WorkbenchTests.test_missing_supporting_source_prevents_plan_admission) ... ok
+test_only_accepted_upstream_unlocks_followup (test_workbench.WorkbenchTests.test_only_accepted_upstream_unlocks_followup) ... ok
+test_pause_resume_and_actor_changes_cannot_reset_four_attempt_limit (test_workbench.WorkbenchTests.test_pause_resume_and_actor_changes_cannot_reset_four_attempt_limit) ... ok
+test_plan_approval_rejects_self_review_and_nonexistent_evidence (test_workbench.WorkbenchTests.test_plan_approval_rejects_self_review_and_nonexistent_evidence) ... ok
+test_plan_contributor_cannot_approve_the_plan (test_workbench.WorkbenchTests.test_plan_contributor_cannot_approve_the_plan) ... ok
+test_plan_must_be_independently_approved_before_dispatch (test_workbench.WorkbenchTests.test_plan_must_be_independently_approved_before_dispatch) ... ok
+test_plan_rejects_dependency_cycle (test_workbench.WorkbenchTests.test_plan_rejects_dependency_cycle) ... ok
+test_plan_rejects_uncovered_original_requirement (test_workbench.WorkbenchTests.test_plan_rejects_uncovered_original_requirement) ... ok
+test_plan_rejects_unknown_playbook_and_role (test_workbench.WorkbenchTests.test_plan_rejects_unknown_playbook_and_role) ... ok
+test_preparation_delivery_does_not_claim_the_original_project_is_finished (test_workbench.WorkbenchTests.test_preparation_delivery_does_not_claim_the_original_project_is_finished) ... ok
+test_previous_revision_authors_cannot_review_a_later_revision (test_workbench.WorkbenchTests.test_previous_revision_authors_cannot_review_a_later_revision) ... ok
+test_process_restart_preserves_submission_and_review_round (test_workbench.WorkbenchTests.test_process_restart_preserves_submission_and_review_round) ... ok
+test_project_names_cannot_escape_collection (test_workbench.WorkbenchTests.test_project_names_cannot_escape_collection) ... ok
+test_project_state_is_persistent_sqlite_and_readable_after_restart (test_workbench.WorkbenchTests.test_project_state_is_persistent_sqlite_and_readable_after_restart) ... ok
+test_replayed_submission_and_acceptance_do_not_create_another_round (test_workbench.WorkbenchTests.test_replayed_submission_and_acceptance_do_not_create_another_round) ... ok
+test_review_cannot_omit_or_duplicate_a_required_acceptance (test_workbench.WorkbenchTests.test_review_cannot_omit_or_duplicate_a_required_acceptance) ... ok
+test_review_recovery_cannot_reset_the_retry_limit_or_round (test_workbench.WorkbenchTests.test_review_recovery_cannot_reset_the_retry_limit_or_round) ... ok
+test_review_rejects_old_submission_or_contract_bindings (test_workbench.WorkbenchTests.test_review_rejects_old_submission_or_contract_bindings) ... ok
+test_submission_rejects_missing_outside_and_symlinked_files (test_workbench.WorkbenchTests.test_submission_rejects_missing_outside_and_symlinked_files) ... ok
+test_tampered_mandatory_policy_prevents_plan_admission (test_workbench.WorkbenchTests.test_tampered_mandatory_policy_prevents_plan_admission) ... ok
+test_tampered_sealed_artifact_cannot_be_accepted (test_workbench.WorkbenchTests.test_tampered_sealed_artifact_cannot_be_accepted) ... ok
+test_two_failed_rounds_preserve_history_and_block_a_third_author (test_workbench.WorkbenchTests.test_two_failed_rounds_preserve_history_and_block_a_third_author) ... ok
+test_unknown_waits_on_same_review_and_keeps_known_failures (test_workbench.WorkbenchTests.test_unknown_waits_on_same_review_and_keeps_known_failures) ... ok
+test_workspace_mutation_does_not_replace_the_reviewed_submission (test_workbench.WorkbenchTests.test_workspace_mutation_does_not_replace_the_reviewed_submission) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.806s
+
+OK
+
+
+CHECK: static syntax, contract JSON, source availability and current-entry links
+CWD: /Users/ray.shao/workflow
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '-c', "from pathlib import Path\nimport ast, json, re, tomllib, hashlib\nroot=Path.cwd()\nfor name in ('workbench.py','tests/test_workbench.py'):\n ast.parse((root/name).read_text(encoding='utf-8'),filename=name)\nprint('AST parsing: 2 Python files PASS')\njson_paths=sorted((root/'library').rglob('*.json'))+sorted((root/'projects/workflow-hub/records').glob('plan*.json'))\nfor path in json_paths: json.loads(path.read_text(encoding='utf-8'))\nprint('JSON parsing:',len(json_paths),'library/plan/review files PASS')\nroles=json.loads((root/'library/roles.json').read_text())['roles']\nsource_count=0\nfor profile in roles.values():\n for source in [profile['source'],*profile.get('skills',[])]:\n  path=Path(source['path']).expanduser()\n  if not path.is_absolute():path=root/path\n  assert path.is_file(),str(path)\n  text=path.read_text()\n  if source.get('format')=='toml':assert tomllib.loads(text).get('developer_instructions'),str(path)\n  else:assert text.strip(),str(path)\n  source_count+=1\nprint('Configured Role/Skill source files:',source_count,'present and readable; this is not semantic certification')\npolicy=json.loads((root/'runtime-reference/config/global-policy.json').read_text())['required_policies'][0]\nassert hashlib.sha256((root/'runtime-reference'/policy['source_path']).read_bytes()).hexdigest()==policy['policy_sha256']\nprint('P00 pinned file digest PASS')\nlinks=0\nfor name in ('AGENTS.md','README.md','docs/WORKFLOW.md','library/README.md'):\n path=root/name\n content=re.sub(r'```.*?```','',path.read_text(),flags=re.S)\n for target in re.findall(r'\\]\\(([^)]+)\\)',content):\n  if '://' in target or target.startswith('#'):continue\n  target=target.split('#')[0]\n  assert (path.parent/target).exists(),f'{name}: {target}'\n  links+=1\nprint('Current-entry local Markdown targets:',links,'PASS')\nprint('Historical docs/playbook links to deleted workflow-mvp are intentionally not counted as current executable entrypoints')\n"]
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+AST parsing: 2 Python files PASS
+JSON parsing: 10 library/plan/review files PASS
+Configured Role/Skill source files: 13 present and readable; this is not semantic certification
+P00 pinned file digest PASS
+Current-entry local Markdown targets: 9 PASS
+Historical docs/playbook links to deleted workflow-mvp are intentionally not counted as current executable entrypoints
+
+STDERR:
+
+
+CHECK: CLI help from another working directory
+CWD: /var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '/Users/ray.shao/workflow/workbench.py', '--root', '/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x', '--help']
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+usage: workbench.py [-h] [--root ROOT]
+                    {list,new,plan,approve-plan,dispatch,checkpoint,pause,resume,submit,review-start,review,accept,cancel,status} ...
+
+Trusted local workflow control. Codex supplies authors and independent
+reviewers. This module controls its own records, not OS permissions or
+external side effects. Only the host controller should call mutation commands;
+actor IDs are host receipts, not authentication credentials. Python 3.11+,
+standard library only.
+
+positional arguments:
+  {list,new,plan,approve-plan,dispatch,checkpoint,pause,resume,submit,review-start,review,accept,cancel,status}
+
+options:
+  -h, --help            show this help message and exit
+  --root ROOT
+
+STDERR:
+
+
+CHECK: CLI create temporary project
+CWD: /var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '/Users/ray.shao/workflow/workbench.py', '--root', '/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x', 'new', 'cli-smoke', '--idea', 'Create a local project brief.']
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+{
+  "id": "cli-smoke",
+  "idea": "Create a local project brief.",
+  "state": "PLANNING",
+  "created_at": "2026-10-28T07:09:59.913401+00:00",
+  "tasks": {},
+  "history": []
+}
+
+STDERR:
+
+
+CHECK: CLI list temporary projects
+CWD: /var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '/Users/ray.shao/workflow/workbench.py', '--root', '/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x', 'list']
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+[
+  {
+    "id": "cli-smoke",
+    "state": "PLANNING"
+  }
+]
+
+STDERR:
+
+
+CHECK: CLI read temporary project state
+CWD: /var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '/Users/ray.shao/workflow/workbench.py', '--root', '/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workbench-final-cli-mpo1kw5x', 'status', 'cli-smoke']
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+{
+  "created_at": "2026-10-28T07:09:59.913401+00:00",
+  "history": [],
+  "id": "cli-smoke",
+  "idea": "Create a local project brief.",
+  "state": "PLANNING",
+  "tasks": {}
+}
+
+STDERR:
+
+
+CHECK: default Python jsonschema availability
+CWD: /Users/ray.shao/workflow
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '-c', "import importlib.util; print('jsonschema available:', importlib.util.find_spec('jsonschema') is not None)"]
+ENV: PYTHONDONTWRITEBYTECODE=1
+EXIT: 0
+STDOUT:
+jsonschema available: False
+
+STDERR:
+
+
+CHECK: legacy reference contract/policy tests (separate scope)
+CWD: /Users/ray.shao/workflow/runtime-reference
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+ENV: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/Users/ray.shao/.cache/uv/archive-v0/Depu0yVg4JfGhgkV:/Users/ray.shao/.cache/uv/archive-v0/MulVd0rSLIZnSzCA:/Users/ray.shao/.cache/uv/archive-v0/WmRcLH8TLSQxZvZ2:/Users/ray.shao/.cache/uv/archive-v0/G2IZkS4kkjIwnGGj:/Users/ray.shao/.cache/uv/archive-v0/edvkpj65ZixuQu1-
+EXIT: 0
+STDOUT:
+
+STDERR:
+test_cancel_fence_before_cleanup (test_contracts.ContractTests.test_cancel_fence_before_cleanup) ... ok
+test_cancelled_attempt_cannot_pass_qa (test_contracts.ContractTests.test_cancelled_attempt_cannot_pass_qa) ... ok
+test_evidence_not_a_self_attestation (test_contracts.ContractTests.test_evidence_not_a_self_attestation) ... ok
+test_hard_scope_only_identifiers_paths_budget (test_contracts.ContractTests.test_hard_scope_only_identifiers_paths_budget) ... ok
+test_high_risk_requires_security (test_contracts.ContractTests.test_high_risk_requires_security) ... ok
+test_immutable_sha_gate (test_contracts.ContractTests.test_immutable_sha_gate) ... ok
+test_job_ready_before_first_attempt (test_contracts.ContractTests.test_job_ready_before_first_attempt) ... ok
+test_late_old_attempt_result_rejected (test_contracts.ContractTests.test_late_old_attempt_result_rejected) ... ok
+test_non_llm_issuer_required (test_contracts.ContractTests.test_non_llm_issuer_required) ... ok
+test_old_a2a_v1_rejected (test_contracts.ContractTests.test_old_a2a_v1_rejected) ... ok
+test_scope_semantics_not_claimed_by_path_checks (test_contracts.ContractTests.test_scope_semantics_not_claimed_by_path_checks) ... ok
+test_skill_single_owner_by_execution_mode (test_contracts.ContractTests.test_skill_single_owner_by_execution_mode) ... ok
+test_valid_fixtures (test_contracts.ContractTests.test_valid_fixtures) ... ok
+test_bootstrap_missing_policy_fails_closed (test_grounded_policy.GroundedPolicyTests.test_bootstrap_missing_policy_fails_closed) ... ok
+test_claim_scope_mismatch (test_grounded_policy.GroundedPolicyTests.test_claim_scope_mismatch) ... ok
+test_fabricated_evidence_ref_not_accepted (test_grounded_policy.GroundedPolicyTests.test_fabricated_evidence_ref_not_accepted) ... ok
+test_fact_without_evidence_rejected (test_grounded_policy.GroundedPolicyTests.test_fact_without_evidence_rejected) ... ok
+test_inference_without_premise_ref_rejected (test_grounded_policy.GroundedPolicyTests.test_inference_without_premise_ref_rejected) ... ok
+test_policy_mandatory_and_default_denied_override (test_grounded_policy.GroundedPolicyTests.test_policy_mandatory_and_default_denied_override) ... ok
+test_schema_valid_unknown (test_grounded_policy.GroundedPolicyTests.test_schema_valid_unknown) ... ok
+test_supported_cannot_ignore_material_contradictions (test_grounded_policy.GroundedPolicyTests.test_supported_cannot_ignore_material_contradictions) ... ok
+test_tampered_policy_digest_fails_closed (test_grounded_policy.GroundedPolicyTests.test_tampered_policy_digest_fails_closed) ... ok
+test_unverified_may_not_pretend_supported (test_grounded_policy.GroundedPolicyTests.test_unverified_may_not_pretend_supported) ... ok
+test_verified_ref_still_not_semantic_proof (test_grounded_policy.GroundedPolicyTests.test_verified_ref_still_not_semantic_proof) ... ok
+test_wrong_attempt_rejected (test_grounded_policy.GroundedPolicyTests.test_wrong_attempt_rejected) ... ok
+test_wrong_policy_version_rejected_by_schema (test_grounded_policy.GroundedPolicyTests.test_wrong_policy_version_rejected_by_schema) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.011s
+
+OK
+
+
+CHECK: legacy durable reference tests (separate scope)
+CWD: /Users/ray.shao/workflow/runtime-reference/durable-runtime
+COMMAND: ['/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13', '-m', 'unittest', 'discover', '-s', '.', '-p', 'test_*.py', '-v']
+ENV: PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/Users/ray.shao/.cache/uv/archive-v0/Depu0yVg4JfGhgkV:/Users/ray.shao/.cache/uv/archive-v0/MulVd0rSLIZnSzCA:/Users/ray.shao/.cache/uv/archive-v0/WmRcLH8TLSQxZvZ2:/Users/ray.shao/.cache/uv/archive-v0/G2IZkS4kkjIwnGGj:/Users/ray.shao/.cache/uv/archive-v0/edvkpj65ZixuQu1-
+EXIT: 0
+STDOUT:
+
+STDERR:
+test_cross_repo_dependency_and_parallel_independent_jobs (test_reference_store.DurableStoreContractTests.test_cross_repo_dependency_and_parallel_independent_jobs) ... ok
+test_duplicate_claim_denied (test_reference_store.DurableStoreContractTests.test_duplicate_claim_denied) ... ok
+test_events_survive_restart (test_reference_store.DurableStoreContractTests.test_events_survive_restart) ... ok
+test_expired_lease_quarantined_until_worker_stop_certified (test_reference_store.DurableStoreContractTests.test_expired_lease_quarantined_until_worker_stop_certified) ... ok
+test_no_empty_checkpoint_or_result (test_reference_store.DurableStoreContractTests.test_no_empty_checkpoint_or_result) ... ok
+test_session_close_and_restart_rehydrates_logical_agent_progress (test_reference_store.DurableStoreContractTests.test_session_close_and_restart_rehydrates_logical_agent_progress) ... ok
+test_wrong_agent_role_denied (test_reference_store.DurableStoreContractTests.test_wrong_agent_role_denied) ... ok
+test_checkpoint (test_schemas.DurableSchemaTests.test_checkpoint) ... ok
+test_multi_repo (test_schemas.DurableSchemaTests.test_multi_repo) ... ok
+test_session (test_schemas.DurableSchemaTests.test_session) ... ok
+test_reject_cycle (test_validate_plan.MultiRepoGraphTests.test_reject_cycle) ... ok
+test_reject_duplicate_job (test_validate_plan.MultiRepoGraphTests.test_reject_duplicate_job) ... ok
+test_reject_unknown_dependency (test_validate_plan.MultiRepoGraphTests.test_reject_unknown_dependency) ... ok
+test_reject_unknown_repo (test_validate_plan.MultiRepoGraphTests.test_reject_unknown_repo) ... ok
+test_valid_plan (test_validate_plan.MultiRepoGraphTests.test_valid_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.088s
+
+OK
+
+
+SUMMARY:
+new workbench public behavior suite: PASS
+static syntax, contract JSON, source availability and current-entry links: PASS
+CLI help from another working directory: PASS
+CLI create temporary project: PASS
+CLI list temporary projects: PASS
+CLI read temporary project state: PASS
+default Python jsonschema availability: PASS
+legacy reference contract/policy tests (separate scope): PASS
+legacy durable reference tests (separate scope): PASS
