@@ -1,0 +1,6 @@
+{
+  "runtime_baseline_commit": "6dfe977d0dc53a90fb7a7ef7d93bdb1ffed1857c",
+  "validation_workspace": "/var/folders/fh/6chnhm7x76l6dbxgghp4qw2w0000gp/T/workflow-cloud-validation-nu8szlf5",
+  "candidate_workspace": "/Users/ray.shao/workflow/projects/claude-cloud-portability/tasks/package-d853fd8df319419d9e0658cd1c74c3f7",
+  "method": "git archive fixed main commit, overlay only candidate source/docs/skills/tests; no external method installs."
+}

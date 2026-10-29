@@ -2,9 +2,11 @@
 
 這份文件定義當前入口與交接方式。共用 Playbook 定義在 [library](../library/)，專案正式狀態由 `workbench.py` 管理。原 `docs/playbook/` 保留較完整的目標架構；尚未落實的 Runner 隔離及外部操作能力不因本版出現而視為完成。
 
+GitHub 雲端 clone 或換電腦先讀 [Claude 雲端接手](CLAUDE_CLOUD.md)。目前 Role／Skills 隨 repo 保存，來源清單與版本見 `.claude/methods-manifest.json`。
+
 ## 執行模式
 
-現有 Codex 對話／協作 Agent 是實際執行者；可信控制者核對使用者授權、實際 host Agent 身分與停止訊號，再操作本機 Python 命令。`--actor` 與 `--stopped` 是控制者的紀錄，不是外部身分認證或 OS 程序終止機制。
+現有 Claude Code／Codex 對話與協作 Agent 是實際執行者；可信控制者核對使用者授權、實際 host Agent 身分與停止訊號，再操作本機 Python 命令。`--actor` 與 `--stopped` 是控制者的紀錄，不是外部身分認證或 OS 程序終止機制。
 
 控制程式使用 Python 標準庫與本機 Git，檢查結構、固定 Git 版本、必要證據與依賴；Agent 提供需求理解與語意查核。本版是受信任的本機協作：控制資料與作者同在一個 OS 帳號下，不能宣稱能隔離惡意 Agent。
 
@@ -15,7 +17,7 @@
 先列出既有 Projects。使用者指定既有專案就接續；只有新目標才建立新 Project。歸屬不明且會影響既有成果時才詢問。
 
 ```sh
-WORKBENCH_ROOT=/Users/ray.shao/workflow
+WORKBENCH_ROOT="$(pwd -P)"  # 在集合根目錄執行；不是 task worktree
 python3 "$WORKBENCH_ROOT/workbench.py" --root "$WORKBENCH_ROOT" list
 python3 "$WORKBENCH_ROOT/workbench.py" --root "$WORKBENCH_ROOT" new csv-export --idea "修正 CSV 空資料匯出漏掉標題列，交付本機可驗收版本"
 python3 "$WORKBENCH_ROOT/workbench.py" --root "$WORKBENCH_ROOT" status csv-export
@@ -40,11 +42,14 @@ Agent 先讀原始需求、決策與已有成果。需求足夠時應能說明�
 | 情境 | 下一步 | 必須保留的依據 |
 |---|---|---|
 | 目標、交付與驗收清楚 | 直接安排適用的研究、設計或交付 Playbook | 需求映射；略過前置工作的理由 |
+| 使用者想討論、想法仍是種子 | clarify／planner，以 grilling 分輪探索方向 | 討論決策樹、使用者回答、候選方向、未決問題與下一輪 frontier |
 | 缺使用者才能決定的關鍵資訊 | 釐清後保存問題並等待 | 未決問題、方向影響與恢復條件 |
 | 缺可查證的事實 | 研究 | 調查問題、來源要求與驗收範圍 |
 | 需要具體可操作的答案 | 在適用 Playbook 內做有界原型 | 要回答的問題、原型限制與結論 |
 | 既有設計不足以實作 | 設計 | 核心流程、必要狀態與工程接手要求 |
 | 沒有適用方法、必要權限或資源 | 保存缺口並等待 | 缺少的能力、所需決策及已保存成果 |
+
+討論使用既有 `grilling` 方法；在 Project 中用 `grill-with-docs` 搭配 `domain-modeling` 保存決策。每輪只問前置決策已定的問題，提供建議並等待使用者回答；使用者確認已達共同理解後，才結束討論並銜接後續計畫。`grill-me` 本身不保存文件，需跨 session 的 Project 優先選有紀錄的入口。
 
 選路是 Agent 的可追查判斷，CLI 不靠關鍵字宣稱理解自然語言。使用者直接提出的想法不受商業價值門檻阻擋；Agent 自行發現的機會不能冒用使用者來源開工，需另有商業評估與採納依據。
 

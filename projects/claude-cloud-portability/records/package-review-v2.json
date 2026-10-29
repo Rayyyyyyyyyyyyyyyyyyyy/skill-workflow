@@ -1,0 +1,78 @@
+{
+  "review_id": "ea1be8d6a54645ddac5f720126d33f92",
+  "round": 2,
+  "reviewer": "/root/claude_portability_review",
+  "submission_digest": "6a98db2430888043069421e54c8a9b94f22e156a179289e8993eda46bc2a9282",
+  "contract_digest": "c38bdeb23c6742912c0d3aed42851d7b8e0f5c35a25c510fa018e1f2c20dfffe",
+  "baseline_digest": "a4b6b875c4147a536d63b5358d4bdadd11e9f6d332cab58f792ad1060a2d69c4",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/claude-cloud-portability/records/package-review-v2.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "R1-check",
+      "status": "PASS",
+      "reason": "Unchanged entry and shared workflow preserve the six-step contract, discussion methods, independent Proof and safety protections; actual cloud activation remains explicitly untested.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R2-check",
+      "status": "PASS",
+      "reason": "Exact Ponytail license notice now preserved with matching frozen evidence hash and source/shipped manifest provenance; all 105 packaged method files covered and valid.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R3-check",
+      "status": "PASS",
+      "reason": "Unchanged dynamic-root cloud guidance separates GitHub documents from ignored official state and provides safe identity/worktree/session handoff boundaries.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R4-check",
+      "status": "PASS",
+      "reason": "Prior independent empty-HOME relocation and 51 tests support unchanged functional files; final three-path delta, checker and all method/submission hashes independently verified; external checks remain NOT_RUN.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-requirements",
+      "status": "PASS",
+      "reason": "R1–R4 now covered; the single missing-license deliverable F1 was repaired without expanding scope or weakening acceptance.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-integrity",
+      "status": "PASS",
+      "reason": "Full upstream copyright/permission notice retained byte-for-byte; delta confirms no functional method/runtime changes or new data/permission behavior.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-verification",
+      "status": "PASS",
+      "reason": "Fixed-input functional evidence remains applicable to unchanged code, and final license/manifest checks were rerun; prior test results are not misrepresented as a new v2 suite run.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-handoff",
+      "status": "PASS",
+      "reason": "Entry, usage, provenance, verification limits and GitHub publication prerequisite are explicit; reviewer PASS does not claim publication or actual Claude cloud execution.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

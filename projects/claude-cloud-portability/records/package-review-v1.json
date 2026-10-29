@@ -1,0 +1,78 @@
+{
+  "review_id": "01f4ffde8aa9495484397dba156bd5cb",
+  "round": 1,
+  "reviewer": "/root/claude_portability_review",
+  "submission_digest": "a55224e8eeb8b942d00744012c40010b4a8c110e88fb32625edb1a48af810fa7",
+  "contract_digest": "c38bdeb23c6742912c0d3aed42851d7b8e0f5c35a25c510fa018e1f2c20dfffe",
+  "baseline_digest": "a4b6b875c4147a536d63b5358d4bdadd11e9f6d332cab58f792ad1060a2d69c4",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/claude-cloud-portability/records/package-review-v1.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "R1-check",
+      "status": "PASS",
+      "reason": "Read actual Claude/AGENTS/workflow entry and checked native metadata against primary docs; existing method/Proof/safety contract preserved, actual platform loading explicitly untested.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R2-check",
+      "status": "FAIL",
+      "reason": "F1: the full copied Ponytail Skill has only license: MIT; upstream package copyright/permission notice is absent from shipped files and manifest.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R3-check",
+      "status": "PASS",
+      "reason": "Current roots are dynamic; cloud guide distinguishes GitHub files from ignored official state and protects historical Projects/identity/task workspace handoff.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R4-check",
+      "status": "PASS",
+      "reason": "Independently reconstructed fixed main archive plus candidate under new root/empty HOME; checker, 51 tests and Python/Node support commands passed, cloud/browser excluded explicitly.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-requirements",
+      "status": "FAIL",
+      "reason": "F1 leaves explicit R2 license-preservation requirement incomplete.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-integrity",
+      "status": "FAIL",
+      "reason": "F1 drops applicable upstream Ponytail copyright/permission notice while package docs claim source licenses retained.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-verification",
+      "status": "PASS",
+      "reason": "Candidate-bound independent local tests cover real moved sources and failure behavior; results and external NOT_RUN limits are explicit; passing tests do not override F1.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-package-handoff",
+      "status": "PASS",
+      "reason": "Fixed package has discoverable entry, usage, provenance, verification/limitations and GitHub publication prerequisites without author chat or false formal acceptance.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

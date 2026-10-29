@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "purpose": "Pinned repo-used methods for Claude/GitHub portability; not an execution-state backup.",
+  "packages": {
+    "role:planner": {
+      "origin": "installed Agency Agents / product-manager.toml",
+      "upstream_sha256": "e2e08d900c4ae7f6191d234a6ff4c980a38d8d92fbd7209252f7f8666b5711f8",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "skill:grilling": {
+      "origin": "installed grilling",
+      "upstream_files": {
+        "SKILL.md": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "skill:domain-modeling": {
+      "origin": "installed domain-modeling",
+      "upstream_files": {
+        "ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+        "GLOSSARY-FORMAT.md": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+        "SKILL.md": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "role:researcher": {
+      "origin": "installed Agency Agents / research-synthesist.toml",
+      "upstream_sha256": "95640c34667b5bc3f482e93c35b25aab7683057169b3c78a010bb1cd6cbfcdb1",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "skill:research": {
+      "origin": "installed research",
+      "upstream_files": {
+        "SKILL.md": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "role:designer": {
+      "origin": "installed Agency Agents / ui-designer.toml",
+      "upstream_sha256": "3cdf149facb7059f1f4ef9a9900c87b0c24d905d20c207e35b1d59e65ce60c81",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "skill:ui-ux-pro-max": {
+      "origin": "installed ui-ux-pro-max",
+      "upstream_files": {
+        "LICENSE": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+        "SKILL.md": "f39f139f56cc2c4d1565edeca91fb1bcfff395e74aee40a6aadb30fea7703a8e",
+        "data/app-interface.csv": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+        "data/catalog-summary.json": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894",
+        "data/charts.csv": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+        "data/colors.csv": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+        "data/data-provenance.json": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+        "data/google-font-licenses.json": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+        "data/google-fonts.csv": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+        "data/icons.csv": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+        "data/landing.csv": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+        "data/motion.csv": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+        "data/phosphor-icons-upstream.json": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+        "data/products.csv": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+        "data/react-performance.csv": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+        "data/stacks/angular.csv": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+        "data/stacks/astro.csv": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+        "data/stacks/avalonia.csv": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+        "data/stacks/flutter.csv": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+        "data/stacks/html-tailwind.csv": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+        "data/stacks/javafx.csv": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+        "data/stacks/jetpack-compose.csv": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+        "data/stacks/laravel.csv": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+        "data/stacks/nextjs.csv": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+        "data/stacks/nuxt-ui.csv": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6",
+        "data/stacks/nuxtjs.csv": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+        "data/stacks/react-native.csv": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+        "data/stacks/react.csv": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+        "data/stacks/shadcn.csv": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+        "data/stacks/svelte.csv": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+        "data/stacks/swiftui.csv": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+        "data/stacks/threejs.csv": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+        "data/stacks/uno.csv": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+        "data/stacks/uwp.csv": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+        "data/stacks/vue.csv": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+        "data/stacks/winui.csv": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+        "data/stacks/wpf.csv": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+        "data/styles.csv": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+        "data/typography.csv": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+        "data/ui-reasoning.csv": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+        "data/ux-guidelines.csv": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+        "references/pro-rules.md": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+        "references/quick-reference.md": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+        "scripts/core.py": "c3be4b23e7150e6b45095213158cfa3c8ad96502f01dde3f6ffff9de64a4f481",
+        "scripts/design_system.py": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103",
+        "scripts/reasoning_contract.py": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+        "scripts/search.py": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374",
+        "scripts/validate_data.py": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8"
+      },
+      "adaptations": [
+        "Repo-relative python3 search commands."
+      ],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "skill:design-taste-frontend": {
+      "origin": "installed design-taste-frontend",
+      "upstream_files": {
+        "LICENSE": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+        "README.md": "5e33fd716b3e1ffaca9340f645d44c193f9b446107fa67f0cce498d33025672c",
+        "SKILL.md": "4eaeadcd0cc03ec354a4002fb4ebc2a479aa20a65b8c8a20846bb294b1074d51",
+        "assets/app.css": "16518c3a999fb81b2698137f1f743128c189272e8b1d411c4b02598c6755b67f",
+        "assets/base.css": "aa6ea21613c79e06e06dea3d33200c78590c89b0346bb976ec07947bb45ceafa",
+        "assets/base.js": "8d50416125596b84c0083d5d5ffba09add57db4b06cbf0eedac2d4999b7653bc",
+        "assets/charts.js": "89071120bd09eb276d9e568bab433ed035ea8b3a1b72750a1fa204a63e3d4ab4",
+        "assets/scenes/stage.css": "b5c587dac45ac6fcc34ae7cb4aa2b3e43797b2ef5d71fd32b48483bda3fca3e0",
+        "assets/scenes/stage.js": "3012ade75e01a9c0c81b5835a60e9ade965ed310cd58d85a7ad10e4ed4a1ad16",
+        "library/app.json": "3678ccbe1e8d05feff6d4f07fa16a0d610aefeea5e697e842a876713ba763cf5",
+        "library/directions.json": "d71e3824af33a92d9e1ca543e17f80baa5b7a30c815df5125cfe3300a14892c1",
+        "library/heroes.json": "98d5e01104412a5fb27936f9c686f3bc0a5f76ce0793186d3de46b982c65b172",
+        "library/motions.json": "51815dd09a823c829897f99ed9ea7dc5c35bd305ac989b8a0632ea6d42a3f08b",
+        "library/palettes.json": "a14be9f45baba848c53436f4aa44eb4f1925ad3e232c5d1dcddf4f565661a525",
+        "library/photos.json": "8fc3b76bca90f44675bd99d99bb4ce95b0756c6c5d4141b7e917d11d90e61520",
+        "library/sections.json": "7c2c8a470a22501176948661f803434db8c542a511281752c717252de80c1ad8",
+        "library/sites.json": "a2bc4d0cff8ebff481f0dfd4879c106d5e1e16cb3122f9ab3702184a5e1f3502",
+        "library/type.json": "01a36c53c4398f48ff945b0f31a256281c1c0c1075729747c11bec70867b6232",
+        "references/app-screens.md": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4",
+        "references/colour.md": "6556bcc7eed48b7bc2d0d281c28bf57c1b75e94d7ca0bde49f5d9df8c6a09351",
+        "references/copy.md": "676edbe75d5f3cfd8a793010ea9f730525ae074b231a674c2426264d3398262e",
+        "references/critique.md": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4",
+        "references/imagery.md": "518def6b2c643b295e13e66b09b66f2e3fc1421d3cf6c7dbb1dc749097ad2ad9",
+        "references/layout.md": "40080640719b07737afb94a8868afef87767a1ab4892814d9b6882e2d283453b",
+        "references/motion.md": "79f94d8469898d2bf6186c198ad86ddf691a67c6536eaec36a4ec101285d9a37",
+        "references/research.md": "83433646a352cae588591e05bc0a75fe1deadff55ede8851bc8dd5dd483adfc5",
+        "references/scenes.md": "733ac7258a1a28f2f6ae8205bc36ba66c563594ad0a2e2f829c5eaaba3199a61",
+        "references/tells.md": "8e6de4411c43d3108f832b3f33bb1a2a838148a72b92a176df893b67d99a0da9",
+        "references/type.md": "6353ff1d0ce2f9913628c88fbcb7dad3cc3877e61196848bce99e33a17d20611",
+        "scripts/assets.mjs": "b4b4b99b5634735f5a0b4213169cda5240ee6bbed8ed8042ad1bcf2b6607c1fa",
+        "scripts/draw.mjs": "6c2047d207d2400d3b099956dfe2ac306203b614246e66bc8760212a7f797dbf",
+        "scripts/inspect.mjs": "9482c546288d4d5c738a915905959e99394551ec27bc202ed443af12a02bd1f7",
+        "scripts/lib/app-draw.mjs": "aa0802d341d19b53ec14ec21746e428be49a8ec3ed7b30253194105fc18a8df6",
+        "scripts/lib/cdp.mjs": "404c8825ce60e4e5e101344f7c36d05bfe335d47f3ab6c2d5dfde12e0b8f1b94",
+        "scripts/lib/probe.mjs": "c14fd0bed7727855a1f3fcf5ade945fba97f314562fd7430354168b2da25433b",
+        "scripts/lib/rules.mjs": "5de058543b3bd6f3dd2f85ff1c1e5e1f91918ba9f4454e7ee0b8934c607982f9",
+        "scripts/lint.mjs": "05f2fae2f56fc051b539cdbacb43a6f78fbbfb9644bb74aa11be472ff12dcaf5",
+        "scripts/scenes.mjs": "234ec582e2b841457c33033feeeba8535f9ac285495a74d08dc533a1566c90d5"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "role:implementer": {
+      "origin": "installed Agency Agents / minimal-change-engineer.toml",
+      "upstream_sha256": "5873d6e5b8ae5aafbaf785d4f2e9d2a9065fac7f32acf6a4f26e51186f4fd09b",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "skill:ponytail": {
+      "origin": "installed ponytail",
+      "upstream_files": {
+        "SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
+        "LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ],
+      "license_source": {
+        "origin": "Ponytail 5.3.2 package-level LICENSE",
+        "sha256": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+        "fixed_evidence": {
+          "path": "projects/claude-cloud-portability/records/package-review-v1.md",
+          "sha256": "2df939cb989fa2a169c8cfa893a3e7a2fa0db76dd11fe74030028f552eb2cef6",
+          "review_commit": "b9c7e23be005b647d79df5abca32da44d916d988"
+        },
+        "adaptations": []
+      }
+    },
+    "role:writer": {
+      "origin": "installed Agency Agents / technical-writer.toml",
+      "upstream_sha256": "4b5d231dded877a52d9fb7d00f7f0d98fed56c5168b90525d69b1860f4cdd3c8",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "skill:humanizer": {
+      "origin": "installed humanizer",
+      "upstream_files": {
+        "SKILL.md": "4addd16135697cd8ad98bcbc7a98f18a404bd71b021f754fb5837cd21e736ffd"
+      },
+      "adaptations": [],
+      "excluded": [
+        "upstream tests/evals, cache and Codex UI metadata; runtime support/data/licenses retained"
+      ]
+    },
+    "role:reviewer": {
+      "origin": "installed Agency Agents / code-reviewer.toml",
+      "upstream_sha256": "40e32a1188bb51af8bc5bdfa69341510e8f9c2d331d3ed6b53f25b71c052eeaf",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "role:integrator": {
+      "origin": "installed Agency Agents / git-workflow-master.toml",
+      "upstream_sha256": "f5fd371769904104c1fa30b8987d43cd8a40f17dfa361386e2e8d2313e57867a",
+      "adaptations": [
+        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+      ]
+    },
+    "role-license": {
+      "origin": "installed Agency Agents LICENSE",
+      "upstream_sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f"
+    },
+    "skill:grill-me": {
+      "origin": "installed grill-me",
+      "upstream_sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+      "adaptations": [
+        "Replace harness-specific Skill tool call with repository file references; preserve explicit-only entry."
+      ]
+    },
+    "skill:grill-with-docs": {
+      "origin": "installed grill-with-docs",
+      "upstream_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "adaptations": [
+        "Replace harness-specific Skill tool call with repository file references; preserve explicit-only entry."
+      ]
+    },
+    "skill:ask-matt": {
+      "origin": "installed ask-matt",
+      "upstream_sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
+      "adaptations": [
+        "Route only to checked-in Workbench methods; remove uninstalled main-flow/tracker assumptions."
+      ]
+    }
+  },
+  "files": {
+    ".claude/agents/LICENSE": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+    ".claude/agents/designer.md": "04df147967585d22a39322bdb8a2895416c8b9248c7d418a2ab012cd334e1f4b",
+    ".claude/agents/implementer.md": "e1989a6a89c8e29cea10cbbc951b91195a8e5c7d30e6265e47c93bbb3dc2c766",
+    ".claude/agents/integrator.md": "1da7f3e8a8dac526a5ab9e855e2b56a8fcf5f05c1c20df5003f855a97829b6b5",
+    ".claude/agents/planner.md": "2e68ebdbbb5b54ce2ab27607b1901b5132bdad74556856a8a72f0c4f609b1713",
+    ".claude/agents/researcher.md": "54f548b13bbd43f4d00c0740e990979d846070e4a8150880d63a8dc0b030d99a",
+    ".claude/agents/reviewer.md": "5bf77322b6c266e4646e8a5fb91e5c5a0f6fe733532cd31199e049c7feabac35",
+    ".claude/agents/writer.md": "85758c775cbdb599c4423a3cdcbd1c20842457325e5cd0cc96111d89bea0d6f1",
+    ".claude/skills/ask-matt/SKILL.md": "f25a90d1a839dbf942bc7919c7f26c0ac24781e680489477e9bfea0cacf768df",
+    ".claude/skills/design-taste-frontend/LICENSE": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
+    ".claude/skills/design-taste-frontend/README.md": "5e33fd716b3e1ffaca9340f645d44c193f9b446107fa67f0cce498d33025672c",
+    ".claude/skills/design-taste-frontend/SKILL.md": "4eaeadcd0cc03ec354a4002fb4ebc2a479aa20a65b8c8a20846bb294b1074d51",
+    ".claude/skills/design-taste-frontend/assets/app.css": "16518c3a999fb81b2698137f1f743128c189272e8b1d411c4b02598c6755b67f",
+    ".claude/skills/design-taste-frontend/assets/base.css": "aa6ea21613c79e06e06dea3d33200c78590c89b0346bb976ec07947bb45ceafa",
+    ".claude/skills/design-taste-frontend/assets/base.js": "8d50416125596b84c0083d5d5ffba09add57db4b06cbf0eedac2d4999b7653bc",
+    ".claude/skills/design-taste-frontend/assets/charts.js": "89071120bd09eb276d9e568bab433ed035ea8b3a1b72750a1fa204a63e3d4ab4",
+    ".claude/skills/design-taste-frontend/assets/scenes/stage.css": "b5c587dac45ac6fcc34ae7cb4aa2b3e43797b2ef5d71fd32b48483bda3fca3e0",
+    ".claude/skills/design-taste-frontend/assets/scenes/stage.js": "3012ade75e01a9c0c81b5835a60e9ade965ed310cd58d85a7ad10e4ed4a1ad16",
+    ".claude/skills/design-taste-frontend/library/app.json": "3678ccbe1e8d05feff6d4f07fa16a0d610aefeea5e697e842a876713ba763cf5",
+    ".claude/skills/design-taste-frontend/library/directions.json": "d71e3824af33a92d9e1ca543e17f80baa5b7a30c815df5125cfe3300a14892c1",
+    ".claude/skills/design-taste-frontend/library/heroes.json": "98d5e01104412a5fb27936f9c686f3bc0a5f76ce0793186d3de46b982c65b172",
+    ".claude/skills/design-taste-frontend/library/motions.json": "51815dd09a823c829897f99ed9ea7dc5c35bd305ac989b8a0632ea6d42a3f08b",
+    ".claude/skills/design-taste-frontend/library/palettes.json": "a14be9f45baba848c53436f4aa44eb4f1925ad3e232c5d1dcddf4f565661a525",
+    ".claude/skills/design-taste-frontend/library/photos.json": "8fc3b76bca90f44675bd99d99bb4ce95b0756c6c5d4141b7e917d11d90e61520",
+    ".claude/skills/design-taste-frontend/library/sections.json": "7c2c8a470a22501176948661f803434db8c542a511281752c717252de80c1ad8",
+    ".claude/skills/design-taste-frontend/library/sites.json": "a2bc4d0cff8ebff481f0dfd4879c106d5e1e16cb3122f9ab3702184a5e1f3502",
+    ".claude/skills/design-taste-frontend/library/type.json": "01a36c53c4398f48ff945b0f31a256281c1c0c1075729747c11bec70867b6232",
+    ".claude/skills/design-taste-frontend/references/app-screens.md": "55e937ec30de605b53a11310b446f328a3ce7403de24fff008920a00be1a5ed4",
+    ".claude/skills/design-taste-frontend/references/colour.md": "6556bcc7eed48b7bc2d0d281c28bf57c1b75e94d7ca0bde49f5d9df8c6a09351",
+    ".claude/skills/design-taste-frontend/references/copy.md": "676edbe75d5f3cfd8a793010ea9f730525ae074b231a674c2426264d3398262e",
+    ".claude/skills/design-taste-frontend/references/critique.md": "9c2f4392674530b3f02ac529fba53d82ab37b85f401c4c1989fbe98d6217f0b4",
+    ".claude/skills/design-taste-frontend/references/imagery.md": "518def6b2c643b295e13e66b09b66f2e3fc1421d3cf6c7dbb1dc749097ad2ad9",
+    ".claude/skills/design-taste-frontend/references/layout.md": "40080640719b07737afb94a8868afef87767a1ab4892814d9b6882e2d283453b",
+    ".claude/skills/design-taste-frontend/references/motion.md": "79f94d8469898d2bf6186c198ad86ddf691a67c6536eaec36a4ec101285d9a37",
+    ".claude/skills/design-taste-frontend/references/research.md": "83433646a352cae588591e05bc0a75fe1deadff55ede8851bc8dd5dd483adfc5",
+    ".claude/skills/design-taste-frontend/references/scenes.md": "733ac7258a1a28f2f6ae8205bc36ba66c563594ad0a2e2f829c5eaaba3199a61",
+    ".claude/skills/design-taste-frontend/references/tells.md": "8e6de4411c43d3108f832b3f33bb1a2a838148a72b92a176df893b67d99a0da9",
+    ".claude/skills/design-taste-frontend/references/type.md": "6353ff1d0ce2f9913628c88fbcb7dad3cc3877e61196848bce99e33a17d20611",
+    ".claude/skills/design-taste-frontend/scripts/assets.mjs": "b4b4b99b5634735f5a0b4213169cda5240ee6bbed8ed8042ad1bcf2b6607c1fa",
+    ".claude/skills/design-taste-frontend/scripts/draw.mjs": "6c2047d207d2400d3b099956dfe2ac306203b614246e66bc8760212a7f797dbf",
+    ".claude/skills/design-taste-frontend/scripts/inspect.mjs": "9482c546288d4d5c738a915905959e99394551ec27bc202ed443af12a02bd1f7",
+    ".claude/skills/design-taste-frontend/scripts/lib/app-draw.mjs": "aa0802d341d19b53ec14ec21746e428be49a8ec3ed7b30253194105fc18a8df6",
+    ".claude/skills/design-taste-frontend/scripts/lib/cdp.mjs": "404c8825ce60e4e5e101344f7c36d05bfe335d47f3ab6c2d5dfde12e0b8f1b94",
+    ".claude/skills/design-taste-frontend/scripts/lib/probe.mjs": "c14fd0bed7727855a1f3fcf5ade945fba97f314562fd7430354168b2da25433b",
+    ".claude/skills/design-taste-frontend/scripts/lib/rules.mjs": "5de058543b3bd6f3dd2f85ff1c1e5e1f91918ba9f4454e7ee0b8934c607982f9",
+    ".claude/skills/design-taste-frontend/scripts/lint.mjs": "05f2fae2f56fc051b539cdbacb43a6f78fbbfb9644bb74aa11be472ff12dcaf5",
+    ".claude/skills/design-taste-frontend/scripts/scenes.mjs": "234ec582e2b841457c33033feeeba8535f9ac285495a74d08dc533a1566c90d5",
+    ".claude/skills/domain-modeling/ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+    ".claude/skills/domain-modeling/GLOSSARY-FORMAT.md": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+    ".claude/skills/domain-modeling/SKILL.md": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+    ".claude/skills/grill-me/SKILL.md": "1f1ccc95eb9a41e951b69490d89909203f67ba5fd49dae12155f6bd4a40da296",
+    ".claude/skills/grill-with-docs/SKILL.md": "4d386ad16c37ad7830c3be5d00515a96a40b3b5e8908fa33d84fbf1c622a9bc4",
+    ".claude/skills/grilling/SKILL.md": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+    ".claude/skills/humanizer/SKILL.md": "4addd16135697cd8ad98bcbc7a98f18a404bd71b021f754fb5837cd21e736ffd",
+    ".claude/skills/ponytail/LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab",
+    ".claude/skills/ponytail/SKILL.md": "9badd22a32e19cb884e46dfa8d3aae82bb81dfa5484105b8b4f0262df823a509",
+    ".claude/skills/research/SKILL.md": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+    ".claude/skills/ui-ux-pro-max/LICENSE": "738f69dfa83db5c347c678fb9d90e560877059f0de93a327c39001bff92dc014",
+    ".claude/skills/ui-ux-pro-max/SKILL.md": "79415f60ee4a0717ca4670c6f0dfcdbcd9c948f8652145b17ecb8aa86c735218",
+    ".claude/skills/ui-ux-pro-max/data/app-interface.csv": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+    ".claude/skills/ui-ux-pro-max/data/catalog-summary.json": "6638da97231c07fb5cef3cd9d3ce483ca7b2f9748980f8c27490eb03968d8894",
+    ".claude/skills/ui-ux-pro-max/data/charts.csv": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+    ".claude/skills/ui-ux-pro-max/data/colors.csv": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+    ".claude/skills/ui-ux-pro-max/data/data-provenance.json": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+    ".claude/skills/ui-ux-pro-max/data/google-font-licenses.json": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+    ".claude/skills/ui-ux-pro-max/data/google-fonts.csv": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+    ".claude/skills/ui-ux-pro-max/data/icons.csv": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+    ".claude/skills/ui-ux-pro-max/data/landing.csv": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+    ".claude/skills/ui-ux-pro-max/data/motion.csv": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+    ".claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+    ".claude/skills/ui-ux-pro-max/data/products.csv": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+    ".claude/skills/ui-ux-pro-max/data/react-performance.csv": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+    ".claude/skills/ui-ux-pro-max/data/stacks/angular.csv": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+    ".claude/skills/ui-ux-pro-max/data/stacks/astro.csv": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+    ".claude/skills/ui-ux-pro-max/data/stacks/avalonia.csv": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+    ".claude/skills/ui-ux-pro-max/data/stacks/flutter.csv": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+    ".claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+    ".claude/skills/ui-ux-pro-max/data/stacks/javafx.csv": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+    ".claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+    ".claude/skills/ui-ux-pro-max/data/stacks/laravel.csv": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+    ".claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+    ".claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv": "fce682a338cfcdbf35d318d20e5befbe7b5d81b05abc37f87677a6d9cde84dc6",
+    ".claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+    ".claude/skills/ui-ux-pro-max/data/stacks/react-native.csv": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+    ".claude/skills/ui-ux-pro-max/data/stacks/react.csv": "4dd176a9787e5c6306b5df94158d75955adcdc6edab41ce5286641a5842303c1",
+    ".claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+    ".claude/skills/ui-ux-pro-max/data/stacks/svelte.csv": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+    ".claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+    ".claude/skills/ui-ux-pro-max/data/stacks/threejs.csv": "155d583b9c64da0df4b6c6cb060c02eab222505e0734d6353da02c9e2b5d982b",
+    ".claude/skills/ui-ux-pro-max/data/stacks/uno.csv": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+    ".claude/skills/ui-ux-pro-max/data/stacks/uwp.csv": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+    ".claude/skills/ui-ux-pro-max/data/stacks/vue.csv": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+    ".claude/skills/ui-ux-pro-max/data/stacks/winui.csv": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+    ".claude/skills/ui-ux-pro-max/data/stacks/wpf.csv": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+    ".claude/skills/ui-ux-pro-max/data/styles.csv": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+    ".claude/skills/ui-ux-pro-max/data/typography.csv": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+    ".claude/skills/ui-ux-pro-max/data/ui-reasoning.csv": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+    ".claude/skills/ui-ux-pro-max/data/ux-guidelines.csv": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+    ".claude/skills/ui-ux-pro-max/references/pro-rules.md": "d28442d61c310b49c054a4ea736f89fb3008beebdbbc38c4b3a540b8f7fadf23",
+    ".claude/skills/ui-ux-pro-max/references/quick-reference.md": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876",
+    ".claude/skills/ui-ux-pro-max/scripts/core.py": "c3be4b23e7150e6b45095213158cfa3c8ad96502f01dde3f6ffff9de64a4f481",
+    ".claude/skills/ui-ux-pro-max/scripts/design_system.py": "e7d1c94c4b2eada17c5551157668362659ccf9626d34dbd58e68142410f90103",
+    ".claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+    ".claude/skills/ui-ux-pro-max/scripts/search.py": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374",
+    ".claude/skills/ui-ux-pro-max/scripts/validate_data.py": "a599aa256049cf30954d1f164721b99e453eb7e4cb8241bcab2d5573e6cf58b8"
+  }
+}

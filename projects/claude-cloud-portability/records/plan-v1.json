@@ -1,0 +1,118 @@
+{
+  "scope": "deliver",
+  "workspace": ".",
+  "allowed_paths": [
+    "CLAUDE.md",
+    "AGENTS.md",
+    "README.md",
+    "docs/WORKFLOW.md",
+    "docs/CLAUDE_CLOUD.md",
+    "library/README.md",
+    "library/roles.json",
+    ".claude",
+    "scripts/check_portability.py",
+    "tests/test_portability.py",
+    "projects/claude-cloud-portability/records"
+  ],
+  "planner": "/root",
+  "routing": {
+    "maturity": "ready",
+    "reason": "使用者已指定 Claude 雲端從 GitHub clone，且確認只搬此 repo 使用的 Skills；現有 loader 支援相對來源，無需重做 runtime。",
+    "missing_inputs": []
+  },
+  "operations": [
+    "local"
+  ],
+  "limits": {
+    "max_rounds": 2,
+    "review_retries": 2,
+    "max_attempts": 4
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "Claude 雲端從 GitHub clone 後有明確入口與跨 session 工作方式，保留 AGENTS 護欄與 Playbook/Role/Skills/Proof 契約。"
+    },
+    {
+      "id": "R2",
+      "text": "只搬此 repo 用到的實際 Roles/Skills（含 grill-me/grill-with-docs），支援檔與授權一併保存，解除個人目錄及工具限定入口依賴。"
+    },
+    {
+      "id": "R3",
+      "text": "現行文件使用可搬移路徑；清楚區分 GitHub 可接續的文件/成果與不可跨機還原的正式執行狀態，提供安全交接方式。"
+    },
+    {
+      "id": "R4",
+      "text": "以無需原電腦個人 Skills 的搬移檢查、實際 source snapshot/dispatch、既有測試及獨立 Proof 驗證；揭露未執行 Claude 雲端及瀏覽器測試。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "package",
+      "playbook": "deliver",
+      "role": "implementer",
+      "allowed_paths": [
+        "CLAUDE.md",
+        "AGENTS.md",
+        "README.md",
+        "docs/WORKFLOW.md",
+        "docs/CLAUDE_CLOUD.md",
+        "library/README.md",
+        "library/roles.json",
+        ".claude",
+        "scripts/check_portability.py",
+        "tests/test_portability.py",
+        "projects/claude-cloud-portability/records"
+      ],
+      "depends_on": [],
+      "supporting_sources": [
+        {
+          "path": "/Users/ray.shao/.codex/skills/writing-for-agents/SKILL.md"
+        },
+        {
+          "path": "/Users/ray.shao/.codex/skills/.system/skill-creator/SKILL.md"
+        }
+      ],
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "acceptance": [
+        {
+          "id": "R1-check",
+          "description": "Claude 雲端從 GitHub clone 後有明確入口與跨 session 工作方式，保留 AGENTS 護欄與 Playbook/Role/Skills/Proof 契約。",
+          "method": "閱讀 Claude 入口及流程文件，核對使用者護欄與必要方法。",
+          "requirement_ids": [
+            "R1"
+          ]
+        },
+        {
+          "id": "R2-check",
+          "description": "只搬此 repo 用到的實際 Roles/Skills（含 grill-me/grill-with-docs），支援檔與授權一併保存，解除個人目錄及工具限定入口依賴。",
+          "method": "檢查來源 manifest、相對 paths、支援檔、實際角色內容與 grill wrappers。",
+          "requirement_ids": [
+            "R2"
+          ]
+        },
+        {
+          "id": "R3-check",
+          "description": "現行文件使用可搬移路徑；清楚區分 GitHub 可接續的文件/成果與不可跨機還原的正式執行狀態，提供安全交接方式。",
+          "method": "依 fresh clone 情境走讀命令及缺少 DB 時的安全交接，不把歷史 DONE 當新機正式狀態。",
+          "requirement_ids": [
+            "R3"
+          ]
+        },
+        {
+          "id": "R4-check",
+          "description": "以無需原電腦個人 Skills 的搬移檢查、實際 source snapshot/dispatch、既有測試及獨立 Proof 驗證；揭露未執行 Claude 雲端及瀏覽器測試。",
+          "method": "在搬移到臨時目錄且 HOME 無個人技能的情境執行檢查與 plan/dispatch；跑既有測試，記錄命令結果及限制。",
+          "requirement_ids": [
+            "R4"
+          ]
+        }
+      ]
+    }
+  ]
+}

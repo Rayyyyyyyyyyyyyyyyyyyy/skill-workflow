@@ -1,0 +1,6 @@
+Command: PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q
+Workspace: fixed Git archive + candidate overlay (validation-inputs-v1.json)
+----------------------------------------------------------------------
+Ran 51 tests in 21.501s
+
+OK

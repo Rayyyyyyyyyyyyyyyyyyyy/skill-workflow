@@ -1,0 +1,7 @@
+{
+  "plan_hash": "c4e88009c9221c161271451519a26b6ef53b520eb304eb60cbde5b88d3e47d10",
+  "reviewer": "/root/claude_portability_review",
+  "status": "FAIL",
+  "reason": "Actual Roles/Skills, wrappers and support/license inputs to be migrated are not fixed in the baseline or sealed supporting_sources; only two authoring references and two role bindings are pinned. Preserve R1–R4 and pin migration inputs before starting.",
+  "evidence": "projects/claude-cloud-portability/records/plan-review-v1.md"
+}
