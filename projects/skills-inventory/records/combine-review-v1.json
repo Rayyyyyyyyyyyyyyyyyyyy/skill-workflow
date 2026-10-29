@@ -1,0 +1,54 @@
+{
+  "review_id": "b464fda3c22b4b12a1b1e4fc6de84bce",
+  "round": 1,
+  "reviewer": "/root/claude_portability_review",
+  "submission_digest": "25559f4837f7bf6b5808d04c03144735afa4c349a18232e7e2a19f04c960ab5f",
+  "contract_digest": "82271e5a07fd29697bee6f873fc9c9c4376ea20497a26bf22b67de24d1b9b903",
+  "baseline_digest": "720b708b73847e22d2c7a345e2f993fbe5c83f3913473c15d30146ec82d3a113",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/skills-inventory/records/combine-review-v1.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "combine-result",
+      "status": "PASS",
+      "reason": "Final overview matches both accepted packages, recomputed totals and interpretations; all 14 relative links resolve and complete data remains accessible with unexecuted recommendations/limits.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-combine-sources",
+      "status": "PASS",
+      "reason": "Verified original DONE/accepted receipts, both fixed commit/tree identities and merge-parent order; all 12 upstream bytes/hashes preserved and all 14 final file hashes match.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-combine-integrity",
+      "status": "PASS",
+      "reason": "Fixed diff stays within approved records scope; private controlled merge has no pending conflict and only REPORT.md plus integration-checks.json added after merge, with no source/install/runtime changes.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-combine-verification",
+      "status": "PASS",
+      "reason": "Independent combined-output checks cover ancestry/byte preservation, aggregate and primary counts, duplicate names, interpretations and links; prior unchanged source proofs reused without pretending a new broad scan or UI test.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-combine-handoff",
+      "status": "PASS",
+      "reason": "Final commit/tree sealed by packet, accepted source receipts/order/base documented, full data/usage/limits linked and safe per-file CAS apply conditions explicit without premature completion/publication.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

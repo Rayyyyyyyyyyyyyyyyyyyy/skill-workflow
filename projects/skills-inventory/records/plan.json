@@ -1,0 +1,117 @@
+{
+  "scope": "deliver",
+  "workspace": ".",
+  "allowed_paths": [
+    "projects/skills-inventory/records"
+  ],
+  "planner": "/root",
+  "routing": {
+    "maturity": "ready",
+    "reason": "使用者指定本機盤點與特定 GitHub repo 查找，成果是研究文件，不需要安裝或方向性產品決策。",
+    "missing_inputs": []
+  },
+  "operations": [
+    "local"
+  ],
+  "limits": {
+    "max_rounds": 2,
+    "review_retries": 2,
+    "max_attempts": 4
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "盤點本機可讀 Skills，完整提供逐筆名稱、描述、路徑、來源類型、內容雜湊及去重統計；包括 symlink、plugins、同步、repo、備份與暫存，明列掃描範圍與不可讀限制，不把檔案存在等同已啟用。"
+    },
+    {
+      "id": "R2",
+      "text": "用固定版本的一手來源調查 awesome-design-md，閱讀 README、實際 DESIGN.md 範例與 LICENSE；說明定位、實際內容與用法及和本機設計 Skills 的關係，區分來源事實與建議。"
+    },
+    {
+      "id": "R3",
+      "text": "整合可供使用者閱讀的結果與完整清單，保留可追溯證據；不安裝、不移除、不改使用者 Skills，也不做瀏覽器檢測或發布。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "inventory",
+      "playbook": "research",
+      "role": "researcher",
+      "allowed_paths": [
+        "projects/skills-inventory/records/inventory"
+      ],
+      "depends_on": [],
+      "requirement_ids": [
+        "R1",
+        "R3"
+      ],
+      "supporting_sources": [],
+      "acceptance": [
+        {
+          "id": "inventory-result",
+          "description": "所有實際發現檔案有逐筆 metadata、來源分類與 hash；統計可重算，symlink／多版本與不可讀範圍明列，摘要不混淆活躍來源與歷史副本。",
+          "method": "獨立 Reviewer 核對原始要求、資料與來源，抽查結果及統計／引用，明列未知與未執行。",
+          "requirement_ids": [
+            "R1",
+            "R3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design-md",
+      "playbook": "research",
+      "role": "researcher",
+      "allowed_paths": [
+        "projects/skills-inventory/records/awesome-design-md"
+      ],
+      "depends_on": [],
+      "requirement_ids": [
+        "R2",
+        "R3"
+      ],
+      "supporting_sources": [],
+      "acceptance": [
+        {
+          "id": "design-md-result",
+          "description": "固定 GitHub commit 與實際 DESIGN.md 範例的來源支持定位、內容、用法及授權描述；與現有設計 Skills 比較有實際指引依據，不聲稱安裝或操作成功。",
+          "method": "獨立 Reviewer 核對原始要求、資料與來源，抽查結果及統計／引用，明列未知與未執行。",
+          "requirement_ids": [
+            "R2",
+            "R3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combine",
+      "playbook": "integrate",
+      "role": "integrator",
+      "allowed_paths": [
+        "projects/skills-inventory/records"
+      ],
+      "depends_on": [
+        "inventory",
+        "design-md"
+      ],
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "supporting_sources": [],
+      "acceptance": [
+        {
+          "id": "combine-result",
+          "description": "整合兩份已接受成果為清晰報告，完整資料可存取，統計／引用與來源一致，不遺漏限制，不把建議當成已執行。",
+          "method": "獨立 Reviewer 核對原始要求、資料與來源，抽查結果及統計／引用，明列未知與未執行。",
+          "requirement_ids": [
+            "R1",
+            "R2",
+            "R3"
+          ]
+        }
+      ]
+    }
+  ]
+}

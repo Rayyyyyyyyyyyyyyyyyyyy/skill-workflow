@@ -1,0 +1,57 @@
+{
+  "state": "DONE",
+  "plan_hash": "c6b24649b337410d6e3e0f62f0005888540ae91431718cd3a2da68187474b1bd",
+  "applied": {
+    "at": "2026-10-29T03:04:22.716653+00:00",
+    "commit": "4410425ec76e6c41683a3ab4d353ec8e7334ea99",
+    "paths": [
+      "projects/skills-inventory/records/REPORT.md",
+      "projects/skills-inventory/records/awesome-design-md/findings.md",
+      "projects/skills-inventory/records/awesome-design-md/sources.json",
+      "projects/skills-inventory/records/integration-checks.json",
+      "projects/skills-inventory/records/inventory/checks.json",
+      "projects/skills-inventory/records/inventory/collect_inventory.py",
+      "projects/skills-inventory/records/inventory/duplicates.json",
+      "projects/skills-inventory/records/inventory/report.md",
+      "projects/skills-inventory/records/inventory/scan-follow-errors.txt",
+      "projects/skills-inventory/records/inventory/scan-follow-paths.txt",
+      "projects/skills-inventory/records/inventory/scan-home-errors.txt",
+      "projects/skills-inventory/records/inventory/scan-home-paths.txt",
+      "projects/skills-inventory/records/inventory/skills.csv",
+      "projects/skills-inventory/records/inventory/skills.json"
+    ],
+    "plan_hash": "c6b24649b337410d6e3e0f62f0005888540ae91431718cd3a2da68187474b1bd"
+  },
+  "accepted": {
+    "combine": {
+      "commit": "4410425ec76e6c41683a3ab4d353ec8e7334ea99",
+      "accepted": {
+        "at": "2026-10-29T03:04:22.150909+00:00",
+        "review_digest": "177ccd6f3780a32c1fcac491af4e44937e2244673588d013735c14973f2bd44b",
+        "submission_digest": "25559f4837f7bf6b5808d04c03144735afa4c349a18232e7e2a19f04c960ab5f"
+      }
+    },
+    "design-md": {
+      "commit": "4bea70cdb1860ab0d20db94f51cb5d3a4a0f53e7",
+      "accepted": {
+        "at": "2026-10-29T02:54:21.291684+00:00",
+        "review_digest": "7c0f572c09dddbb35a77fb347e699c97d52299cd74a655145fd259eb493bf2f1",
+        "submission_digest": "ecc028e70a1822226090dfbaa6ae4ebeb88e081d3921a1e32c6f5eea9dff2438"
+      }
+    },
+    "inventory": {
+      "commit": "70de3ff99b9889eed132914e3f511e8845f4be5a",
+      "accepted": {
+        "at": "2026-10-29T02:58:19.749745+00:00",
+        "review_digest": "50a45d7e28a7aaf135c77a72106e24ee33ff8210c868e0b6c3690634135a9fe5",
+        "submission_digest": "de69778dd6c1758b337153e12b54ae8ee80170644adcd6a0f530b93b3590cb26"
+      }
+    }
+  },
+  "limitations": [
+    "metadata/source audit, not activated or executed Skill proof",
+    "readable home scope only; excluded/protected folders not exhaustive",
+    "no installs/removals/browser"
+  ],
+  "publication": "Consult source Git history and remote; this record attests local acceptance only."
+}

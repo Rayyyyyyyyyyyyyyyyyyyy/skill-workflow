@@ -2,6 +2,8 @@
 
 目標環境是 Claude Code 從 GitHub 取得這個 repo 的雲端 session；也適用新電腦上的 clone。工作方法與文件在 repo 內，不需要原電腦的 `~/.codex`、`~/.agents` 或個人 Claude 設定。這是 repo 準備與本機搬移驗證，尚未在真正的 Claude 雲端環境試跑。
 
+需要補齊原電腦的其他方法時，依 [技能安裝清單](CLAUDE_SKILLS_INSTALL.md) 區分 repo 已附、上游可取得與等待原始來源的項目，再交給 Claude 處理。
+
 ## 第一次開始
 
 1. 在 Claude Code 選擇 GitHub repo 與**包含這次整理的 branch／commit**。本機未推送的改動不會出現在雲端；GitHub 連線與平台權限由你的帳號提供，repo 不包含登入憑證。

@@ -1,0 +1,287 @@
+{
+  "checked_date": "2026-10-29",
+  "scope": "Documentation handoff only; no skill installation, packaging, removal, browser or remote writes.",
+  "matt": {
+    "repo": "mattpocock/skills",
+    "commit": "59db609eb1e18aaf59b63284d0e52255aff0c63c",
+    "tree": "905b82656daa8179a20c737db3aeed704f8be22c",
+    "truncated": false,
+    "installed_family": [
+      {
+        "name": "ask-matt",
+        "path": "skills/engineering/ask-matt",
+        "blob_sha": "4bfeeb61dae548b8b7754c4fba7bd40ab3926099",
+        "installed_skill_sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "code-review",
+        "path": "skills/engineering/code-review",
+        "blob_sha": "373a4f26e6cfa3617778397945bb069d9cb184bc",
+        "installed_skill_sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "codebase-design",
+        "path": "skills/engineering/codebase-design",
+        "blob_sha": "3f63c8146dd2604b419c929e9876b90c30d410e9",
+        "installed_skill_sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "diagnosing-bugs",
+        "path": "skills/engineering/diagnosing-bugs",
+        "blob_sha": "d039541ddd1c46e6ddbd662fe99d49b686fc5e12",
+        "installed_skill_sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "domain-modeling",
+        "path": "skills/engineering/domain-modeling",
+        "blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+        "installed_skill_sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "grill-me",
+        "path": "skills/productivity/grill-me",
+        "blob_sha": "3947ff9c4ad980d14fc07fccbf659d47c114e81d",
+        "installed_skill_sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "grill-with-docs",
+        "path": "skills/engineering/grill-with-docs",
+        "blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+        "installed_skill_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "grilling",
+        "path": "skills/productivity/grilling",
+        "blob_sha": "df69d9936880cd3314c28858c6c52f48db23b856",
+        "installed_skill_sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "handoff",
+        "path": "skills/productivity/handoff",
+        "blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+        "installed_skill_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "implement",
+        "path": "skills/engineering/implement",
+        "blob_sha": "bd49e472984c7b99aac40286fdae749bb955a842",
+        "installed_skill_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "improve-codebase-architecture",
+        "path": "skills/engineering/improve-codebase-architecture",
+        "blob_sha": "44cc7d3136c44534d68ac523fa6cd37e759d2846",
+        "installed_skill_sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "prototype",
+        "path": "skills/engineering/prototype",
+        "blob_sha": "a0044501fe0d385b4d8575b610188ede9b236ccf",
+        "installed_skill_sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "research",
+        "path": "skills/engineering/research",
+        "blob_sha": "fecee97e9457ba039678d2fcf1b1bc9fca78307d",
+        "installed_skill_sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "setup-matt-pocock-skills",
+        "path": "skills/engineering/setup-matt-pocock-skills",
+        "blob_sha": "2df0b07981718fa5d9a51526dfbcaee87e3a543d",
+        "installed_skill_sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4",
+        "upstream_skill_exact_match": false
+      },
+      {
+        "name": "tdd",
+        "path": "skills/engineering/tdd",
+        "blob_sha": "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985",
+        "installed_skill_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "teach",
+        "path": "skills/productivity/teach",
+        "blob_sha": "493fa3bae0dada971c4dfb965790e56920b1dced",
+        "installed_skill_sha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "to-spec",
+        "path": "skills/engineering/to-spec",
+        "blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+        "installed_skill_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "to-tickets",
+        "path": "skills/engineering/to-tickets",
+        "blob_sha": "9b77a01db9460c99c22d03c910c349f890f12c0e",
+        "installed_skill_sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "triage",
+        "path": "skills/engineering/triage",
+        "blob_sha": "3fd5617e906cf9b71a6b17424791adb905fc248b",
+        "installed_skill_sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "wayfinder",
+        "path": "skills/engineering/wayfinder",
+        "blob_sha": "e28cf3018906d6d60fc5b25390b4eeea035dd290",
+        "installed_skill_sha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7",
+        "upstream_skill_exact_match": true
+      },
+      {
+        "name": "writing-for-agents",
+        "path": "skills/productivity/writing-for-agents",
+        "blob_sha": "a37608daf6e835e767deecfb498facecaaba82ba",
+        "installed_skill_sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+        "upstream_skill_exact_match": true
+      }
+    ],
+    "upstream_not_installed": [
+      "implement-spec",
+      "retro",
+      "pr",
+      "wizard",
+      "to-questionnaire",
+      "wait-what"
+    ],
+    "readme_url": "https://github.com/mattpocock/skills/blob/59db609eb1e18aaf59b63284d0e52255aff0c63c/README.md",
+    "version_note": "Verified upstream directory exists; equality to the locally installed version must be checked separately."
+  },
+  "agency": {
+    "repo": "msitarzewski/agency-agents",
+    "local_catalog_commit": "4e3ac3ca6604c75113f52c695dbddcc7af928b46",
+    "readme_url": "https://github.com/msitarzewski/agency-agents/blob/4e3ac3ca6604c75113f52c695dbddcc7af928b46/README.md",
+    "verified_upstream_form": "Markdown role library and install script for Claude Code, including native role files; not proof that the local agency-agents/SKILL.md router is distributed upstream.",
+    "local_catalog_role_count": 282,
+    "workflow_aliases_already_present": 7
+  },
+  "graphify": {
+    "repo": "Graphify-Labs/graphify",
+    "previous_repo": "safishamsi/graphify",
+    "default_branch": "v8",
+    "commit": "0a8cd4e1e342235fe53e881fb5d591bf0460071f",
+    "readme_url": "https://github.com/Graphify-Labs/graphify/blob/0a8cd4e1e342235fe53e881fb5d591bf0460071f/README.md",
+    "verified_readme_method": "Python 3.10+; graphifyy runtime; graphify install --project or graphify claude install --project; do not install Codex backend.",
+    "local_version_equivalent": "unknown"
+  },
+  "impeccable": {
+    "repo": "pbakaus/impeccable",
+    "readme_url": "https://github.com/pbakaus/impeccable/blob/main/README.md",
+    "verified_project_skill_path": ".claude/skills/impeccable",
+    "method_note": "README describes installer plus hooks and runtime binary. Prefer project-scoped Claude files; inspect dependencies. Do not auto-enable hooks, global install, browser or download execution.",
+    "local_version_equivalent": "unknown"
+  },
+  "existing_design_sources": [
+    {
+      "name": "design-taste-frontend",
+      "repo": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "status": "already vendored; do not reinstall or overwrite"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "status": "already vendored; do not reinstall or overwrite"
+    }
+  ],
+  "local_source_unverified": [
+    "arxiv",
+    "claude-design",
+    "ideation",
+    "jupyter-live-kernel",
+    "plan",
+    "popular-web-designs",
+    "powerpoint",
+    "research-paper-writing",
+    "salesforce-pdi-coach",
+    "sketch",
+    "writing-plans"
+  ],
+  "existing_repo_skills": [
+    "ask-matt",
+    "design-taste-frontend",
+    "domain-modeling",
+    "grill-me",
+    "grill-with-docs",
+    "grilling",
+    "humanizer",
+    "ponytail",
+    "research",
+    "ui-ux-pro-max"
+  ],
+  "missing_methods": [
+    "agency-agents",
+    "arxiv",
+    "claude-design",
+    "code-review",
+    "codebase-design",
+    "diagnosing-bugs",
+    "graphify",
+    "handoff",
+    "ideation",
+    "impeccable",
+    "implement",
+    "improve-codebase-architecture",
+    "jupyter-live-kernel",
+    "plan",
+    "popular-web-designs",
+    "powerpoint",
+    "prototype",
+    "research-paper-writing",
+    "salesforce-pdi-coach",
+    "setup-matt-pocock-skills",
+    "sketch",
+    "tdd",
+    "teach",
+    "to-spec",
+    "to-tickets",
+    "triage",
+    "wayfinder",
+    "writing-for-agents",
+    "writing-plans"
+  ],
+  "claude_account_synced": [
+    "built-in-browser",
+    "chrome-browser",
+    "computer-use",
+    "deep-research",
+    "docs",
+    "docx",
+    "google-workspace",
+    "import-memory",
+    "morning",
+    "pdf",
+    "pptx",
+    "skill-creator",
+    "xlsx"
+  ],
+  "excluded_provider_tools": [
+    "hatch-pet",
+    "imagegen",
+    "import-to-claude-code",
+    "openai-docs",
+    "review-agent",
+    "skill-installer"
+  ],
+  "inventory_source": "projects/skills-inventory/records/inventory/skills.json"
+}

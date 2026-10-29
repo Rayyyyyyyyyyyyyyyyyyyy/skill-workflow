@@ -1,0 +1,70 @@
+{
+  "review_id": "6a43c535bdf347558264626d03f63aa7",
+  "round": 1,
+  "reviewer": "/root/install_catalog_reviewer",
+  "submission_digest": "48b4685fa017e5bcd3dfe809d3a1ab9500bd53c9381d32cc1f454c86c41f110b",
+  "contract_digest": "2c25307ea2258225313c887d96c27cdc5f0cc35bd38e239ffaa25a8ec5364681",
+  "baseline_digest": "52150bb2e1f1cb05786a7c12a4b9743f47bef03fec0910f4bfb7a15fcf9d2086",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/skill-install-handoff/records/review-v1.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "R1-check",
+      "status": "PASS",
+      "reason": "Recomputed complete 10/29/13 classifications and six exclusions; 15 Matt missing rows and six noninstalled upstream names match the fixed source facts.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R2-check",
+      "status": "PASS",
+      "reason": "Independently checked Matt tree/21 main-file hashes and pinned source READMEs; guide preserves Agency library/loader distinction, runtime/version limits and eleven unknown-source items.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "R3-check",
+      "status": "PASS",
+      "reason": "Read bounded Claude handoff and two entry links; existing snapshots, Flow/Role/Proof, project scope and browser/global/external-action limits remain explicit.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-write-requirements",
+      "status": "PASS",
+      "reason": "Fixed four-file change delivers the requested installation handoff without restoring cancelled Skill/Role packaging or selecting extra installations.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-write-integrity",
+      "status": "PASS",
+      "reason": "Source facts, qualifications and user intent preserved; no original Skills, Roles, runtime, settings or user data were changed.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-write-verification",
+      "status": "PASS",
+      "reason": "Submission-bound hashes, set/table counts, remote tree/README facts, relative links and diff whitespace independently passed; installation/cloud/browser NOT_RUN is explicit.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-write-handoff",
+      "status": "PASS",
+      "reason": "Guide includes actual sources, target scope, missing-original-source state, prompt, evidence and verification limits, accessible from both intended entry documents.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

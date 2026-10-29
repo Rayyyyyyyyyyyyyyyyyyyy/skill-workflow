@@ -1,0 +1,54 @@
+{
+  "review_id": "2a8aa7cc80814bf5b89ccb67dcf48185",
+  "round": 1,
+  "reviewer": "/root/claude_portability_review",
+  "submission_digest": "de69778dd6c1758b337153e12b54ae8ee80170644adcd6a0f530b93b3590cb26",
+  "contract_digest": "c003c3d8ed360b5d8d3ee9516b37739b6735b119740c5f3aa64c06332b0fc058",
+  "baseline_digest": "b0cc02a3796adadb8dbda3c2e64b25e8a170b767c90ed843b1fb0a9e32f169c5",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/skills-inventory/records/inventory-review-v1.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "inventory-result",
+      "status": "PASS",
+      "reason": "All 1,540 raw discovered paths represented; JSON/CSV agree field-for-field; metadata, classifications, aliases, hashes and duplicates recompute with explicit unreadable/activation limits.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-inventory-coverage",
+      "status": "PASS",
+      "reason": "Full per-path names/descriptions/source data cover observed personal/system/synced/plugin/repo/task/backup/temp sources; all 57 primary names readable, excluded/unreadable areas explicit.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-inventory-sources",
+      "status": "PASS",
+      "reason": "Matched all 10 submission digests, both raw discovery/error records, 83 real primary file metadata/hashes and 31 class endpoint samples; date, versions and hash semantics preserved.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-inventory-calibration",
+      "status": "PASS",
+      "reason": "Counts distinguish lexical/canonical/name/content identity; 230 duplicate groups and 94 differing-content names do not imply cleanup; permission exit 2 and runtime activation/coverage unknowns remain clear.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-inventory-handoff",
+      "status": "PASS",
+      "reason": "Fixed-commit report links complete JSON/CSV/duplicates, safe collector and raw logs; re-run dependencies/new-output guard and decision limits are clear, without installing or removing anything.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

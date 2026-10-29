@@ -1,0 +1,54 @@
+{
+  "review_id": "04058979b8894dbba2eb9c759ffc981b",
+  "round": 1,
+  "reviewer": "/root/claude_portability_review",
+  "submission_digest": "ecc028e70a1822226090dfbaa6ae4ebeb88e081d3921a1e32c6f5eea9dff2438",
+  "contract_digest": "d7c639e047c6a8b17a32576dedf262de41c3f21274e15a924c7b2a7a3e260270",
+  "baseline_digest": "2ec7872e3421f4bae07bf56fe7ebae619b08c43ab79628ab0711760ca2ee5de6",
+  "stopped": true,
+  "evidence": {
+    "E1": "projects/skills-inventory/records/design-md-review-v1.md"
+  },
+  "checks": [
+    {
+      "acceptance_id": "design-md-result",
+      "status": "PASS",
+      "reason": "Pinned GitHub commit/tree and five independently hash-verified primary documents support repo contents/use/license; five local Skill hashes and actual instructions support the comparison, without install/runtime success claims.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-design-md-coverage",
+      "status": "PASS",
+      "reason": "Research answers positioning, actual structure, use, license and method relationship; three-example reading scope and untested generation/current-site limits are explicit.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-design-md-sources",
+      "status": "PASS",
+      "reason": "Independent connector retrieval confirms full 260-entry/173-blob tree, 84 design paths, zero Skills/previews, commit date, all five remote Git blob/SHA-256 values and five local Skill hashes.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-design-md-calibration",
+      "status": "PASS",
+      "reason": "FACT/INFERENCE/UNKNOWN are separated; README preview contradiction, alpha/third-party interpretation, rights caveats and untested UI/browser behavior are preserved.",
+      "evidence_refs": [
+        "E1"
+      ]
+    },
+    {
+      "acceptance_id": "PB-design-md-handoff",
+      "status": "PASS",
+      "reason": "Findings and complete source/path metadata are accessible at fixed submission commit; scoped adoption recommendation remains a project decision, not an installation or new formal job.",
+      "evidence_refs": [
+        "E1"
+      ]
+    }
+  ]
+}

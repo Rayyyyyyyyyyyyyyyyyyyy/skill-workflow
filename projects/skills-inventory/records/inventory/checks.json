@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "checks": [
+    "all raw scan paths represented; metadata_errors=0",
+    "JSON/CSV path sets and 1540-row counts agree",
+    "source group counts sum to all definition paths",
+    "primary roots: 83 lexical paths, 80 canonical files, 57 names",
+    "all 83 primary source file hashes rechecked against snapshot",
+    "all 57 primary names appear in readable report",
+    "collector classification assert self-checks passed",
+    "collector refuses to overwrite an existing snapshot; rejection left source JSON hash unchanged"
+  ],
+  "not_checked": [
+    "Skill execution",
+    "installed/enabled status",
+    "all filesystem directories outside scan scope",
+    "browser behavior"
+  ]
+}

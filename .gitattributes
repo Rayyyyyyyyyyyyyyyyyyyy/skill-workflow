@@ -1,0 +1,2 @@
+# Preserve inventory snapshot bytes and data whitespace for recorded evidence.
+projects/skills-inventory/records/inventory/skills.csv -text -whitespace

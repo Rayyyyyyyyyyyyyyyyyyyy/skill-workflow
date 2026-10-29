@@ -1,0 +1,91 @@
+{
+  "scope": "deliver",
+  "workspace": ".",
+  "allowed_paths": [
+    "docs/CLAUDE_SKILLS_INSTALL.md",
+    "docs/CLAUDE_CLOUD.md",
+    "README.md",
+    "projects/skill-install-handoff/records"
+  ],
+  "planner": "/root",
+  "routing": {
+    "maturity": "ready",
+    "reason": "使用者已取消打包，要求列出實際安裝技能供Claude自行處理；已完成來源API／盤點資料核對，缺來源項目可明確交接而不臆造。",
+    "missing_inputs": []
+  },
+  "operations": [
+    "local"
+  ],
+  "limits": {
+    "max_rounds": 2,
+    "review_retries": 2,
+    "max_attempts": 4
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "完整對應本機盤點，區分 repo 已附10份、未附29份一般方法、Claude帳號同步13份及排除的 Codex／CLI 工具；列清 Agency、Matt 已安裝系列，沒有把上游未安裝項當已安裝。"
+    },
+    {
+      "id": "R2",
+      "text": "為 Claude 提供已核對的來源與正確目錄，明列版本等同性及未確認來源；Agency角色庫與本機loader分清，不虛構重裝網址或保證每項皆可重建。"
+    },
+    {
+      "id": "R3",
+      "text": "提供可直接交給Claude的安裝指示與可發現文件入口：只處理缺項、保留既有快照和固定Flow／Role／Proof、禁止默換或全域覆寫，遵守瀏覽器和操作權限；本次只改文件。"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "write",
+      "playbook": "deliver",
+      "role": "writer",
+      "allowed_paths": [
+        "docs/CLAUDE_SKILLS_INSTALL.md",
+        "docs/CLAUDE_CLOUD.md",
+        "README.md",
+        "projects/skill-install-handoff/records"
+      ],
+      "depends_on": [],
+      "supporting_sources": [
+        {
+          "path": "projects/skill-install-handoff/records/source-facts.json"
+        },
+        {
+          "path": "/Users/ray.shao/.codex/skills/writing-for-agents/SKILL.md"
+        }
+      ],
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "acceptance": [
+        {
+          "id": "R1-check",
+          "description": "完整對應本機盤點，區分 repo 已附10份、未附29份一般方法、Claude帳號同步13份及排除的 Codex／CLI 工具；列清 Agency、Matt 已安裝系列，沒有把上游未安裝項當已安裝。",
+          "method": "獨立查核原始要求、已固定來源資料與文件差異，重新比對集合／分類／來源，確認連結、狀態、範圍與使用說明無誤。",
+          "requirement_ids": [
+            "R1"
+          ]
+        },
+        {
+          "id": "R2-check",
+          "description": "為 Claude 提供已核對的來源與正確目錄，明列版本等同性及未確認來源；Agency角色庫與本機loader分清，不虛構重裝網址或保證每項皆可重建。",
+          "method": "獨立查核原始要求、已固定來源資料與文件差異，重新比對集合／分類／來源，確認連結、狀態、範圍與使用說明無誤。",
+          "requirement_ids": [
+            "R2"
+          ]
+        },
+        {
+          "id": "R3-check",
+          "description": "提供可直接交給Claude的安裝指示與可發現文件入口：只處理缺項、保留既有快照和固定Flow／Role／Proof、禁止默換或全域覆寫，遵守瀏覽器和操作權限；本次只改文件。",
+          "method": "獨立查核原始要求、已固定來源資料與文件差異，重新比對集合／分類／來源，確認連結、狀態、範圍與使用說明無誤。",
+          "requirement_ids": [
+            "R3"
+          ]
+        }
+      ]
+    }
+  ]
+}

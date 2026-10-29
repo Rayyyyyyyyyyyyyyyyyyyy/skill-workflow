@@ -6,6 +6,8 @@
 
 在 Claude Code 選這個 GitHub repo，使用包含最新整理的 branch／commit，先讀 [CLAUDE.md](CLAUDE.md) 和 [雲端接手](docs/CLAUDE_CLOUD.md)。Role／Skills 與所需支援檔隨 repo 保存，不必複製原電腦的個人安裝。
 
+需要補齊其他方法時，請把 [技能安裝清單](docs/CLAUDE_SKILLS_INSTALL.md) 交給 Claude，依來源與現有缺項處理。
+
 在集合根目錄先執行：
 
 ```sh

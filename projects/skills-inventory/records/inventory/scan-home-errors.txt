@@ -1,0 +1,2 @@
+rg: /Users/ray.shao/Pictures/Photos Library.photoslibrary: Operation not permitted (os error 1)
+rg: /Users/ray.shao/.Trash: Operation not permitted (os error 1)

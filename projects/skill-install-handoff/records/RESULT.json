@@ -1,0 +1,22 @@
+{
+  "state": "DONE",
+  "plan_hash": "6f97256577679a4be532bf06aab3801864b90d81d42f3561bca1e24bd8ab6f96",
+  "applied": {
+    "at": "2026-10-29T06:34:56.258863+00:00",
+    "commit": "7fd8c20a4128254001ef01d0d7cdb266d24e1e2c",
+    "paths": [
+      "README.md",
+      "docs/CLAUDE_CLOUD.md",
+      "docs/CLAUDE_SKILLS_INSTALL.md",
+      "projects/skill-install-handoff/records/validation.md"
+    ],
+    "plan_hash": "6f97256577679a4be532bf06aab3801864b90d81d42f3561bca1e24bd8ab6f96"
+  },
+  "review_digest": "12fc66b57b5ae9250bb9accdd659477f2cc84a9efc64323d9837ee13b3bf0b82",
+  "scope": "Installation handoff documents only; no Skills or Roles installed/copied/removed; no runtime/Flow changes.",
+  "limitations": [
+    "11 methods have no verified reinstall source",
+    "installation, native cloud loading, browser and feature execution untested"
+  ],
+  "publication": "Consult source Git history and remote; this record attests local acceptance only."
+}

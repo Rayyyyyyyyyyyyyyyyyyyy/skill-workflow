@@ -1,0 +1,131 @@
+{
+  "purpose": "Integration checks for the combined report, not independent acceptance or publication.",
+  "actor": "/root/skill_report_integration",
+  "attempt_id": "133e8d94cd924e2fbcc994442e9eb614",
+  "controller_root": "/Users/ray.shao/workflow",
+  "workspace": "/Users/ray.shao/workflow/projects/skills-inventory/tasks/combine-133e8d94cd924e2fbcc994442e9eb614",
+  "merge_version_before_report": {
+    "commit": "d734bd2cdc4876808f86e5fc294e4199e0d2137c",
+    "tree": "d086a5056163452afd9613250eaa2959d978f50d",
+    "base_commit": "70de3ff99b9889eed132914e3f511e8845f4be5a"
+  },
+  "accepted_source_order": [
+    "inventory",
+    "design-md"
+  ],
+  "accepted_sources": {
+    "inventory": {
+      "git": {
+        "base_commit": "b88013c1e9fca5e3880edcd8482916bfbb531862",
+        "branch": "codex/skills-inventory/inventory-a2b503463f324fb391b4d934266e9250",
+        "changed_paths": [
+          "projects/skills-inventory/records/inventory/checks.json",
+          "projects/skills-inventory/records/inventory/collect_inventory.py",
+          "projects/skills-inventory/records/inventory/duplicates.json",
+          "projects/skills-inventory/records/inventory/report.md",
+          "projects/skills-inventory/records/inventory/scan-follow-errors.txt",
+          "projects/skills-inventory/records/inventory/scan-follow-paths.txt",
+          "projects/skills-inventory/records/inventory/scan-home-errors.txt",
+          "projects/skills-inventory/records/inventory/scan-home-paths.txt",
+          "projects/skills-inventory/records/inventory/skills.csv",
+          "projects/skills-inventory/records/inventory/skills.json"
+        ],
+        "commit": "70de3ff99b9889eed132914e3f511e8845f4be5a",
+        "repo": "/Users/ray.shao/workflow/projects/skills-inventory/.workflow/git",
+        "tree": "9c27b0d1a81d02979ee5456c6da82c604c99dc6f",
+        "workspace": "/Users/ray.shao/workflow/projects/skills-inventory/tasks/inventory-a2b503463f324fb391b4d934266e9250"
+      },
+      "submission_digest": "de69778dd6c1758b337153e12b54ae8ee80170644adcd6a0f530b93b3590cb26",
+      "acceptance": {
+        "at": "2026-10-29T02:58:19.749745+00:00",
+        "review_digest": "50a45d7e28a7aaf135c77a72106e24ee33ff8210c868e0b6c3690634135a9fe5",
+        "submission_digest": "de69778dd6c1758b337153e12b54ae8ee80170644adcd6a0f530b93b3590cb26"
+      }
+    },
+    "design-md": {
+      "git": {
+        "base_commit": "b88013c1e9fca5e3880edcd8482916bfbb531862",
+        "branch": "codex/skills-inventory/design-md-95f17de2c3c5490e9f7b169565fe3e24",
+        "changed_paths": [
+          "projects/skills-inventory/records/awesome-design-md/findings.md",
+          "projects/skills-inventory/records/awesome-design-md/sources.json"
+        ],
+        "commit": "4bea70cdb1860ab0d20db94f51cb5d3a4a0f53e7",
+        "repo": "/Users/ray.shao/workflow/projects/skills-inventory/.workflow/git",
+        "tree": "7d94930207a477769ce3ba1ee1ce93bbd71f2f2a",
+        "workspace": "/Users/ray.shao/workflow/projects/skills-inventory/tasks/design-md-95f17de2c3c5490e9f7b169565fe3e24"
+      },
+      "submission_digest": "ecc028e70a1822226090dfbaa6ae4ebeb88e081d3921a1e32c6f5eea9dff2438",
+      "acceptance": {
+        "at": "2026-10-29T02:54:21.291684+00:00",
+        "review_digest": "7c0f572c09dddbb35a77fb347e699c97d52299cd74a655145fd259eb493bf2f1",
+        "submission_digest": "ecc028e70a1822226090dfbaa6ae4ebeb88e081d3921a1e32c6f5eea9dff2438"
+      }
+    }
+  },
+  "verified_source_sha256": {
+    "projects/skills-inventory/records/inventory/checks.json": "d10c59330b608f97c5c215dcff7aa8b0f968205474326c46f60d816a5cd712b7",
+    "projects/skills-inventory/records/inventory/collect_inventory.py": "38f728dee9d88a6e34f0db5b64133dc8a6f18116517b855cfcef29ba458a65a1",
+    "projects/skills-inventory/records/inventory/duplicates.json": "f31ef6bcd457e87d722d9d3bb04e3def3e9b7c7eef6c91644357ca1c5bfb0a59",
+    "projects/skills-inventory/records/inventory/report.md": "ba0315b852202f117dfbf4d29ee67fd6b467b01f9db2e7be31fd44f12ac3973b",
+    "projects/skills-inventory/records/inventory/scan-follow-errors.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/skills-inventory/records/inventory/scan-follow-paths.txt": "8a559b76e581d90c790f400d1c3fd05f845ec9fc394f3f43c429d74807677b22",
+    "projects/skills-inventory/records/inventory/scan-home-errors.txt": "8abaa775109ff22bfed52035ce41e9d69769fd79bc7e694c3bcfb6c9a82abe99",
+    "projects/skills-inventory/records/inventory/scan-home-paths.txt": "0d01c685f47780318f6a5f652669ad61440eb03e52c50237c7a84a71415176f0",
+    "projects/skills-inventory/records/inventory/skills.csv": "08c16a815e387ff65f3ec999f28470d0d26fce22ab5ab3815f34599dc18933fe",
+    "projects/skills-inventory/records/inventory/skills.json": "18c89a8706c46acb2d420c3956c7e67a1123c6355950e4ff5a11bd6982ba5e31",
+    "projects/skills-inventory/records/awesome-design-md/findings.md": "687946837cc454d3672a30e8e57814c22d4b8c934dd25cbd5033fdf8cbba12b3",
+    "projects/skills-inventory/records/awesome-design-md/sources.json": "e853e296346f42d43ccb44087beceb8a89bdcdfdf7a845848e7b5181df3577a1"
+  },
+  "checks": {
+    "all_12_source_files_unchanged": true,
+    "sources_are_accepted_commit_ancestors": true,
+    "aggregate_counts_recomputed": {
+      "definition_paths": 1540,
+      "canonical_paths": 1537,
+      "names": 851,
+      "contents": 997
+    },
+    "primary_counts_recomputed": {
+      "definition_paths": 83,
+      "canonical_paths": 80,
+      "names": 57,
+      "contents": 59
+    },
+    "primary_names_with_content_differences": [
+      "impeccable",
+      "skill-creator"
+    ],
+    "plugin_runtime_paths": 92,
+    "plugin_runtime_names": 63,
+    "remote_tree_counts": {
+      "design_md": 84,
+      "skill_md": 0,
+      "preview_html": 0,
+      "truncated": false
+    },
+    "local_report_file_links_checked": [
+      "awesome-design-md/findings.md",
+      "awesome-design-md/sources.json",
+      "integration-checks.json",
+      "inventory/duplicates.json",
+      "inventory/report.md",
+      "inventory/scan-home-errors.txt",
+      "inventory/skills.csv",
+      "inventory/skills.json"
+    ]
+  },
+  "conflicts": [],
+  "apply_conditions": [
+    "All necessary tasks must be independently accepted.",
+    "Only the fixed terminal integration commit may be applied.",
+    "Source per-file contents must still equal baseline; otherwise preserve state and wait."
+  ],
+  "not_run": [
+    "Skill execution",
+    "re-scan original directories",
+    "functional tests not relevant to report-only integration",
+    "browser or UI preview",
+    "remote writes or publication"
+  ]
+}
