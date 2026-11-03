@@ -33,6 +33,6 @@ WORKBENCH_ROOT="$(pwd -P)"; python3 "$WORKBENCH_ROOT/workbench.py" --root "$WORK
 - 正式狀態：每個 Project 的 `projects/<slug>/.workflow/state.sqlite3`，加上私有 Git repo、來源快照與證據；這些與 `projects/*/tasks/` 都被 gitignore，clone 不會帶上。來源及安全回寫目錄預設是 `projects/<slug>/workspace/`，計畫設 `workspace: "."` 時改為集合根目錄。
 - `library/git_tasks.py`：私有 Git 快照與 task worktree；從不 stage／reset 來源 repo。`allowed()`／`clean()` 守住 task `allowed_paths`。
 - `library/playbooks/*.json`（clarify、research、design、deliver、review、integrate）提供各 task 的最低驗收項，`plan` 存入時自動附加為 `PB-<task>-<criterion>`。
-- `library/roles.json` 把 Role 綁到 `.claude/agents/*.md` 與 `.claude/skills/*/SKILL.md`；派工時固定內容 Digest。`.claude/methods-manifest.json` 記錄方法包來源與檔案雜湊，`check_portability.py` 依它查核。改 Role／Skill 檔要手動更新 manifest `files` 內的 SHA-256（沒有更新腳本），否則檢查回報 `method checksum mismatch`。
+- `library/roles.json` 把 Role 綁到 `.claude/agents/*.md` 與 `.claude/skills/*/SKILL.md`；`plan` 存入時固定內容 Digest，之後改檔不影響已存入的計畫。`.claude/methods-manifest.json` 記錄方法包來源與檔案雜湊，`check_portability.py` 依它查核。改 Role／Skill 檔要手動更新 manifest `files` 內的 SHA-256（沒有更新腳本），否則檢查回報 `method checksum mismatch`。
 - Task 狀態流：`READY → RUNNING → AWAITING_REVIEW → DONE`，異常進 `WAITING`（附 reason，如 `GIT_MERGE_CONFLICT`、`REVIEW_BLOCKED`）或 `CANCELLED`。Project 層另有自己的 `state`／`reason`（如 `PLAN_REWORK_REQUIRED`、`SOURCE_CHANGED`）。審查 FAIL 時第 1 輪退回 `READY`，之後進 `WAITING`（`GOAL_ALIGNMENT_REQUIRED`）。輪次、Attempt 與准入失敗計數跨重啟保留，不可藉換計畫歸零。
 - `tests/test_workbench.py` 以行為描述命名測試，是控制契約的可執行規格；改 `workbench.py` 行為先對照它與 `docs/WORKFLOW.md`。
