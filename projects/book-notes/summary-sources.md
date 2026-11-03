@@ -1,0 +1,124 @@
+# 書本摘要查證來源（2026-11-03）
+
+摘要內容在 book-reader 的 `site/src/content/books/*.md`，欄位 `summary`。
+
+## 來源限制
+
+- 沒有取得這些書的全文。每本列一到兩個主要來源，當時查閱的是 Wikipedia 導言或搜尋結果摘要，不是逐頁讀過該網頁。
+- 來源多為二手資料，部分是商業摘要網站；只在書籍基本主張上互相佐證。
+- 章節架構、術語、案例與批評等細節，有些來自撰寫者既有知識，來源未必逐項涵蓋。獨立查核結果另見 `summary-review.md`。
+- 《別人怎麼對你，都是你教的》（103）只找到一篇節錄，內容最薄；《Rewire》（109）也缺少章節層級的資料。
+
+| 排名 | 來源 |
+|---|---|
+| 1 | https://en.wikipedia.org/wiki/Thinking%2C_Fast_and_Slow |
+| 2 | https://en.wikipedia.org/wiki/Influence%3A_Science_and_Practice |
+| 3 | https://en.wikipedia.org/wiki/Predictably_Irrational |
+| 4 | https://www.supersummary.com/how-emotions-are-made/summary |
+| 5 | https://en.wikipedia.org/wiki/The_Righteous_Mind |
+| 6 | https://en.wikipedia.org/wiki/Stumbling_on_Happiness |
+| 7 | https://en.wikipedia.org/wiki/Nudge_%28book%29 |
+| 8 | https://en.wikipedia.org/wiki/Mistakes_Were_Made_%28but_Not_by_Me%29 |
+| 9 | https://www.shortform.com/blog/laws-of-human-nature-robert-greene/ |
+| 10 | https://en.wikipedia.org/wiki/Quiet%3A_The_Power_of_Introverts_in_a_World_That_Can%27t_Stop_Talking |
+| 11 | https://www.supersummary.com/think-again/book-brief/ |
+| 12 | https://en.wikipedia.org/wiki/Stolen_Focus |
+| 13 | https://en.wikipedia.org/wiki/The_Anxious_Generation |
+| 14 | https://bobmorris.biz/clear-thinking-a-book-review-by-bob-morris |
+| 15 | https://notesbythalia.com/the-let-them-theory-mel-robbins-book-review/ |
+| 16 | https://en.wikipedia.org/wiki/Chatter%3A_The_Voice_in_Our_Head |
+| 17 | https://www.apa.org/ed/precollege/psychology-teacher-network/activities-books/human-mind |
+| 18 | https://www.persuasion.community/p/-how-to-avoid-high-conflict |
+| 19 | https://en.wikipedia.org/wiki/Good_to_Great |
+| 20 | https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma |
+| 21 | https://en.wikipedia.org/wiki/The_Lean_Startup |
+| 22 | https://en.wikipedia.org/wiki/Blue_Ocean_Strategy |
+| 23 | https://www.alexmurrell.co.uk/summaries/richard-rumelt-good-strategy-bad-strategy |
+| 24 | https://en.wikipedia.org/wiki/High_Output_Management |
+| 25 | https://en.wikipedia.org/wiki/Zero_to_One |
+| 26 | https://www.supersummary.com/measure-what-matters/summary |
+| 27 | https://en.wikipedia.org/wiki/Crossing_the_Chasm |
+| 28 | https://www.supersummary.com/the-hard-thing-about-hard-things/summary |
+| 29 | https://www.publishersweekly.com/9781984877864 |
+| 30 | https://evansamek.substack.com/p/summary-7-powers |
+| 31 | https://tomtunguz.com/the-great-ceo-within/（僅佐證基本主張） |
+| 32 | https://nextbigideaclub.com/magazine/working-backwards-insights-stories-secrets-inside-amazon-bookbite/26769/ |
+| 33 | https://www.supersummary.com/the-diary-of-a-ceo/summary/ |
+| 34 | https://www.shortform.com/blog/unreasonable-hospitality-book/ |
+| 35 | https://scalingup.com/bookstore/（僅佐證基本主張） |
+| 36 | https://positiveorgs.bus.umich.edu/?p=28573 |
+| 37 | https://en.wikipedia.org/wiki/The_Psychology_of_Money |
+| 38 | https://en.wikipedia.org/wiki/Poor_Charlie%27s_Almanack |
+| 39 | https://en.wikipedia.org/wiki/The_Intelligent_Investor |
+| 40 | https://en.wikipedia.org/wiki/One_Up_on_Wall_Street |
+| 41 | https://en.wikipedia.org/wiki/Principles_%28book%29 |
+| 42 | https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street |
+| 43 | https://en.wikipedia.org/wiki/The_Little_Book_of_Common_Sense_Investing |
+| 44 | https://www.getabstract.com/en/summary/the-most-important-thing/15603 |
+| 45 | https://en.wikipedia.org/wiki/Fooled_by_Randomness |
+| 46 | https://www.boldin.com/retirement/podcast-episode-48-jl-collins-simple-path-to-wealth/ |
+| 47 | https://en.wikipedia.org/wiki/Reminiscences_of_a_Stock_Operator |
+| 48 | https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/the-outsiders |
+| 49 | https://www.supersummary.com/same-as-ever/book-brief/ |
+| 50 | https://jamesbachini.com/die-with-zero/ |
+| 51 | https://monevator.com/just-keep-buying-review/ |
+| 52 | https://www.cfr.org/books/power-law |
+| 53 | https://www.netgalley.com/book/311368/reviews（僅佐證基本主張） |
+| 54 | https://blackwells.co.uk/bookshop/product/Richer-Wiser-Happier-by-William-Green/9781501164859 |
+| 55 | https://en.wikipedia.org/wiki/Atomic_Habits |
+| 56 | https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People |
+| 57 | https://www.mindtools.com/adoguzc/deep-work/ |
+| 58 | https://www.supersummary.com/mindset/summary/ |
+| 59 | https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning<br>https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning |
+| 60 | https://www.supersummary.com/the-courage-to-be-disliked/summary |
+| 61 | https://www.runn.io/blog/essentialism-summary |
+| 62 | https://www.bookbrowse.com/bb_briefs/detail/index.cfm/ezine_preview_number/26543/grit |
+| 63 | https://en.wikipedia.org/wiki/Daring_Greatly |
+| 64 | https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way |
+| 65 | https://en.wikipedia.org/wiki/The_Power_of_Now |
+| 66 | https://nextbigideaclub.com/magazine/5-timeless-lessons-building-riches-joy-bookbite/57071/the-almanack-of-naval-ravikant_bbinline_solo/ |
+| 67 | https://penguin.co.uk/books/446560/feel-good-productivity-by-abdaal-ali/9781529159394 |
+| 68 | https://en.wikipedia.org/wiki/Four_Thousand_Weeks%3A_Time_Management_for_Mortals |
+| 69 | https://readingraphics.com/book-summary-buy-back-your-time/ |
+| 70 | https://www.inkl.com/news/the-creative-act-by-rick-rubin-review-life-lessons-from-the-bearded-beat-master |
+| 71 | https://www.penguin.com.au/books/build-the-life-you-want-9781529919875 |
+| 72 | https://www.shortform.com/summary/10x-is-easier-than-2x-summary-dan-sullivan |
+| 73 | https://en.wikipedia.org/wiki/Why_We_Sleep |
+| 74 | https://www.publishersweekly.com/9781524746728 |
+| 75 | https://www.supersummary.com/the-molecule-of-more/summary/ |
+| 76 | https://en.wikipedia.org/wiki/The_Brain_that_Changes_Itself |
+| 77 | https://en.wikipedia.org/wiki/Behave_%28book%29 |
+| 78 | https://redwood.berkeley.edu/seminars/jeff-hawkins-april-2021/ |
+| 79 | https://en.wikipedia.org/wiki/Phantoms_in_the_Brain |
+| 80 | https://en.wikipedia.org/wiki/Being_You%3A_A_New_Science_of_Consciousness |
+| 81 | https://en.wikipedia.org/wiki/The_Man_Who_Mistook_His_Wife_for_a_Hat<br>https://kottke.org/25/12/the-lies-and-falsifications-of-oliver-sacks（二手報導；未讀《紐約客》原文） |
+| 82 | https://en.wikipedia.org/wiki/Incognito%3A_The_Secret_Lives_of_the_Brain |
+| 83 | https://fivebooks.com/book/experience-machine-andy-clark（僅佐證基本主張） |
+| 84 | https://en.wikipedia.org/wiki/Outlive%3A_The_Science_and_Art_of_Longevity |
+| 85 | https://www.timeshighereducation.com/node/707635 |
+| 86 | https://www.bu.edu/articles/2025/neuroscientists-debut-book-discusses-how-to-change-a-memory/ |
+| 87 | https://en.wikipedia.org/wiki/Sapiens%3A_A_Brief_History_of_Humankind |
+| 88 | https://en.wikipedia.org/wiki/Outliers_%28book%29 |
+| 89 | https://en.wikipedia.org/wiki/The_Black_Swan%3A_The_Impact_of_the_Highly_Improbable |
+| 90 | https://en.wikipedia.org/wiki/Guns%2C_Germs%2C_and_Steel |
+| 91 | https://en.wikipedia.org/wiki/Factfulness |
+| 92 | https://en.wikipedia.org/wiki/Noise%3A_A_Flaw_in_Human_Judgment |
+| 93 | https://en.wikipedia.org/wiki/Range%3A_Why_Generalists_Triumph_in_a_Specialized_World |
+| 94 | https://en.wikipedia.org/wiki/Skin_in_the_Game_%28book%29 |
+| 95 | https://en.wikipedia.org/wiki/Antifragile_%28book%29 |
+| 96 | https://www.libraryjournal.com/review/superforecasting-the-art-and-science-of-prediction |
+| 97 | https://en.wikipedia.org/wiki/Breath%3A_The_New_Science_of_a_Lost_Art |
+| 98 | https://en.wikipedia.org/wiki/The_Tipping_Point |
+| 99 | https://en.wikipedia.org/wiki/Determined%3A_A_Science_of_Life_Without_Free_Will |
+| 100 | https://en.wikipedia.org/wiki/An_Immense_World<br>https://www.npr.org/2022/06/21/1105793891/ed-yong-an-immense-world-animal-senses |
+| 101 | https://www.supersummary.com/the-cafe-on-the-edge-of-the-world/summary/ |
+| 102 | https://buybookbook.com/products/product-2780<br>https://enbergagency.se/angels-and-devils-cocktail-david-jp-phillips/ |
+| 103 | https://www.gvm.com.tw/article/120893 |
+| 104 | https://en.wikipedia.org/wiki/The_Art_of_Loving |
+| 105 | https://bridgestreetbooks.ie/product/i-may-be-wrong/<br>https://en.wikipedia.org/wiki/Bj%C3%B6rn_Natthiko_Lindeblad |
+| 106 | https://en.wikipedia.org/wiki/The_Book_of_Joy<br>https://www.spiritualityandpractice.com/book-reviews/view/28397/the-book-of-joy |
+| 107 | https://www.penguinrandomhouse.com/books/601388/dying-to-be-me-by-anita-moorjani/<br>https://en.wikipedia.org/wiki/Anita_Moorjani |
+| 108 | https://en.wikipedia.org/wiki/When_Breath_Becomes_Air |
+| 109 | https://bookpage.com/reviews/rewire-nicole-vignola-book-review/ |
+| 110 | https://www.shortform.com/blog/michael-singer-the-surrender-experiment/<br>https://en.wikipedia.org/wiki/Michael_Alan_Singer |
+| 111 | https://kimtasso.com/book-review-counselling-for-toads-a-psychological-adventure-by-robert-de-board/ |
