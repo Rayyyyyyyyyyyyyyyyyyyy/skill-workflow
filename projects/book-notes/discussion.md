@@ -33,7 +33,7 @@
 
 ## 2026-11-03 摘要補齊
 
-使用者決定先補齊全部 111 本摘要，不分批。內容在 book-reader `ft/book-summaries`，尚未合併或推送。查核見 `summary-review.md`，來源見 `summary-sources.md`。心得仍一本一本討論，不批次代寫。
+使用者決定先補齊全部 111 本摘要，不分批。首版已合併推送（`8b50b90`）；逐句查核後的修正在 `ft/summary-fact-check`（`01d6731`），尚未合併或推送。查核見 `summary-review.md`，來源見 `summary-sources.md`。心得仍一本一本討論，不批次代寫。
 
 ## 2026-11-03 使用者後續決策
 
@@ -44,7 +44,7 @@
 
 ## 未決
 
-- `ft/book-summaries` 的合併與推送。
+- `ft/summary-fact-check` 的合併與推送（線上 `8b50b90` 仍是未經逐句查核的舊摘要）。
 - Safari／iOS 與螢幕閱讀器的手動檢查。
 - 第一篇要討論的書。
 - `你發生過什麼事` 草稿不在 111 本書目內，是否上架。

@@ -25,7 +25,7 @@
 | 12 | https://en.wikipedia.org/wiki/Stolen_Focus |
 | 13 | https://en.wikipedia.org/wiki/The_Anxious_Generation |
 | 14 | https://bobmorris.biz/clear-thinking-a-book-review-by-bob-morris |
-| 15 | https://notesbythalia.com/the-let-them-theory-mel-robbins-book-review/ |
+| 15 | https://notesbythalia.com/the-let-them-theory-mel-robbins-book-review/<br>https://en.wikipedia.org/wiki/The_Let_Them_Theory |
 | 16 | https://en.wikipedia.org/wiki/Chatter%3A_The_Voice_in_Our_Head |
 | 17 | https://www.apa.org/ed/precollege/psychology-teacher-network/activities-books/human-mind |
 | 18 | https://www.persuasion.community/p/-how-to-avoid-high-conflict |
@@ -74,7 +74,7 @@
 | 61 | https://www.runn.io/blog/essentialism-summary |
 | 62 | https://www.bookbrowse.com/bb_briefs/detail/index.cfm/ezine_preview_number/26543/grit |
 | 63 | https://en.wikipedia.org/wiki/Daring_Greatly |
-| 64 | https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way |
+| 64 | https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way<br>https://www.goodreads.com/book/show/18668059（讀者評論，來源較弱） |
 | 65 | https://en.wikipedia.org/wiki/The_Power_of_Now |
 | 66 | https://nextbigideaclub.com/magazine/5-timeless-lessons-building-riches-joy-bookbite/57071/the-almanack-of-naval-ravikant_bbinline_solo/ |
 | 67 | https://penguin.co.uk/books/446560/feel-good-productivity-by-abdaal-ali/9781529159394 |
@@ -112,7 +112,7 @@
 | 99 | https://en.wikipedia.org/wiki/Determined%3A_A_Science_of_Life_Without_Free_Will |
 | 100 | https://en.wikipedia.org/wiki/An_Immense_World<br>https://www.npr.org/2022/06/21/1105793891/ed-yong-an-immense-world-animal-senses |
 | 101 | https://www.supersummary.com/the-cafe-on-the-edge-of-the-world/summary/ |
-| 102 | https://buybookbook.com/products/product-2780<br>https://enbergagency.se/angels-and-devils-cocktail-david-jp-phillips/ |
+| 102 | https://buybookbook.com/products/product-2780<br>https://enbergagency.se/angels-and-devils-cocktail-david-jp-phillips/<br>https://www.davidjpphillips.com/（作者自述的觀看數） |
 | 103 | https://www.gvm.com.tw/article/120893 |
 | 104 | https://en.wikipedia.org/wiki/The_Art_of_Loving |
 | 105 | https://bridgestreetbooks.ie/product/i-may-be-wrong/<br>https://en.wikipedia.org/wiki/Bj%C3%B6rn_Natthiko_Lindeblad |
