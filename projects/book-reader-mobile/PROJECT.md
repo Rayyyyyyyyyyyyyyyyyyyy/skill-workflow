@@ -1,5 +1,13 @@
 # book-reader-mobile
 
+## 目前狀態（2026-11-05 查核）
+
+- 外部 repo：`/Users/ray.shao/book-reader`
+- 狀態：已完成，已上線。這個專案只有文件，沒有 `workbench` 紀錄，所以不會出現在 `list`。
+- 最後版本：程式 `7210074`（GitHub Pages 最後一次部署）；`main` 為 `5080382`，`site/` 與 `7210074` 無差異。
+- 待處理：下方「未修」清單，審查認為不擋合併。
+- 未驗證：iPhone Safari、VoiceOver、真實 bfcache、正式站 301。
+
 book-reader 手機版 UI/UX 重新設計。狀態：已完成（2026-11-05 使用者：「好了 可以收尾」）。`7210074` 為最後上線程式，OpenSpec 已歸檔，issue #1 已關。真實 Safari、VoiceOver、bfcache 沒有測試紀錄。
 
 ## 原始要求（2026-11-04）
