@@ -19,6 +19,8 @@
 
 它們位於 `.claude/skills/<name>/`，版本依 `.claude/methods-manifest.json`。其中 `ask-matt`、`grill-me`、`grill-with-docs` 已適配 Workbench；先跳過既有項，不用上游整包安裝覆寫。`design-taste-frontend`、`ui-ux-pro-max`、`humanizer`、`ponytail` 也已有實際檔案。
 
+盤點之後另附 `craft-anything`（2026-11-07，上游 `storytold/craft-anything` 官方 Skill 加 Workbench 前言），不綁定 Role，也不附 CLI 執行檔；使用方式與限制見 [craft-anything-integration](../projects/craft-anything-integration/PROJECT.md)。
+
 ## 需要補的 29 項
 
 ### Matt 系列：15 份缺項

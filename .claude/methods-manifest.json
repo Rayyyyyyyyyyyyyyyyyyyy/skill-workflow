@@ -244,6 +244,20 @@
       "adaptations": [
         "Route only to checked-in Workbench methods; remove uninstalled main-flow/tracker assumptions."
       ]
+    },
+    "skill:craft-anything": {
+      "origin": "https://github.com/storytold/craft-anything @ 1f8508a104134c436cbba5ea2f675619ef47702f, crates/setup/src (skill version 2; MIT OR Apache-2.0, MIT copy kept)",
+      "upstream_files": {
+        "crates/setup/src/skill.md": "67af4e9bd3658d277eb057789bdff0d60fbae8df94995d18e444546f1ae1f529",
+        "crates/setup/src/skill_recovery.md": "f983ea2dfb9ea0706fcc49fe274964d79f84eda68cf0fc58e60541eb16376a3a",
+        "LICENSE-MIT": "777b5f0c65bd9c289cb234e32857b594745d5c76d613034870aa05bd00d32622"
+      },
+      "adaptations": [
+        "Workbench preface added after frontmatter (clean room, browser and deep-mode authorization, no nested rebuild/chat controller, setup limits, evidence paths, supporting_sources pinning); upstream body kept verbatim. recovery.md and LICENSE copied unchanged."
+      ],
+      "excluded": [
+        "craft-anything-cli binary, engine source and desktop app; not bound to any Role"
+      ]
     }
   },
   "files": {
@@ -256,6 +270,9 @@
     ".claude/agents/reviewer.md": "5bf77322b6c266e4646e8a5fb91e5c5a0f6fe733532cd31199e049c7feabac35",
     ".claude/agents/writer.md": "85758c775cbdb599c4423a3cdcbd1c20842457325e5cd0cc96111d89bea0d6f1",
     ".claude/skills/ask-matt/SKILL.md": "f25a90d1a839dbf942bc7919c7f26c0ac24781e680489477e9bfea0cacf768df",
+    ".claude/skills/craft-anything/LICENSE": "777b5f0c65bd9c289cb234e32857b594745d5c76d613034870aa05bd00d32622",
+    ".claude/skills/craft-anything/SKILL.md": "764131b1e8459ea0d79832460a4b6def90a45f556e68d0a173cb95da893e83b1",
+    ".claude/skills/craft-anything/references/recovery.md": "f983ea2dfb9ea0706fcc49fe274964d79f84eda68cf0fc58e60541eb16376a3a",
     ".claude/skills/design-taste-frontend/LICENSE": "4575a543ab88dad12ccea7d97e563d0bce5b448b06072e65d3264497dad326df",
     ".claude/skills/design-taste-frontend/README.md": "5e33fd716b3e1ffaca9340f645d44c193f9b446107fa67f0cce498d33025672c",
     ".claude/skills/design-taste-frontend/SKILL.md": "4eaeadcd0cc03ec354a4002fb4ebc2a479aa20a65b8c8a20846bb294b1074d51",
