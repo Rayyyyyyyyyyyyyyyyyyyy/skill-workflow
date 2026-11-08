@@ -1,5 +1,11 @@
 # 給 Claude 的技能安裝清單
 
+## 2026-11-08 安裝結果
+
+- 已安裝：Matt 系列 15 份（`mattpocock/skills@59db609`，含 LICENSE）、`impeccable`（`pbakaus/impeccable@924bbd1`）、agency-agents 282 個角色（`msitarzewski/agency-agents@4e3ac3c`，放在 `library/agents/`）。目錄見 [library/CATALOG.md](../library/CATALOG.md)。
+- 還沒裝：下方「11 份尚未確認可重裝來源」（要從原電腦複製）與 `graphify`（需要 runtime）。
+- 下面是 2026-10-29 的原始盤點，保留作為來源紀錄。
+
 這是 2026-10-29 本機盤點的安裝交接文件。目標是在 Claude 的 GitHub 雲端 session 補齊需要的方法；本次只整理清單，沒有安裝、複製或移除任何 Skill，也沒有改動 Flow。
 
 ## 先看狀態

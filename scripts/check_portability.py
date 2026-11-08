@@ -43,6 +43,15 @@ def check(root: Path) -> list[str]:
                 local_file(raw)
                 if raw not in files:
                     errors.append(f"method missing from manifest ({role}): {raw}")
+        catalog = local_file("library/CATALOG.md").read_text()
+        index = local_file("library/agents/INDEX.md").read_text()
+        for skill in sorted((root / ".claude/skills").glob("*/SKILL.md")):
+            if f"`{skill.parent.name}`" not in catalog:
+                errors.append(f"skill missing from catalog (run scripts/sync_methods.py): {skill.parent.name}")
+        for role in sorted((root / "library/agents").rglob("*.md")):
+            relative = role.relative_to(root).as_posix()
+            if role.name != "INDEX.md" and role.read_text().startswith("---") and f"`{relative}`" not in index:
+                errors.append(f"role missing from index (run scripts/sync_methods.py): {relative}")
         for relative in ("CLAUDE.md", "AGENTS.md", "docs/WORKFLOW.md", "docs/CLAUDE_CLOUD.md"):
             local_file(relative)
     except (OSError, ValueError, KeyError, TypeError) as exc:

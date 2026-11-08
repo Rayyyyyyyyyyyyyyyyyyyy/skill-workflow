@@ -1,17 +1,11 @@
 ---
 name: ask-matt
-description: Choose the existing Project Workbench flow and repo-local skills for an idea, discussion, research, design or local delivery.
+description: Pick the workflow mode, Skills and Roles for an idea, direction or goal.
 disable-model-invocation: true
 ---
 
-Read `docs/WORKFLOW.md` from the collection root and inspect existing Projects before routing.
+Read `docs/WORKFLOW.md` and `library/CATALOG.md` from the collection root, then look at `projects/` for an existing Project.
 
-- A seed idea or a request to discuss: use the `clarify` Playbook with planner. Read `../grill-with-docs/SKILL.md`, `../grilling/SKILL.md` and `../domain-modeling/SKILL.md`; follow dependency-aware interview rounds and save decisions. User confirmation of shared understanding ends discussion.
-- A concrete missing fact: select `research` and read `../research/SKILL.md`.
-- An unsettled interface: select `design` and read `../ui-ux-pro-max/SKILL.md` and `../design-taste-frontend/SKILL.md`.
-- A sufficiently clear local deliverable: select `deliver`; implementer uses `../ponytail/SKILL.md`, writer uses `../humanizer/SKILL.md`.
-- Independent acceptance and multi-branch integration use the existing review/integrate contracts in `library/`.
-
-Read each selected skill before explaining or applying it. For formal tasks, the controller pins actual Role/Skill/support files before dispatch; use those snapshots. Register candidate work through the controller, without silently adding jobs. Role and Skill availability do not authorize external actions. If a required method or independent host context is missing, preserve the gap.
-
-This router covers the checked-in Workbench methods. It does not assume other personal Matt skills or a particular tracker are installed.
+1. Classify what the user gave: **goal**, **direction** or **seed** (the three modes in WORKFLOW.md).
+2. From the catalog, choose the Skills and Roles this task needs. Search `library/agents/INDEX.md` by keyword for specialists. Read each chosen Skill before applying it.
+3. Write the mode, the finish line and the chosen tools into the Project's `PROJECT.md`, explain the choice to the user in a few lines, and start the push loop.
