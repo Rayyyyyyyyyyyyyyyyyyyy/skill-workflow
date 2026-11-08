@@ -24,7 +24,7 @@ PLATFORM_SKILLS = [
     ("skill-creator", "建立或改進 Skill 並跑評測"),
     ("dataviz", "做任何圖表或資料視覺化前先讀"),
     ("built-in-browser / chrome-browser / computer-use", "操作瀏覽器或桌面（需授權，見 AGENTS.md）"),
-    ("code-review / security-review / simplify", "Claude Code 內建的審查與精簡"),
+    ("security-review / simplify", "Claude Code 內建的安全審查與精簡（`code-review` 指的是 repo 內 Matt 的版本）"),
 ]
 
 
@@ -55,7 +55,8 @@ def skill_rows() -> list[str]:
     rows = []
     for skill in sorted(p for p in SKILLS.iterdir() if (p / "SKILL.md").is_file()):
         meta = frontmatter(skill / "SKILL.md")
-        rows.append(f"| `{meta.get('name', skill.name)}` | {short(meta.get('description', ''), 140)} |")
+        how = "讀檔" if meta.get("disable-model-invocation") == "true" else "Skill 工具"
+        rows.append(f"| `{meta.get('name', skill.name)}` | {how} | {short(meta.get('description', ''), 140)} |")
     return rows
 
 
@@ -95,10 +96,15 @@ def write_catalog(divisions) -> None:
         "由 `scripts/sync_methods.py` 產生；新增或修改 Skill／Role 後重跑，不要手改。",
         "每接一個任務先掃過這份目錄，挑出這次用得上的 Skill 與角色，記到 PROJECT.md 的「工具」欄；做到一半需要別的就再加。",
         "",
-        "## Skills（`.claude/skills/`，Claude Code 會自動發現；用 Skill 工具或 `/名稱` 呼叫）",
+        "## Skills（`.claude/skills/`）",
         "",
-        "| Skill | 用途 |",
-        "|---|---|",
+        "「呼叫」欄寫「Skill 工具」的，直接用 Skill 工具呼叫；寫「讀檔」的，這個 Skill 關掉了模型自動呼叫，"
+        "要直接完整讀 `.claude/skills/<名稱>/SKILL.md` 再照做（使用者也可以自己打 `/名稱`）。",
+        "Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 issue tracker 設定已經寫在 "
+        "`docs/agents/`：票放在 `projects/<slug>/` 的本機 Markdown，不必另跑 setup-matt-pocock-skills。",
+        "",
+        "| Skill | 呼叫 | 用途 |",
+        "|---|---|---|",
         *skill_rows(),
         "",
         "## 平台可能提供的 Skills（依當次 session 實際清單為準）",

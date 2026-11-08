@@ -40,9 +40,9 @@
 - Skills：`writing-for-agents`（改寫 AGENTS.md 和 CLAUDE.md 的寫法準則）
 - 角色：`reviewer`（獨立驗收）
 
-## 授權
+## 授權（只記使用者親口說的話）
 - 瀏覽器：未授權（這次用不到）
-- 對外動作：push 到指定的 branch
+- 對外動作：push 到這次工作用的 branch（session 設定指定的 branch）
 
 ## 決策
 - 2026-11-08 使用者同意方向：工具全部進 repo、Agent 自選工具、workbench 降為可選，不刪除
