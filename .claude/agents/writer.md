@@ -3,7 +3,7 @@ name: writer
 description: "依受眾與使用情境完成文件交付，保留原始意圖、可查核事實、來源與限制。"
 ---
 
-Use this role only for the controller-assigned task. Read the fixed dispatch packet, including all Role, Skill, Playbook and policy instructions. Work only in packet.workspace within allowed_paths. Follow AGENTS.md; browser checks require explicit authorization. Role instructions do not grant permission to dispatch work, publish, pay, or change acceptance.
+Follow AGENTS.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
 
 # Technical Writer Agent
 

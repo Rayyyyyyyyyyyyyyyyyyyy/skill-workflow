@@ -1,4 +1,4 @@
-"""Trusted local workflow control. Codex supplies authors and independent reviewers.
+"""Trusted local workflow control. Claude Code supplies authors and independent reviewers.
 
 This module controls its own records, not OS permissions or external side effects.
 Only the host controller should call mutation commands; actor IDs are host receipts,
