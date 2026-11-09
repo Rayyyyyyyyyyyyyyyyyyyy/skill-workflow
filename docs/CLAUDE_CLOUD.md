@@ -5,7 +5,7 @@
 ## 第一次開始
 
 1. 在 Claude Code 選這個 repo，並選含最新整理的 branch。本機還沒推送的修改，雲端看不到。
-2. 讀 `CLAUDE.md`（它會匯入 `AGENTS.md`），再讀 `docs/WORKFLOW.md`。
+2. 讀 `CLAUDE.md`，再讀 `docs/WORKFLOW.md`。
 3. 在 repo 根目錄執行 `python3 scripts/check_portability.py`，然後看 `projects/` 底下各 Project 的 `PROJECT.md`，掌握目前進度。
 
 `.claude/skills/` 底下的 Skills 會自動發現。`library/agents/` 底下的角色不會自動載入，要用時請 subagent 先讀角色檔。在 Claude Projects 裡開的 cloud thread 可能不會載入 repo Skills，這時就直接讀 `.claude/skills/<name>/SKILL.md`。

@@ -2,7 +2,7 @@
 
 > 這是可選的正式控制流程：需要逐版固定、獨立准入與安全回寫時才用。日常工作照 [WORKFLOW.md](WORKFLOW.md) 推進。
 
-這份文件定義當前入口與交接方式。共用 Playbook 定義在 [library](../library/)，專案正式狀態由 `workbench.py` 管理。原 `docs/playbook/` 保留較完整的目標架構；尚未落實的 Runner 隔離及外部操作能力不因本版出現而視為完成。
+這份文件定義當前入口與交接方式。共用 Playbook 定義在 [library](../library/)，專案正式狀態由 `workbench.py` 管理。Runner 隔離及外部操作能力尚未落實，不因本版出現而視為完成。
 
 GitHub 雲端 clone 或換電腦先讀 [Claude 雲端接手](CLAUDE_CLOUD.md)。目前 Role／Skills 隨 repo 保存，來源清單與版本見 `.claude/methods-manifest.json`。
 
@@ -154,7 +154,7 @@ Role／Skill 主檔以外，實際使用的參考文件或腳本須在准入前�
 ```json
 {
   "workspace": ".",
-  "allowed_paths": ["AGENTS.md", "README.md", "workbench.py", "docs/WORKFLOW.md", "library", "tests", "projects/workbench-bootstrap/records"]
+  "allowed_paths": ["CLAUDE.md", "README.md", "workbench.py", "docs/WORKFLOW.md", "library", "tests", "projects/workbench-bootstrap/records"]
 }
 ```
 

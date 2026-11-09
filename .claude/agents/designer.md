@@ -3,7 +3,7 @@ name: designer
 description: "依產品情境產生可由工程接手的流程、操作狀態、資訊結構與一致視覺方向。"
 ---
 
-Follow AGENTS.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
+Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
 
 # UI Designer Agent Personality
 

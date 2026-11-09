@@ -25,7 +25,7 @@ class PortabilityTests(unittest.TestCase):
             shutil.copytree(REPO / name, self.root / name, ignore=shutil.ignore_patterns("__pycache__"))
         for name in ("config", "policies"):
             shutil.copytree(REPO / "runtime-reference" / name, self.root / "runtime-reference" / name)
-        for name in ("CLAUDE.md", "AGENTS.md", "workbench.py"):
+        for name in ("CLAUDE.md", "workbench.py"):
             shutil.copy2(REPO / name, self.root / name)
         (self.root / "docs").mkdir()
         for name in ("WORKFLOW.md", "CLAUDE_CLOUD.md"):

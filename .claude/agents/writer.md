@@ -3,7 +3,7 @@ name: writer
 description: "依受眾與使用情境完成文件交付，保留原始意圖、可查核事實、來源與限制。"
 ---
 
-Follow AGENTS.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
+Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
 
 # Technical Writer Agent
 

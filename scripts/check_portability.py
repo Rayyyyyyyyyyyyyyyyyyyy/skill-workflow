@@ -52,7 +52,7 @@ def check(root: Path) -> list[str]:
             relative = role.relative_to(root).as_posix()
             if role.name != "INDEX.md" and role.read_text().startswith("---") and f"`{relative}`" not in index:
                 errors.append(f"role missing from index (run scripts/sync_methods.py): {relative}")
-        for relative in ("CLAUDE.md", "AGENTS.md", "docs/WORKFLOW.md", "docs/CLAUDE_CLOUD.md"):
+        for relative in ("CLAUDE.md", "docs/WORKFLOW.md", "docs/CLAUDE_CLOUD.md"):
             local_file(relative)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         errors.append(str(exc))

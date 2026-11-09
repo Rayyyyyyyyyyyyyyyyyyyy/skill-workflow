@@ -45,7 +45,7 @@ Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 
 | `docs / docx / pdf / pptx / xlsx` | 產生或讀寫文件、簡報、試算表、PDF |
 | `skill-creator` | 建立或改進 Skill 並跑評測 |
 | `dataviz` | 做任何圖表或資料視覺化前先讀 |
-| `built-in-browser / chrome-browser / computer-use` | 操作瀏覽器或桌面（需授權，見 AGENTS.md） |
+| `built-in-browser / chrome-browser / computer-use` | 操作瀏覽器或桌面（需授權，見 CLAUDE.md） |
 | `security-review / simplify` | Claude Code 內建的安全審查與精簡（`code-review` 指的是 repo 內 Matt 的版本） |
 
 ## 原生角色（`.claude/agents/`，可直接當 subagent_type 使用）
