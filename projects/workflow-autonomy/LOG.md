@@ -17,3 +17,14 @@
 - 一併採納的建議：卡關定義統一成「同一個問題換三種做法都沒進展」；種子模式提概念時一起附完成線，使用者只要選一次；使用者要深入討論時以 grilling 節奏為準；補上網路被擋時的處理方式；補上舊專案怎麼轉成新格式。
 - 沒採納：sync_methods 的測試、收錄 agency 的 strategy/、還原上游完整版 ask-matt，這幾項留作後續。
 - 驗證：check_portability PASS；unittest OK。
+
+## 2026-11-09
+- 查證：arxiv、claude-design、ideation、plan、sketch 等 11 個 Skill 只存在 `~/.codex/skills/`、它的備份，以及 `~/Documents/Codex/2026-06-27/sli/work/local-skills/`，不在 `~/.claude/skills/`，也不在 Claude 帳號的 Skill 清單裡。判斷是 Codex 工作時自建的，不是 Claude 內建。
+- 依使用者決定刪除 Codex 相關內容：
+  - 刪掉 `docs/CLAUDE_SKILLS_INSTALL.md`（剩下的內容只有那 11 份待搬清單和 Codex 排除工具）。
+  - CLAUDE_CLOUD 的待搬清單改成「新增 Skill 或角色」的通用做法。
+  - WORKBENCH.md 和 workbench.py 的說明不再提 Codex。
+- 保留不動：
+  - `library/git_tasks.py` 的 `codex/` branch 前綴。改名的話，原電腦上既有的 workbench task branch 就接不上了。
+  - `projects/` 底下的歷史紀錄，以及 `docs/playbook/` 的設計稿。
+- 驗證：check_portability PASS；unittest OK。

@@ -8,7 +8,7 @@ GitHub 雲端 clone 或換電腦先讀 [Claude 雲端接手](CLAUDE_CLOUD.md)。
 
 ## 執行模式
 
-現有 Claude Code／Codex 對話與協作 Agent 是實際執行者；可信控制者核對使用者授權、實際 host Agent 身分與停止訊號，再操作本機 Python 命令。`--actor` 與 `--stopped` 是控制者的紀錄，不是外部身分認證或 OS 程序終止機制。
+Claude Code 對話與協作 Agent 是實際執行者；可信控制者核對使用者授權、實際 host Agent 身分與停止訊號，再操作本機 Python 命令。`--actor` 與 `--stopped` 是控制者的紀錄，不是外部身分認證或 OS 程序終止機制。
 
 控制程式使用 Python 標準庫與本機 Git，檢查結構、固定 Git 版本、必要證據與依賴；Agent 提供需求理解與語意查核。本版是受信任的本機協作：控制資料與作者同在一個 OS 帳號下，不能宣稱能隔離惡意 Agent。
 

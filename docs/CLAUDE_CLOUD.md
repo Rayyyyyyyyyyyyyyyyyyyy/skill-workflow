@@ -1,6 +1,6 @@
 # Claude 雲端／換電腦接手
 
-工作方法都在 repo 裡，不需要原電腦的 `~/.claude`、`~/.codex` 或 `~/.agents`。
+工作方法都在 repo 裡，不需要原電腦的個人設定目錄。
 
 ## 第一次開始
 
@@ -28,6 +28,6 @@
 
 雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。`projects/*/.workflow/` 和 `projects/*/tasks/` 是 workbench 的本機狀態，不進 Git。只有文件、沒有本機狀態的舊 Project，照文件接續就好，不要重建或覆寫。
 
-## 原電腦上還有、repo 尚未收錄的方法
+## 新增 Skill 或角色
 
-`arxiv`、`claude-design`、`ideation`、`jupyter-live-kernel`、`plan`、`popular-web-designs`、`powerpoint`、`research-paper-writing`、`salesforce-pdi-coach`、`sketch`、`writing-plans`，以及 `graphify`。前 11 個找不到可確認的上游，要從原電腦把整個資料夾複製到 `.claude/skills/<name>/`，然後跑 `python3 scripts/sync_methods.py`。graphify 另外需要 Python runtime，見 [CLAUDE_SKILLS_INSTALL.md](CLAUDE_SKILLS_INSTALL.md)。
+把整個資料夾放進 `.claude/skills/<name>/`（角色放 `.claude/agents/` 或 `library/agents/<分部>/`），然後跑 `python3 scripts/sync_methods.py`，並在 `.claude/methods-manifest.json` 的 `packages` 記下來源與版本。
