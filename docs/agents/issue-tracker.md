@@ -10,6 +10,17 @@ Issues and specs live as markdown files in the Project folder `projects/<slug>/`
 - Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
 - Comments and conversation history append to the bottom of the file under a `## Comments` heading
 
+## Overrides for this repo
+
+These take precedence over what `to-tickets` says:
+
+- **No user approval round.** Skip the skill's "Quiz the user" step. The main session decides the breakdown itself and records the reasoning in LOG.md (see `docs/WORKFLOW.md` section 4). Ask the user only for the cases that section lists.
+- **Tickets are always written to files** at `projects/<slug>/issues/<NN>-<slug>.md` (not `.scratch/`) before any dispatch. A ticket that exists only in the conversation cannot be dispatched or reviewed.
+- **Required fields.** On top of the skill's template (What to build, Blocked by, Status, acceptance criteria), every ticket file must also have:
+  - `**Scope:**` the areas or modules the work may touch
+  - `**Out of scope:**` what the implementer must not do
+  - `**Verify:**` commands that can be run as written, each with the result that means PASS. If something can only be checked by hand or in a browser, say so and say how.
+
 ## When a skill says "publish to the issue tracker"
 
 Create a new file under `projects/<slug>/` (creating the directory if needed).

@@ -53,8 +53,8 @@
 
 主 session 負責想清楚與切細，執行交給 sonnet；驗收不可省略。
 
-1. **切票**：主 session 照 `to-tickets` 的格式，把工作切成 `projects/<slug>/issues/NN-<slug>.md`。每張票只完成一個可驗證的行為，必須自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行、看結果就知道 PASS／FAIL）、被哪張票擋住。
-2. **明確度關卡**：執行者不必再做判斷就能完成的票，才可以派出去。需要取捨、設計或問使用者的，留在主 session 解決（必要時用 `grilling`），解決後再寫進票。
+1. **切票**：主 session 照 `to-tickets` 的格式，把工作切成 `projects/<slug>/issues/NN-<slug>.md`，必填欄位與本 repo 的例外見 [docs/agents/issue-tracker.md](agents/issue-tracker.md)。每張票只完成一個可驗證的行為，必須自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行、看結果就知道 PASS／FAIL）、被哪張票擋住。票一定要寫成檔案才能派工。
+2. **明確度關卡**：執行者不必再做判斷就能完成的票，才可以派出去。需要取捨、設計或問使用者的，留在主 session 解決（必要時用 `grilling`），解決後再寫進票。一批票切完後、第一次派工前，開一個全新的 subagent（`model: "sonnet"`），只給它這批票檔的路徑，請它回答：每張票要做什麼、有哪些地方它必須猜。它得猜的地方就補進票裡，補到沒有為止再派工。一批測一次，不逐票測；只問哪裡要猜，不請它審設計。
 3. **派工**：只派沒有被擋住的票。派工訊息只寫票檔路徑和工作目錄，不重抄內容：`Agent(subagent_type: "implementer")`（角色預設 `model: sonnet`）。彼此獨立的票可以平行派。
 4. **回報要短**：commit hash、跑過的驗收指令和結果、沒驗證的部分。不貼整份 diff 或完整 log。
 5. **逐票驗收（必做）**：每張票交付後，開 `reviewer`（`model: "sonnet"`，跟實作不同的上下文），只給它票檔路徑和 commit，逐條判 PASS／FAIL／UNKNOWN。FAIL 就把理由附在票裡重派；同一張票失敗兩次，收回主 session 重新切票或自己處理。

@@ -210,7 +210,7 @@
       "origin": "installed Agency Agents / code-reviewer.toml",
       "upstream_sha256": "40e32a1188bb51af8bc5bdfa69341510e8f9c2d331d3ed6b53f25b71c052eeaf",
       "adaptations": [
-        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
+        "Upstream Code Reviewer persona replaced with a repo-specific acceptance reviewer (per-criterion PASS/FAIL/UNKNOWN with evidence, no edits to the author's work); Claude name/description and fixed-scope preface kept."
       ]
     },
     "role:integrator": {
@@ -511,7 +511,7 @@
     ".claude/agents/integrator.md": "0ab92d4a3a8612cf0679afef88058e67283ad7ac7dbf7d235e9bc290e88d8fa7",
     ".claude/agents/planner.md": "3705ba57bd6f502aa7426edb66728be5606c36dae1318b7a203fee7a5ec59eaf",
     ".claude/agents/researcher.md": "5f11993785c94a168bcee0533d358a61a9b23e61e493ba78f126ab7da66a392f",
-    ".claude/agents/reviewer.md": "701efcb8eaa6855a3bd4b8e1413bc9106e7ac87ea59e10a4b81b8a656fb119cc",
+    ".claude/agents/reviewer.md": "139e1fcecf9671da05019662a1dc2e6c41bf9a022c8555f748cecaf12acaca83",
     ".claude/agents/writer.md": "55dc0db1ec3608cdffa254574280b1265c8a72bedf0f2b6d95ddde68832b9b1d",
     "library/agents/INDEX.md": "5b90c3685f295451cfc25f29466a6f89e16a1bacb6541736e979a05564b0f49f",
     "library/agents/LICENSE": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
