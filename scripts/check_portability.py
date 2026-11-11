@@ -36,13 +36,6 @@ def check(root: Path) -> list[str]:
             actual = hashlib.sha256(local_file(relative).read_bytes()).hexdigest()
             if actual != expected:
                 errors.append(f"method checksum mismatch: {relative}")
-        roles = json.loads(local_file("library/roles.json").read_text())["roles"]
-        for role, profile in roles.items():
-            for source in [profile["source"], *profile.get("skills", [])]:
-                raw = source["path"]
-                local_file(raw)
-                if raw not in files:
-                    errors.append(f"method missing from manifest ({role}): {raw}")
         catalog = local_file("library/CATALOG.md").read_text()
         index = local_file("library/agents/INDEX.md").read_text()
         for skill in sorted((root / ".claude/skills").glob("*/SKILL.md")):

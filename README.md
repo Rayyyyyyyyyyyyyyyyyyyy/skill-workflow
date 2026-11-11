@@ -30,7 +30,6 @@
 | [docs/WORKFLOW.md](docs/WORKFLOW.md) | 三種輸入、推進迴圈、驗收、紀錄格式 |
 | [docs/CLAUDE_CLOUD.md](docs/CLAUDE_CLOUD.md) | 雲端與新電腦接手 |
 | `projects/<slug>/` | 每個 Project 的目標、完成線、進度與成果 |
-| [docs/WORKBENCH.md](docs/WORKBENCH.md) | 可選的嚴格控制程式 `workbench.py` |
 
 ```sh
 python3 scripts/check_portability.py   # 檢查方法包

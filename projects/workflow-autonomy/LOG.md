@@ -28,3 +28,13 @@
   - `library/git_tasks.py` 的 `codex/` branch 前綴。改名的話，原電腦上既有的 workbench task branch 就接不上了。
   - `projects/` 底下的歷史紀錄，以及 `docs/playbook/` 的設計稿。
 - 驗證：check_portability PASS；unittest OK。
+
+## 2026-11-11 repo 審查後的調整（branch `ft/workflow-cleanup`）
+- reviewer 角色內文改成純驗收者：逐條 PASS／FAIL／UNKNOWN、證據親自取得、不改成果。原因：上游 Code Reviewer 人設要求「建議不要求、稱讚、鼓勵」，跟逐票驗收相反。
+- `docs/agents/issue-tracker.md` 加本 repo 例外：不做 to-tickets 的使用者核准輪、票必須寫成檔案、必填 Scope／Out of scope／Verify。原因：repo 裡沒有任何 `projects/*/issues/`，票只存在對話裡。
+- `docs/WORKFLOW.md` 明確度關卡加上零 context 檢查（一批票派工前，全新 subagent 只讀票檔，回報哪裡必須猜）。來源：Dave Rensin 的 Elephant-Goldfish Model。
+- README「怎麼用」補上範例。
+- 使用者決定刪掉 workbench：移除程式、文件、playbooks、roles.json、git_tasks.py、`runtime-reference/config/` 與對應測試；七個角色前言不再提 dispatch packet；四個舊專案的接續指令改成指向 `records/`。`check_portability.py` 不再讀 roles.json。
+- 驗證：check_portability PASS；unittest 3 個測試 OK。
+- 未驗證：新的 reviewer 與零 context 檢查還沒在真實票上跑過。
+- 還沒決定：`~/.claude/agents/` 的 286 個全域角色、全域與專案兩套瀏覽器規則以哪一套為準。

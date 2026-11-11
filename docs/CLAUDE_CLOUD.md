@@ -26,7 +26,7 @@
 
 ## 換 session 時保存什麼
 
-雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。`projects/*/.workflow/` 和 `projects/*/tasks/` 是 workbench 的本機狀態，不進 Git。只有文件、沒有本機狀態的舊 Project，照文件接續就好，不要重建或覆寫。
+雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。舊 Project 照資料夾裡現有的文件接續，不要重建或覆寫。
 
 ## 新增 Skill 或角色
 

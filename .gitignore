@@ -4,10 +4,3 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 graphify-out/
-
-# Local execution state, task checkouts, and copied dispatch instructions.
-projects/*/.workflow/
-projects/*/tasks/
-projects/*/records/*-dispatch*.json
-projects/*/records/*-review-packet*.json
-projects/*/records/git-role-source.toml

@@ -4,7 +4,7 @@
 
 ## 1. 接案
 
-1. 看 `projects/`。使用者點名的專案，或目標跟既有專案相同，就接續那個專案：先讀它的 `PROJECT.md` 與 `LOG.md`，從「下一步」開始做。舊專案如果還寫著用 `workbench.py status` 接續，就讀它資料夾裡現有的文件，再把 PROJECT.md 補成文末的格式，並補一份 LOG.md。
+1. 看 `projects/`。使用者點名的專案，或目標跟既有專案相同，就接續那個專案：先讀它的 `PROJECT.md` 與 `LOG.md`，從「下一步」開始做。舊專案如果沒有「目前狀態」或 LOG.md，就讀它資料夾裡現有的文件（含 `records/`），再把 PROJECT.md 補成文末的格式，並補一份 LOG.md。
 2. 新目標就建 `projects/<slug>/PROJECT.md`（格式見文末），把使用者原話一字不改貼進「原始想法」。之後的補充往下追加，原文保留。
 
 成果放哪裡：屬於別的 repo 就直接在那個 repo 開 branch 做，紀錄留在這裡的 Project 資料夾；沒有既有 repo 就放 `projects/<slug>/workspace/`。
@@ -98,7 +98,3 @@
 ## 決策
 - YYYY-MM-DD 使用者決定／Agent 判斷（理由）
 ```
-
-## 需要嚴格控管時
-
-如果使用者要求每一版都固定下來、要獨立准入、要逐檔安全回寫，改用 [Workbench 控制程式](WORKBENCH.md)。這是可選工具，平常不必用。

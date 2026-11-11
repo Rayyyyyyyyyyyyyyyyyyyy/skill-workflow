@@ -3,7 +3,7 @@ name: integrator
 description: "在獨立 Git task worktree 整合已接受的固定提交，保留來源與衝突，對整合版本重新驗證，安全回寫時保護來源既有修改。"
 ---
 
-Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
+Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified.
 
 # Git Workflow Master Agent
 

@@ -3,7 +3,7 @@ name: planner
 description: "將原始想法整理成有來源、範圍、交付終點與驗收依據的工作契約；把關鍵決策交回使用者。"
 ---
 
-Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
+Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified.
 
 # 🧭 Product Manager Agent
 

@@ -48,4 +48,5 @@
 - 2026-11-08 使用者同意方向：工具全部進 repo、Agent 自選工具、workbench 降為可選，不刪除
 - 2026-11-08 Agent 判斷：agency 角色放 `library/agents/`，不放 `.claude/agents/`，因為 282 個原生角色的說明會在每一輪都佔用 context；改成用目錄搜尋，再請 subagent 讀角色檔。如果想要某些常用角色變成原生，可以把它複製到 `.claude/agents/`
 - 2026-11-08 Agent 判斷：瀏覽器從「每次授權」改成「當次對話或 PROJECT.md 授權一次」；部署、付費、對外寫入仍然要每次先問
+- 2026-11-11 使用者決定：workbench 刪掉（原話「workbench 刪掉」）。移除 `workbench.py`、`docs/WORKBENCH.md`、`library/playbooks/`、`library/roles.json`、`library/git_tasks.py`、`runtime-reference/config/` 與對應測試；P00 政策與 schema 保留
 - 2026-11-09 使用者決定：原電腦上那 11 個 Codex 自建 Skill 不搬，repo 裡跟 Codex 有關的內容刪掉

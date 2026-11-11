@@ -25,12 +25,11 @@
 ```sh
 python3 scripts/sync_methods.py                                        # 新增或修改 Skill／Role 後重產目錄與雜湊
 python3 scripts/check_portability.py                                   # 方法包完整性檢查
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q     # 測試（workbench 與可搬移性）
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q     # 測試（方法包可搬移性）
 ```
 
 ## 架構要點
 
 - `projects/<slug>/PROJECT.md`、`LOG.md`：每個 Project 的目標、完成線、工具、授權、決策與進度。換 session 時從這兩個檔案接續。
 - `library/CATALOG.md`、`library/agents/INDEX.md`：由 `scripts/sync_methods.py` 產生，不要手改。來源版本記錄在 `.claude/methods-manifest.json` 的 `packages`。
-- `workbench.py`＋`library/playbooks/`＋`library/roles.json`：可選的嚴格控制流程，只在使用者要求逐版控管時使用，說明在 [docs/WORKBENCH.md](docs/WORKBENCH.md)；`tests/test_workbench.py` 是它的可執行規格。
-- `runtime-reference/` 只保留 P00 政策、它釘選的設定與 ClaimEvidence schema；`workbench.py` 會檢查政策指紋，不要改動。
+- `runtime-reference/` 只保留 P00 政策與它引用的 ClaimEvidence schema。

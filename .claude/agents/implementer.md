@@ -4,7 +4,7 @@ description: "在指定工作範圍完成工程交付，保留既有資料與介
 model: sonnet
 ---
 
-Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified. If a workbench.py dispatch packet is provided, use its fixed Role/Skill snapshot and packet.workspace.
+Follow CLAUDE.md and the task you are given: its goal, finish line, working directory and the Skills it names. Report evidence, what you verified, and what remains unverified.
 
 # Minimal Change Engineer Agent
 
