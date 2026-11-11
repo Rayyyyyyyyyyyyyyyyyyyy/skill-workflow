@@ -64,5 +64,6 @@
 - 2026-11-08 Agent 判斷：瀏覽器從「每次授權」改成「當次對話或 PROJECT.md 授權一次」；部署、付費、對外寫入仍然要每次先問
 - 2026-11-11 使用者決定（原話「照你建議」「目標也是用goal 來執行」）：採用上面的目標寫法；方法凍結；工具庫維持全部帶著；成功標準用「被問幾次、驗收失敗幾輪」。Agent 解讀：「用 goal 來執行」指照 WORKFLOW 的目標模式，自己寫完成線後直接開工
 - 2026-11-11 使用者決定（原話「以全域版本為標準」）：瀏覽器規則改成跟使用者全域設定一致，每次檢測都要當次授權，PROJECT.md 的紀錄不算授權。取代 2026-11-08「PROJECT.md 授權一次」那條 Agent 判斷
+- 2026-11-11 使用者決定（原話「全域角色刪掉，integrator 刪掉」）：刪除 `integrator` 原生角色（原生角色 7→6；它只為 workbench 的整合流程存在，角色庫仍有同一份 Git Workflow Master）；刪除使用者電腦 `~/.claude/agents/` 裡跟 `library/agents/` 逐位元相同的 282 個角色，保留 4 個 `impeccable-*`
 - 2026-11-11 使用者決定：workbench 刪掉（原話「workbench 刪掉」）。移除 `workbench.py`、`docs/WORKBENCH.md`、`library/playbooks/`、`library/roles.json`、`library/git_tasks.py`、`runtime-reference/config/` 與對應測試；P00 政策與 schema 保留
 - 2026-11-09 使用者決定：原電腦上那 11 個 Codex 自建 Skill 不搬，repo 裡跟 Codex 有關的內容刪掉

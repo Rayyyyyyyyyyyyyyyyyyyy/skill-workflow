@@ -51,3 +51,8 @@
 - 使用者決定以全域版為準：`CLAUDE.md` 護欄、`docs/WORKFLOW.md` 的「驗」與 PROJECT.md 格式都改成「每次檢測當次授權，專案文件不算授權」。既有專案 PROJECT.md 裡記過的瀏覽器授權從此不再有效。
 - 使用者指示 push `ft/workflow-cleanup` 並併回 main。
 - 驗證：check_portability PASS；unittest OK。
+
+## 2026-11-11 刪除 integrator 與全域重複角色
+- 刪除 `.claude/agents/integrator.md` 與 manifest 的來源紀錄；README 的原生角色數改為 6。
+- 使用者電腦的 `~/.claude/agents/`：刪除前逐檔比對，282 個與 `library/agents/` 逐位元相同才刪；剩 4 個 `impeccable-*`。要還原就從 `library/agents/` 複製回去。
+- 驗證：check_portability PASS；unittest OK；sync 輸出 6 native roles。

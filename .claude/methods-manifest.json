@@ -213,13 +213,6 @@
         "Upstream Code Reviewer persona replaced with a repo-specific acceptance reviewer (per-criterion PASS/FAIL/UNKNOWN with evidence, no edits to the author's work); Claude name/description and fixed-scope preface kept."
       ]
     },
-    "role:integrator": {
-      "origin": "installed Agency Agents / git-workflow-master.toml",
-      "upstream_sha256": "f5fd371769904104c1fa30b8987d43cd8a40f17dfa361386e2e8d2313e57867a",
-      "adaptations": [
-        "TOML developer_instructions preserved as Markdown; Claude name/description and fixed-scope preface added."
-      ]
-    },
     "role-license": {
       "origin": "installed Agency Agents LICENSE",
       "upstream_sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f"
@@ -508,7 +501,6 @@
     ".claude/agents/LICENSE": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
     ".claude/agents/designer.md": "1dda69480b60f29d098eba5dd8b4bd5cd6fddea5e0e44651c34b5b254f257c00",
     ".claude/agents/implementer.md": "f35ee0130a862edff31bd42dce32748926ac92ad4aec66f4bf8906c9c3a9a895",
-    ".claude/agents/integrator.md": "84712e369a39544669b3e5c7d455cde7fc48ee5c6353c3b19783460f3cc53b2d",
     ".claude/agents/planner.md": "c19460077fd150f1e224065cef08d0231bd970da4d9ea527a964f70f29d49d04",
     ".claude/agents/researcher.md": "7024e24248c50004f6341499e68e4b75eb08fcd3717bc2d476fb9f956fe00573",
     ".claude/agents/reviewer.md": "c5e830935e72f355358aab719d47da621c54105fe8d4143c5efde20459800216",

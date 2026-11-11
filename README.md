@@ -18,7 +18,7 @@
 
 ## 工具
 
-- [library/CATALOG.md](library/CATALOG.md)：26 個 Skills、7 個原生角色、282 個專業角色的目錄。
+- [library/CATALOG.md](library/CATALOG.md)：26 個 Skills、6 個原生角色、282 個專業角色的目錄。
 - `.claude/skills/`：Matt Pocock 系列、impeccable、ui-ux-pro-max、design-taste-frontend、humanizer、ponytail 等。
 - `library/agents/`：agency-agents 角色庫，涵蓋工程、設計、行銷、遊戲、安全、研究等 18 個分部。
 
