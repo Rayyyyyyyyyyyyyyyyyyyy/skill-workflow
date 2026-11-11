@@ -46,3 +46,8 @@
 - 未驗證：零 context 的票檔檢查還沒在真實票上跑過；新 reviewer 還沒驗過程式碼類的票。
 - 收尾數字：使用者被問 3 次（審查後問是否動手、刪除 workbench 後問 push 與 integrator、重新確定目標時問三項決定）；獨立驗收 FAIL 0 輪。
 - 下一步：等使用者決定 push 與併回 main。
+
+## 2026-11-11 瀏覽器規則改為每次授權；併回 main
+- 使用者決定以全域版為準：`CLAUDE.md` 護欄、`docs/WORKFLOW.md` 的「驗」與 PROJECT.md 格式都改成「每次檢測當次授權，專案文件不算授權」。既有專案 PROJECT.md 裡記過的瀏覽器授權從此不再有效。
+- 使用者指示 push `ft/workflow-cleanup` 並併回 main。
+- 驗證：check_portability PASS；unittest OK。
