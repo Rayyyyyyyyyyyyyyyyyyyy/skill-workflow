@@ -56,3 +56,10 @@
 - 刪除 `.claude/agents/integrator.md` 與 manifest 的來源紀錄；README 的原生角色數改為 6。
 - 使用者電腦的 `~/.claude/agents/`：刪除前逐檔比對，282 個與 `library/agents/` 逐位元相同才刪；剩 4 個 `impeccable-*`。要還原就從 `library/agents/` 複製回去。
 - 驗證：check_portability PASS；unittest OK；sync 輸出 6 native roles。
+
+## 2026-11-11 刪除已結案專案；補裝 implement-spec、retro、pr
+- 使用者指示：舊專案都已結案，刪掉。移除 `projects/` 下 8 個資料夾（book-notes、book-reader-mobile、book-reader-ux、claude-cloud-portability、skill-install-handoff、skills-inventory、winter-ux-motion、workflow-hub），只留 workflow-autonomy。要找回就從 git 歷史（`c185aec` 之前）取。
+- 使用者指示補裝 `implement-spec`、`retro`、`pr`：取自 mattpocock/skills 與既有 Matt skills 相同的 commit `59db609`，內容未改；同時複製到 `~/.claude/skills/`。
+- 已知殘留：manifest 裡 ponytail 的 `fixed_evidence.path` 指向已刪的 `projects/claude-cloud-portability/records/package-review-v1.md`，該檔可從 `review_commit` `b9c7e23` 取回。
+- 驗證：sync 輸出 29 skills；check_portability PASS；unittest OK。
+- 未驗證：三個新 Skill 還沒實際跑過。
