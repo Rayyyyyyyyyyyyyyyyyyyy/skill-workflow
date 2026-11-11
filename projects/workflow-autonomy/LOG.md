@@ -38,3 +38,11 @@
 - 驗證：check_portability PASS；unittest 3 個測試 OK。
 - 未驗證：新的 reviewer 與零 context 檢查還沒在真實票上跑過。
 - 還沒決定：`~/.claude/agents/` 的 286 個全域角色、全域與專案兩套瀏覽器規則以哪一套為準。
+
+## 2026-11-11 重新確定目標，照目標模式執行 G1–G5
+- 做了什麼：目標原文寫進 PROJECT.md 與 README；WORKFLOW 第 6 節加上收尾要記的兩個數字；CLAUDE.md 加方法凍結規則；工具庫不動。commit `1eca1b2`。
+- 獨立驗收：全新 sonnet subagent 先讀新版 `.claude/agents/reviewer.md` 再驗收，G1–G5 共 5 條 PASS、0 FAIL、0 UNKNOWN，每條附它自己跑的指令與輸出。這是新 reviewer 角色第一次實際使用；驗收者回報角色說明沒有需要猜的地方。
+- 驗收者註記：G5 的 grep 依條件排除了 `skills/`。主 session 先前查過，該目錄裡的 "workbench" 只出現在字型名稱與網站描述文字，跟被刪的程式無關。
+- 未驗證：零 context 的票檔檢查還沒在真實票上跑過；新 reviewer 還沒驗過程式碼類的票。
+- 收尾數字：使用者被問 3 次（審查後問是否動手、刪除 workbench 後問 push 與 integrator、重新確定目標時問三項決定）；獨立驗收 FAIL 0 輪。
+- 下一步：等使用者決定 push 與併回 main。

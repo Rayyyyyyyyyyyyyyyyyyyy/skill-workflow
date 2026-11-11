@@ -2,9 +2,9 @@
 
 ## 目前狀態（2026-11-11）
 - 模式：目標（2026-11-11 使用者重新確定目標，並指定照目標模式執行）
-- 狀態：進行中，G1–G5 待獨立驗收
+- 狀態：G1–G5 完成，獨立驗收 5 條 PASS（2026-11-11）
 - 成果位置：本 repo，branch `ft/workflow-cleanup`（worktree `../skill-workflow-ft-workflow-cleanup`），尚未 push
-- 下一步：獨立驗收 G1–G5；之後等使用者決定是否 push、併回 main
+- 下一步：等使用者決定是否 push、併回 main；之後方法凍結，只在真實專案卡住時才改
 
 ## 目標（2026-11-11 重新確定）
 > 我丟一個目標、方向或種子，Agent 自己推進到完成線每一條都有獨立驗收的證據。我只在帳號、付費、對外寫入、不可逆操作、個人喜好這幾種情況被打擾。這包方法 clone 到任何電腦或雲端都能直接用。
@@ -42,11 +42,11 @@
 - [x] C5 workbench 降為可選（`docs/WORKBENCH.md`），既有測試照常通過
 
 ### 第二批（2026-11-11，對應重新確定的目標）
-- [ ] G1 目標原文寫進本檔與 README 開頭（驗證：`grep -c "獨立驗收的證據" README.md projects/workflow-autonomy/PROJECT.md` 兩個檔都 ≥1）
-- [ ] G2 成功標準可以被記錄：`docs/WORKFLOW.md` 第 6 節規定每個專案收尾時在 LOG.md 記「使用者被問了幾次」與「獨立驗收 FAIL 幾輪」（驗證：`grep -n "被問了幾次" docs/WORKFLOW.md` 有結果，且在第 6 節內）
-- [ ] G3 方法凍結規則寫進 `CLAUDE.md`：只在真實專案卡住且原因出在方法時才改，不另開以方法為主題的專案（驗證：`grep -n "方法凍結" CLAUDE.md` 有結果）
-- [ ] G4 工具庫維持原狀：26 個 Skill、7 個原生角色、282 個角色庫角色（驗證：`python3 scripts/sync_methods.py` 輸出這三個數字，且執行後 `git status --short` 沒有變動）
-- [ ] G5 方法包檢查與測試通過，repo 內（`projects/` 的歷史紀錄除外）沒有殘留的 workbench 引用（驗證：`python3 scripts/check_portability.py` 印出 PASS；`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q` 結果 OK；`grep -rIli workbench --exclude-dir=.git --exclude-dir=projects --exclude-dir=skills .` 沒有輸出）
+- [x] G1 目標原文寫進本檔與 README 開頭（驗證：`grep -c "獨立驗收的證據" README.md projects/workflow-autonomy/PROJECT.md` 兩個檔都 ≥1）
+- [x] G2 成功標準可以被記錄：`docs/WORKFLOW.md` 第 6 節規定每個專案收尾時在 LOG.md 記「使用者被問了幾次」與「獨立驗收 FAIL 幾輪」（驗證：`grep -n "被問了幾次" docs/WORKFLOW.md` 有結果，且在第 6 節內）
+- [x] G3 方法凍結規則寫進 `CLAUDE.md`：只在真實專案卡住且原因出在方法時才改，不另開以方法為主題的專案（驗證：`grep -n "方法凍結" CLAUDE.md` 有結果）
+- [x] G4 工具庫維持原狀：26 個 Skill、7 個原生角色、282 個角色庫角色（驗證：`python3 scripts/sync_methods.py` 輸出這三個數字，且執行後 `git status --short` 沒有變動）
+- [x] G5 方法包檢查與測試通過，repo 內（`projects/` 的歷史紀錄除外）沒有殘留的 workbench 引用（驗證：`python3 scripts/check_portability.py` 印出 PASS；`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q` 結果 OK；`grep -rIli workbench --exclude-dir=.git --exclude-dir=projects --exclude-dir=skills .` 沒有輸出）
 
 不在這批完成線內、等使用者決定：push 與併回 main、`~/.claude/agents/` 的 286 個全域角色、瀏覽器規則以哪一套為準、`integrator` 角色去留。
 
