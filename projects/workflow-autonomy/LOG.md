@@ -63,3 +63,8 @@
 - 已知殘留：manifest 裡 ponytail 的 `fixed_evidence.path` 指向已刪的 `projects/claude-cloud-portability/records/package-review-v1.md`，該檔可從 `review_commit` `b9c7e23` 取回。
 - 驗證：sync 輸出 29 skills；check_portability PASS；unittest OK。
 - 未驗證：三個新 Skill 還沒實際跑過。
+
+## 2026-11-12 外部 repo 專案的紀錄改放 `project/<slug>` branch
+- 起因：template-upgrade 的紀錄被 commit 到本 repo `main`（3 個本機 commit，未 push）。使用者：「但那跟skill-workflow這個repo本體沒有關係呀 只是利用了方法工具，但更新的目標repo另有其他 要push也是另開branch」，並要求「不只要在記憶，也要更新在workflow的方法步驟裡」。
+- 處理：3 個 commit 移到本機 branch `project/template-upgrade`，`main` 退回 `origin/main`（`4161ce1`）。
+- 方法修改：`docs/WORKFLOW.md` 接案第 1 步加看 `project/*` branch，新增「紀錄 commit 在哪」；`docs/CLAUDE_CLOUD.md` 外部 repo 與保存兩段、`CLAUDE.md` 架構要點同步。

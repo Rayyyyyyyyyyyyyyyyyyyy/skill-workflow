@@ -22,11 +22,11 @@
 
 ## 外部 repo
 
-成果在別的 repo 時（例如 winter、book-reader），用 `add_repo` 或 clone 把它加進 session，在那個 repo 的 branch 上工作，紀錄寫回這裡的 Project 資料夾。PROJECT.md 的「目前狀態」只在實際查過外部 repo 之後才更新，並寫上查核日期。
+成果在別的 repo 時（例如 winter、book-reader），用 `add_repo` 或 clone 把它加進 session，在那個 repo 的 branch 上工作，紀錄寫回這裡的 Project 資料夾，並 commit 在這個 repo 的 `project/<slug>` branch，不進 `main`（見 `docs/WORKFLOW.md`「紀錄 commit 在哪」）。PROJECT.md 的「目前狀態」只在實際查過外部 repo 之後才更新，並寫上查核日期。
 
 ## 換 session 時保存什麼
 
-雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。舊 Project 照資料夾裡現有的文件接續，不要重建或覆寫。
+雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。外部 repo 專案的紀錄推到 `project/<slug>` branch。舊 Project 照資料夾裡現有的文件接續，不要重建或覆寫。
 
 ## 新增 Skill 或角色
 

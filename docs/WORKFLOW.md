@@ -4,10 +4,12 @@
 
 ## 1. 接案
 
-1. 看 `projects/`。使用者點名的專案，或目標跟既有專案相同，就接續那個專案：先讀它的 `PROJECT.md` 與 `LOG.md`，從「下一步」開始做。舊專案如果沒有「目前狀態」或 LOG.md，就讀它資料夾裡現有的文件（含 `records/`），再把 PROJECT.md 補成文末的格式，並補一份 LOG.md。
+1. 看 `projects/`，也看 `git branch -a --list '*project/*'`（外部 repo 專案的紀錄在 `project/<slug>` branch 上，要先切過去）。使用者點名的專案，或目標跟既有專案相同，就接續那個專案：先讀它的 `PROJECT.md` 與 `LOG.md`，從「下一步」開始做。舊專案如果沒有「目前狀態」或 LOG.md，就讀它資料夾裡現有的文件（含 `records/`），再把 PROJECT.md 補成文末的格式，並補一份 LOG.md。
 2. 新目標就建 `projects/<slug>/PROJECT.md`（格式見文末），把使用者原話一字不改貼進「原始想法」。之後的補充往下追加，原文保留。
 
 成果放哪裡：屬於別的 repo 就直接在那個 repo 開 branch 做，紀錄留在這裡的 Project 資料夾；沒有既有 repo 就放 `projects/<slug>/workspace/`。
+
+紀錄 commit 在哪：成果在別的 repo 時，這裡只是借用方法，紀錄跟這個 repo 本身無關，所以開工前先在這個 repo 切到 `project/<slug>` branch，`projects/<slug>/` 的 commit 都放在那裡，不要 commit 到 `main`。要 push 也只推 `project/<slug>`。`main` 只放方法本身的修改。
 
 ## 2. 判斷是哪一種輸入
 
