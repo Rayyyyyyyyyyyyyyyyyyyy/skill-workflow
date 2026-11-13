@@ -66,7 +66,7 @@ Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 
 
 完整清單與一行說明在 [agents/INDEX.md](agents/INDEX.md)，用關鍵字搜尋最快：`grep -i "frontend\|react" library/agents/INDEX.md`。
 
-要用某個角色時，開一個 subagent，請它先完整讀該角色檔，再以那個角色完成指定任務；同一任務可以組好幾個角色分工或互相審查。
+要用某個角色時，開一個 subagent，請它先完整讀該角色檔，再用那一行的方法與工具完成指定任務（不是只換口吻）；同一任務可以組好幾個角色分工或互相審查。
 
 | 分部 | 數量 | 例子 |
 |---|---:|---|

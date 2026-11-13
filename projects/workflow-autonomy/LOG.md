@@ -77,3 +77,13 @@
 - 檢查 main 是否只放方法：刪掉 `.gitattributes`，它唯一的規則指向已刪除的 `projects/skills-inventory`。
 - 刪除遠端 branch：`chore/merge-entry-cleanup`、`ft/workflow-cleanup`、`claude/inspiring-feynman-ied4yc`（三個都已全部進 main）。另依使用者指示放棄 nihongo-dojo-ios-app，刪除 `claude/nhk-n3-1-app-design-48gcth`（最後一個 commit 是 `a4ff394`，紀錄沒有進 main；外部 repo `nihongo-dojo-app` 沒動）。
 - 依使用者指示刪除 `project/template-upgrade`（最後一個 commit 是 `94f7c8a`，只有 `projects/template-upgrade/` 的紀錄；程式碼在 `Rayyyyyyyyyyyyyyyyyyyy/template`）。規則補充：專案結束後刪掉 worktree 和 `project/<slug>` branch，最後一個 commit 記在這裡。
+
+## 2026-11-13 依 Rieseberg〈How to be more ambitious〉補強完成線與驗收
+- 起因：使用者以 `/goal` 指示「去找出這文章的全文，與實作方式，來優化更新現在這個 repo 裡面的方法」。這不是真實專案卡住，而是使用者明確要求，所以覆蓋方法凍結。
+- 來源：原文 felixrieseberg.com（2026-10-13）與社群 Skill `robonuggets/be-ambitious`；重點和對照表在 `docs/references/rieseberg-ambition.md`。
+- 方法修改（`docs/WORKFLOW.md`）：第 2 節完成線寫結果不寫做法，每條都要有外部判準，並用四問挖深；第 3 節角色庫要用方法和工具、不只換口吻，新增跨領域的「名詞改成動詞」與紅隊；第 4 節進迴圈前先接好驗證用的基礎建設；第 5 節與 `.claude/agents/reviewer.md`：reviewer 照外部判準重跑取證，不能用實作者的回報代替，「使用者判定」的判 UNKNOWN 並列入「已完成但未驗證」；PROJECT.md 完成線格式改成寫外部判準。`scripts/sync_methods.py` 的角色用法說明同步修改，並重新產生 `library/CATALOG.md` 與 `.claude/methods-manifest.json` 的雜湊。
+- 沒有採用：「訂不合理的目標」（與「範圍擴大先問」相衝）；不安裝 be-ambitious Skill（規則已寫進 WORKFLOW，不多一個要維護的外部依賴）。
+- 待觀察：下一個專案收尾時，看外部判準是否讓驗收 FAIL 的輪數或 UNKNOWN 變多，以及問使用者的次數有沒有增加。
+- 獨立驗收（使用者指定 Fable 5.2）第 1 輪：3 PASS、2 FAIL。FAIL 1：WORKFLOW 第 5 節與 `.claude/agents/reviewer.md` 的證據標準不一致。FAIL 2：多處要執行者猜，包括往上一層算不算擴大範圍、「使用者判定」怎麼結案、「重要」沒有判準、沒切票時的第一張票、瀏覽器授權、四問 (1)–(3) 寫在哪。已逐項修正：範圍以使用者原話為界，往上一層的版本當選項問使用者；「使用者判定」判 UNKNOWN，列入「已完成但未驗證」；跨領域改成在方向／種子模式與第二種做法失敗時使用；reviewer.md 同步。
+- 第 2 輪：4 PASS、1 FAIL。FAIL 是 LOG 還寫著第 1 輪的舊說法，已改正。順便補上殘留的含糊處：問了往上一層的選項後，等回覆期間先照原話範圍的完成線做。這兩處修改沒有再送第 3 輪，以 grep 和下列檢查確認。
+- 驗證：sync_methods、check_portability PASS；unittest OK。
