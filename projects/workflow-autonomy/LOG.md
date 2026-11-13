@@ -101,15 +101,15 @@
 - 發現 2：template-upgrade 的收尾數字只在已刪除的 `project/template-upgrade`（`94f7c8a`，目前是本機懸空 commit）。補記在這裡：
   - 第 1 輪（票 01–11）：使用者被問 2 次；逐票驗收 FAIL 0 輪，獨立驗收 FAIL 0 輪。
   - 第 2 輪（票 12–31）：使用者被問 0 次；FAIL 輪 2 次（都是票 28）。
-  - 第 3 輪（深色首頁）與合併發佈：該專案 LOG 沒有記數字。
+  - 第 3 輪（深色首頁）與合併發佈：該專案 LOG 沒有彙整數字；敘述裡有一次逐票 FAIL（票 35，修正後 PASS）。
   - 這些都發生在 11-13 的 Rieseberg 修改之前，可以當那次修改的對照基準。
 - 方法修改：`docs/WORKFLOW.md` 第 1 節，刪 branch 時把收尾的兩個數字連同最後一個 commit 記到這裡。
 - 檢查過、沒有改的：
-  - `~/.claude/agents/` 又有 287 個角色檔（11-11 13:55 寫入，晚於同日的刪除）：272 個與 `library/agents/` 相同、10 個不同、`engineering-electrical-engineer.md` 不在 library。來源不明，等使用者決定。
+  - `~/.claude/agents/` 現在有 287 個檔：4 個是 `impeccable-*`（10-19 寫入，11-11 刪除時留下的）；另外 283 個角色檔是 11-11 13:54–13:55 寫入的，晚於同日的刪除，其中 272 個與 `library/agents/` 同名檔相同、10 個不同、`engineering-electrical-engineer.md` 不在 library。來源不明，等使用者決定。
   - 6 個原生角色的 frontmatter 與 WORKFLOW 一致（只有 implementer 指定 `model: sonnet`）；`reviewer.md` 與 WORKFLOW 第 5 節的證據標準一致。
   - `library/agents/` 282 個角色檔加 INDEX；方法文件 68 個檔的相對連結 0 個失效。
   - 仍未處理：manifest 裡 ponytail 的 `fixed_evidence.path` 指向已刪的檔案；`implement-spec`、`retro`、`pr` 還沒實際跑過。
 
 ## 2026-11-13 方法修改的驗收改回 sonnet
 - 使用者指示：「拿掉fable modal的調用好了，統一原本回到的review流程」。`CLAUDE.md`「方法凍結」那一條改成：方法修改的獨立驗收照 WORKFLOW.md 第 5 節開 `reviewer`（`model: "sonnet"`），不再用 Fable。同日稍早「方法修改改由 Fable 驗收」那一節作廢。
-- 上一節（同名 Skill、收尾數字）送出的 Fable 驗收在跑完前中止，沒有結果；改送 sonnet reviewer。
+- 上一節（同名 Skill、收尾數字，`81a7c66`）的 Fable 驗收在這個指示之前已送出並跑完：6 PASS、1 FAIL。FAIL 是上一節對 `~/.claude/agents/` 的描述不精確（把 4 個 `impeccable-*` 也算成 11-11 寫入的角色檔），已改正。同時依它的備註補上第 3 輪票 35 的逐票 FAIL，並在全域三個 Skill 的轉向那一行註明路徑從 repo 根目錄算。這些修正和本節的 `CLAUDE.md` 修改改送 sonnet reviewer。
