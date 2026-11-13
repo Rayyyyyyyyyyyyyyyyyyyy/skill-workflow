@@ -141,3 +141,4 @@
   - `README.md` 文件表：`projects/<slug>/` 註明在 `project/<slug>` branch。
   - `.claude/methods-manifest.json` ponytail `fixed_evidence`：原檔在 `4cebdb2` 刪除，改成 `git_show: 4cebdb2^:<path>`，實測 `git show` 的 sha256 與記錄相符；`review_commit`（`b9c7e23`）已不在本機 repo，拿掉。
 - 仍未處理：`implement-spec`、`retro`、`pr` 還沒實際跑過。
+- opus reviewer 驗收 `a4c128c`：5 PASS、0 FAIL、0 UNKNOWN。條件外發現：CLAUDE_CLOUD 沒提到已結案專案的 branch 已刪、最後 commit 只記在本檔；未處理，待使用者決定。
