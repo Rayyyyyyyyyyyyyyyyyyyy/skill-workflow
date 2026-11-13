@@ -127,3 +127,4 @@
 - 查到全域角色又出現的原因：使用者電腦裝了 Agency Agents 桌面 app（`/Applications/Agency Agents.app`），它會自動安裝並更新 `~/.claude/agents/`。
 - 方法修改：刪除 `library/agents/`（282 個角色、INDEX、LICENSE；要找回從 `e943880` 取）。WORKFLOW 第 3 節、`CLAUDE.md`、`docs/CLAUDE_CLOUD.md`、`library/README.md` 改成：專業角色直接用 subagent 類型清單上的名稱開，不讀檔；清單上沒有就照 README 安裝，裝不了只用原生角色。README 新增「另外安裝」：安裝方式、沒裝的影響、12 個常用角色（依過去專案類型推估，沒有使用紀錄）。`sync_methods.py` 不再產生 INDEX；`check_portability.py` 印出全域角色數量，沒裝不算失敗。manifest 的 agency-agents 來源改註明裝在全域。
 - `.claude/agents/LICENSE` 保留，6 個原生角色改寫自 agency-agents。
+- opus reviewer 驗收 `7cf535d`：5 PASS、0 FAIL、0 UNKNOWN。順手修掉它指出的格式瑕疵（`sync_methods.py` 多一行空行）。未驗：雲端或新電腦上實際開專業角色。

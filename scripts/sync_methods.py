@@ -68,7 +68,6 @@ def native_role_rows() -> list[str]:
     return rows
 
 
-
 def write_catalog() -> None:
     text = "\n".join([
         "# 工具目錄",
