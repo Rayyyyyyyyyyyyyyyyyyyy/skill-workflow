@@ -119,3 +119,4 @@
 - 使用者指示：「review 的agent modal 要用比執行的agent modal更高級」。上一節「驗收改回 sonnet」由這一節取代；Fable 仍然不用。
 - 方法修改：`.claude/agents/reviewer.md` frontmatter 加 `model: opus`（implementer 維持 `model: sonnet`）；`docs/WORKFLOW.md` 切細派工開頭、逐票驗收、第 5 節寫明規則；`CLAUDE.md`「方法凍結」那一條改成照第 5 節。明確度關卡的 subagent 維持 sonnet，因為它模擬的是執行者會不會需要猜。
 - Agent 判斷：主 session 自己動手的修改也用預設的 opus。主 session 跑在比 opus 更高的模型時，這種情況 reviewer 不會比執行者高；照規則要嚴格成立，就把修改切票交給 implementer 做。
+- opus reviewer 驗收 `945599b` 第 1 輪：4 PASS、1 FAIL。FAIL：執行者是 opus 時文件沒說 reviewer 用什麼，主 session 自己動手的例外也沒說原因。已改寫第 5 節：opus 是上限，執行者是 opus 或主 session 自己動手時 reviewer 都用 opus，靠獨立的上下文。
