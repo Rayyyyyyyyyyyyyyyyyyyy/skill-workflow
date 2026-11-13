@@ -37,14 +37,9 @@ def check(root: Path) -> list[str]:
             if actual != expected:
                 errors.append(f"method checksum mismatch: {relative}")
         catalog = local_file("library/CATALOG.md").read_text()
-        index = local_file("library/agents/INDEX.md").read_text()
         for skill in sorted((root / ".claude/skills").glob("*/SKILL.md")):
             if f"`{skill.parent.name}`" not in catalog:
                 errors.append(f"skill missing from catalog (run scripts/sync_methods.py): {skill.parent.name}")
-        for role in sorted((root / "library/agents").rglob("*.md")):
-            relative = role.relative_to(root).as_posix()
-            if role.name != "INDEX.md" and role.read_text().startswith("---") and f"`{relative}`" not in index:
-                errors.append(f"role missing from index (run scripts/sync_methods.py): {relative}")
         for relative in ("CLAUDE.md", "docs/WORKFLOW.md", "docs/CLAUDE_CLOUD.md"):
             local_file(relative)
     except (OSError, ValueError, KeyError, TypeError) as exc:
@@ -64,6 +59,9 @@ def main():
         return 1
     print("PASS: repo method files, hashes and Role/Skill paths; Python 3.11+ and Git available.")
     print("Node.js: " + ("available" if shutil.which("node") else "missing; design-taste scripts unavailable"))
+    roles = len(list((Path.home() / ".claude/agents").glob("*.md")))
+    # Specialist roles live outside the repo, so a missing install is reported, not failed.
+    print(f"Global specialist roles (~/.claude/agents): {roles}" + ("" if roles else "; install them, see README"))
     print("Not checked: Claude discovery/identity, cloud permissions, network or browser behavior.")
     return 0
 

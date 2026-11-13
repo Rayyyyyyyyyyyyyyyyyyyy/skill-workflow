@@ -8,7 +8,7 @@
 2. 讀 `CLAUDE.md`，再讀 `docs/WORKFLOW.md`。
 3. 在 repo 根目錄執行 `python3 scripts/check_portability.py`，然後看 `projects/` 底下各 Project 的 `PROJECT.md`，掌握目前進度。
 
-`.claude/skills/` 底下的 Skills 會自動發現。`library/agents/` 底下的角色不會自動載入，要用時請 subagent 先讀角色檔。在 Claude Projects 裡開的 cloud thread 可能不會載入 repo Skills，這時就直接讀 `.claude/skills/<name>/SKILL.md`。
+`.claude/skills/` 底下的 Skills 會自動發現。專業角色不在 repo 裡，雲端通常沒有；需要時照 README「另外安裝」裝進 `~/.claude/agents/`，裝不了就只用 `.claude/agents/` 的原生角色。在 Claude Projects 裡開的 cloud thread 可能不會載入 repo Skills，這時就直接讀 `.claude/skills/<name>/SKILL.md`。
 
 ## 可以直接給 Claude 的話
 
@@ -30,4 +30,4 @@
 
 ## 新增 Skill 或角色
 
-把整個資料夾放進 `.claude/skills/<name>/`（角色放 `.claude/agents/` 或 `library/agents/<分部>/`），然後跑 `python3 scripts/sync_methods.py`，並在 `.claude/methods-manifest.json` 的 `packages` 記下來源與版本。
+把整個資料夾放進 `.claude/skills/<name>/`（repo 專用的角色放 `.claude/agents/`；專業角色裝在全域，不進 repo），然後跑 `python3 scripts/sync_methods.py`，並在 `.claude/methods-manifest.json` 的 `packages` 記下來源與版本。

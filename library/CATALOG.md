@@ -62,29 +62,6 @@ Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 
 | `reviewer` | 在獨立上下文逐項查核指定成果與證據；回報符合、缺陷與未知，不修改作者成果或自行批准交付。 |
 | `writer` | 依受眾與使用情境完成文件交付，保留原始意圖、可查核事實、來源與限制。 |
 
-## 專業角色庫（`library/agents/`，共 282 個）
+## 專業角色（全域 `~/.claude/agents/`，不在 repo 裡）
 
-完整清單與一行說明在 [agents/INDEX.md](agents/INDEX.md)，用關鍵字搜尋最快：`grep -i "frontend\|react" library/agents/INDEX.md`。
-
-要用某個角色時，開一個 subagent，請它先完整讀該角色檔，再用那一行的方法與工具完成指定任務（不是只換口吻）；同一任務可以組好幾個角色分工或互相審查。
-
-| 分部 | 數量 | 例子 |
-|---|---:|---|
-| academic | 6 | Anthropologist, Geographer, Historian, Narratologist, Psychologist, Statistician |
-| design | 10 | Brand Guardian, Image Prompt Engineer, Inclusive Visuals Specialist, Persona Walkthrough Specialist, UI Designer, UI Finish-Gate Reviewer … |
-| engineering | 65 | AI Data Remediation Engineer, AI Engineer, API Platform Engineer, ATS Validator Architect, Autonomous Optimization Architect, Backend Architect … |
-| finance | 5 | Bookkeeper & Controller, Financial Analyst, FP&A Analyst, Investment Researcher, Tax Strategist |
-| game-development | 21 | Blender Add-on Engineer, Economy Designer, Game Audio Engineer, Game Designer, Godot Gameplay Scripter, Godot Multiplayer Engineer … |
-| gis | 13 | 3D & Scene Developer, GIS Analyst, BIM/GIS Specialist, Cartography Designer, Drone/Reality Mapping Specialist, GeoAI/ML Engineer … |
-| healthcare | 3 | Clinical Evidence Agent, Healthcare Innovation Strategist, Sovereign Health Systems Agent |
-| marketing | 37 | AEO Foundations Architect, Agentic Search Optimizer, AI Citation Strategist, App Store Optimizer, Baidu SEO Specialist, Bilibili Content Strategist … |
-| paid-media | 7 | Paid Media Auditor, Ad Creative Strategist, Paid Social Strategist, PPC Campaign Strategist, Programmatic & Display Buyer, Search Query Analyst … |
-| product | 6 | Behavioral Nudge Engine, DX Engineer, Feedback Synthesizer, Product Manager, Sprint Prioritizer, Trend Researcher |
-| project-management | 7 | Experiment Tracker, Jira Workflow Steward, Meeting Notes Specialist, Project Shepherd, Studio Operations, Studio Producer … |
-| research | 1 | Research Synthesist |
-| sales | 9 | Account Strategist, Sales Coach, Deal Strategist, Discovery Coach, Sales Engineer, Offer & Lead Gen Strategist … |
-| security | 12 | AI-Generated Code Security Auditor, Application Security Engineer, Security Architect, Blockchain Security Auditor, Cloud Security Architect, Compliance Auditor … |
-| spatial-computing | 6 | macOS Spatial/Metal Engineer, Terminal Integration Specialist, visionOS Spatial Engineer, XR Cockpit Interaction Specialist, XR Immersive Developer, XR Interface Architect |
-| specialized | 59 | Accounts Payable Agent, Agentic Identity & Trust Architect, Agents Orchestrator, Automation Governance Architect, Business Strategist, Change Management Consultant … |
-| support | 6 | Analytics Reporter, Executive Summary Generator, Finance Tracker, Infrastructure Maintainer, Legal Compliance Checker, Support Responder |
-| testing | 9 | Accessibility Auditor, API Tester, Evidence Collector, Performance Benchmarker, Reality Checker, Test Automation Engineer … |
+agency-agents 的專業角色裝在全域，session 的 subagent 類型清單上就有名稱和一行說明，直接用名稱開；派工時寫明要它用哪些方法與工具（不是只換口吻）。安裝方式與常用角色見根目錄 README「另外安裝」。

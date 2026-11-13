@@ -1,7 +1,7 @@
 """Regenerate the tool catalog and method-file hashes after adding or editing Skills/Roles.
 
 Run from anywhere: python3 scripts/sync_methods.py
-Writes library/CATALOG.md, library/agents/INDEX.md and the `files` map of
+Writes library/CATALOG.md and the `files` map of
 .claude/methods-manifest.json (the `packages` provenance is kept as written).
 """
 from __future__ import annotations
@@ -14,7 +14,6 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".claude/skills"
 NATIVE_ROLES = ROOT / ".claude/agents"
-LIBRARY_ROLES = ROOT / "library/agents"
 MANIFEST = ROOT / ".claude/methods-manifest.json"
 
 # Skills the Claude platform itself may provide; availability depends on the session.
@@ -69,27 +68,8 @@ def native_role_rows() -> list[str]:
     return rows
 
 
-def library_roles() -> dict[str, list[tuple[str, str, str]]]:
-    divisions: dict[str, list[tuple[str, str, str]]] = {}
-    for path in sorted(LIBRARY_ROLES.rglob("*.md")):
-        if path.name == "INDEX.md":
-            continue
-        meta = frontmatter(path)
-        if not meta.get("name"):
-            continue
-        division = path.relative_to(LIBRARY_ROLES).parts[0]
-        divisions.setdefault(division, []).append(
-            (meta["name"], path.relative_to(ROOT).as_posix(), meta.get("description", ""))
-        )
-    return divisions
 
-
-def write_catalog(divisions) -> None:
-    total = sum(len(v) for v in divisions.values())
-    division_rows = [
-        f"| {name} | {len(roles)} | {', '.join(r[0] for r in roles[:6])}{' …' if len(roles) > 6 else ''} |"
-        for name, roles in sorted(divisions.items())
-    ]
+def write_catalog() -> None:
     text = "\n".join([
         "# 工具目錄",
         "",
@@ -119,33 +99,19 @@ def write_catalog(divisions) -> None:
         "|---|---|",
         *native_role_rows(),
         "",
-        f"## 專業角色庫（`library/agents/`，共 {total} 個）",
+        "## 專業角色（全域 `~/.claude/agents/`，不在 repo 裡）",
         "",
-        "完整清單與一行說明在 [agents/INDEX.md](agents/INDEX.md)，用關鍵字搜尋最快："
-        "`grep -i \"frontend\\|react\" library/agents/INDEX.md`。",
-        "",
-        "要用某個角色時，開一個 subagent，請它先完整讀該角色檔，再用那一行的方法與工具完成指定任務（不是只換口吻）；"
-        "同一任務可以組好幾個角色分工或互相審查。",
-        "",
-        "| 分部 | 數量 | 例子 |",
-        "|---|---:|---|",
-        *division_rows,
+        "agency-agents 的專業角色裝在全域，session 的 subagent 類型清單上就有名稱和一行說明，直接用名稱開；"
+        "派工時寫明要它用哪些方法與工具（不是只換口吻）。安裝方式與常用角色見根目錄 README「另外安裝」。",
         "",
     ])
     (ROOT / "library/CATALOG.md").write_text(text, encoding="utf-8")
-
-    index = ["# 專業角色索引", "", "由 `scripts/sync_methods.py` 產生。格式：角色名稱 — 檔案 — 用途。", ""]
-    for name, roles in sorted(divisions.items()):
-        index += [f"## {name}", ""]
-        index += [f"- **{n}** — `{p}` — {short(d, 160)}" for n, p, d in roles]
-        index.append("")
-    (LIBRARY_ROLES / "INDEX.md").write_text("\n".join(index), encoding="utf-8")
 
 
 def write_manifest() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     files = {}
-    for base in (SKILLS, NATIVE_ROLES, LIBRARY_ROLES):
+    for base in (SKILLS, NATIVE_ROLES):
         for path in sorted(base.rglob("*")):
             if path.is_file() and "__pycache__" not in path.parts and path.name != ".DS_Store":
                 files[path.relative_to(ROOT).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -154,11 +120,9 @@ def write_manifest() -> None:
 
 
 def main() -> int:
-    divisions = library_roles()
-    write_catalog(divisions)
+    write_catalog()
     write_manifest()
-    print(f"catalog: {len(skill_rows())} skills, {len(native_role_rows())} native roles, "
-          f"{sum(len(v) for v in divisions.values())} library roles")
+    print(f"catalog: {len(skill_rows())} skills, {len(native_role_rows())} native roles")
     return 0
 
 

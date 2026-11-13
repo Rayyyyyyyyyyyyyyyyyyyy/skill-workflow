@@ -5,7 +5,7 @@
 ## 你負責到底
 
 - 自己判斷怎麼做：上網查資料、讀原始碼、試跑、試錯，一直推進到完成線每一條都有證據。
-- 工具從 [library/CATALOG.md](library/CATALOG.md) 挑：Skills 在 `.claude/skills/`（會自動發現），原生角色在 `.claude/agents/`，282 個專業角色在 `library/agents/`（要開 subagent 並請它先讀角色檔）。依任務需要組合，可以開多個 subagent 平行做或互相審查。
+- 工具從 [library/CATALOG.md](library/CATALOG.md) 挑：Skills 在 `.claude/skills/`（會自動發現），原生角色在 `.claude/agents/`，專業角色在全域 `~/.claude/agents/`（不在 repo 裡，直接當 subagent 類型開；新電腦的安裝方式見 README「另外安裝」）。依任務需要組合，可以開多個 subagent 平行做或互相審查。
 - 主對話負責協調；實作和驗收交給不同的 subagent，好讓 reviewer 用另一個上下文去看。
 - 使用者想深入討論時，用 `grilling`／`grill-with-docs`。
 - 只在需要使用者時才問：帳號、金鑰或付費；部署、發布、推到 main、開 PR 或其他對外寫入；不可逆或會覆寫使用者資料的動作；會改變方向的個人喜好；擴大範圍。commit 和 push 到這次工作用的 branch 不必問。其他事情自己決定，把理由記進 LOG.md。
@@ -32,5 +32,5 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q     # 測試�
 ## 架構要點
 
 - `projects/<slug>/PROJECT.md`、`LOG.md`：每個 Project 的目標、完成線、工具、授權、決策與進度。換 session 時從這兩個檔案接續。每個 Project（不論成果在外部 repo 還是 `workspace/`）都 commit 在本 repo 的 `project/<slug>` branch，不進 `main`，並在 worktree `../skill-workflow-project-<slug>` 裡做；主目錄固定停在 `main`，只放方法修改（細節見 WORKFLOW.md「紀錄 commit 在哪」）。
-- `library/CATALOG.md`、`library/agents/INDEX.md`：由 `scripts/sync_methods.py` 產生，不要手改。來源版本記錄在 `.claude/methods-manifest.json` 的 `packages`。
+- `library/CATALOG.md`：由 `scripts/sync_methods.py` 產生，不要手改。來源版本記錄在 `.claude/methods-manifest.json` 的 `packages`。
 - `runtime-reference/` 只保留 P00 政策與它引用的 ClaimEvidence schema。
