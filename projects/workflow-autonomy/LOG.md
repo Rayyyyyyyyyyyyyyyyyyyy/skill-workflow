@@ -87,3 +87,6 @@
 - 獨立驗收（使用者指定 Fable 5.2）第 1 輪：3 PASS、2 FAIL。FAIL 1：WORKFLOW 第 5 節與 `.claude/agents/reviewer.md` 的證據標準不一致。FAIL 2：多處要執行者猜，包括往上一層算不算擴大範圍、「使用者判定」怎麼結案、「重要」沒有判準、沒切票時的第一張票、瀏覽器授權、四問 (1)–(3) 寫在哪。已逐項修正：範圍以使用者原話為界，往上一層的版本當選項問使用者；「使用者判定」判 UNKNOWN，列入「已完成但未驗證」；跨領域改成在方向／種子模式與第二種做法失敗時使用；reviewer.md 同步。
 - 第 2 輪：4 PASS、1 FAIL。FAIL 是 LOG 還寫著第 1 輪的舊說法，已改正。順便補上殘留的含糊處：問了往上一層的選項後，等回覆期間先照原話範圍的完成線做。這兩處修改沒有再送第 3 輪，以 grep 和下列檢查確認。
 - 驗證：sync_methods、check_portability PASS；unittest OK。
+
+## 2026-11-13 方法修改改由 Fable 驗收
+- 使用者指示：「用fable 只限於做把關推進workflow方法的優化迭代」。`CLAUDE.md`「方法凍結」那一條補上：方法修改的獨立驗收用 `reviewer` 加 `model: "fable"`，一般專案照舊用 sonnet。
