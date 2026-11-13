@@ -120,3 +120,4 @@
 - 方法修改：`.claude/agents/reviewer.md` frontmatter 加 `model: opus`（implementer 維持 `model: sonnet`）；`docs/WORKFLOW.md` 切細派工開頭、逐票驗收、第 5 節寫明規則；`CLAUDE.md`「方法凍結」那一條改成照第 5 節。明確度關卡的 subagent 維持 sonnet，因為它模擬的是執行者會不會需要猜。
 - Agent 判斷：主 session 自己動手的修改也用預設的 opus。主 session 跑在比 opus 更高的模型時，這種情況 reviewer 不會比執行者高；照規則要嚴格成立，就把修改切票交給 implementer 做。
 - opus reviewer 驗收 `945599b` 第 1 輪：4 PASS、1 FAIL。FAIL：執行者是 opus 時文件沒說 reviewer 用什麼，主 session 自己動手的例外也沒說原因。已改寫第 5 節：opus 是上限，執行者是 opus 或主 session 自己動手時 reviewer 都用 opus，靠獨立的上下文。
+- 第 2 輪（`355874f`）：3 PASS、0 FAIL、0 UNKNOWN。使用者指示「調整完再push」，push 到 `origin/main`。
