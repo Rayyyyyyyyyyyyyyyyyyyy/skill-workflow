@@ -75,3 +75,4 @@
 - 方法修改：`docs/WORKFLOW.md`「紀錄 commit 在哪」改成外部專案紀錄在 `../skill-workflow-project-<slug>` worktree 做；主目錄只放方法修改，可直接 commit，push 前先問。`CLAUDE.md` 架構要點同步。`docs/CLAUDE_CLOUD.md` 不改，因為雲端 session 每次都是新 clone，直接切 branch 就好。
 - 補充（同日）：使用者同意把規則擴大到所有 Project，成果放在 `workspace/` 的也一樣，一律走 `project/<slug>` worktree，main 只放方法。WORKFLOW.md、CLAUDE.md 同步修改。
 - 檢查 main 是否只放方法：刪掉 `.gitattributes`，它唯一的規則指向已刪除的 `projects/skills-inventory`。
+- 刪除遠端 branch：`chore/merge-entry-cleanup`、`ft/workflow-cleanup`、`claude/inspiring-feynman-ied4yc`（三個都已全部進 main）。另依使用者指示放棄 nihongo-dojo-ios-app，刪除 `claude/nhk-n3-1-app-design-48gcth`（最後一個 commit 是 `a4ff394`，紀錄沒有進 main；外部 repo `nihongo-dojo-app` 沒動）。
