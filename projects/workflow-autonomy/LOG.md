@@ -74,3 +74,4 @@
 - 處理：template-upgrade 已完成並 push（`project/template-upgrade` 的 `94f7c8a`），主目錄切回 `main`。
 - 方法修改：`docs/WORKFLOW.md`「紀錄 commit 在哪」改成外部專案紀錄在 `../skill-workflow-project-<slug>` worktree 做；主目錄只放方法修改，可直接 commit，push 前先問。`CLAUDE.md` 架構要點同步。`docs/CLAUDE_CLOUD.md` 不改，因為雲端 session 每次都是新 clone，直接切 branch 就好。
 - 補充（同日）：使用者同意把規則擴大到所有 Project，成果放在 `workspace/` 的也一樣，一律走 `project/<slug>` worktree，main 只放方法。WORKFLOW.md、CLAUDE.md 同步修改。
+- 檢查 main 是否只放方法：刪掉 `.gitattributes`，它唯一的規則指向已刪除的 `projects/skills-inventory`。
