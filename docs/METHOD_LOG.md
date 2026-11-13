@@ -142,3 +142,12 @@
   - `.claude/methods-manifest.json` ponytail `fixed_evidence`：原檔在 `4cebdb2` 刪除，改成 `git_show: 4cebdb2^:<path>`，實測 `git show` 的 sha256 與記錄相符；`review_commit`（`b9c7e23`）已不在本機 repo，拿掉。
 - 仍未處理：`implement-spec`、`retro`、`pr` 還沒實際跑過。
 - opus reviewer 驗收 `a4c128c`：5 PASS、0 FAIL、0 UNKNOWN。條件外發現：CLAUDE_CLOUD 沒提到已結案專案的 branch 已刪、最後 commit 只記在本檔；未處理，待使用者決定。
+
+## 2026-11-13 派工改用 implement-spec、收尾加 retro、PR 用 pr
+- 使用者指示：「捨棄原本的重疊部分，改成用那三個skill」「要可以自行觸發」。問了兩題：逐票驗收選「只用最後的 code-review」；明確度關卡選「保留」。這推翻 11-09 起的「逐票 reviewer 不可省」。
+- 方法修改：
+  - `docs/WORKFLOW.md` 第 4 節「切細派工」改成「切規格與派工」：`to-spec` → `to-tickets` → 明確度關卡 → `implement-spec`。本 repo 的例外寫在那一節：implementer 用 `implementer` 角色（sonnet）、整合 branch 的位置、沒有程式碼的票不用 `tdd`、draft PR 先問使用者並用 `pr` 寫說明、`code-review` 的兩個審查 subagent 用 opus，修完重跑到沒有問題為止。第 5 節的完成線獨立驗收不變。
+  - 第 6 節：收尾記完兩個數字後跑 `retro`，屬於方法的改進候選照「方法凍結」處理。
+  - `implement-spec`、`retro` 拿掉 `disable-model-invocation: true`（manifest 的 mattpocock `adaptations` 記下）。全域 `~/.claude/skills/` 的同名兩份會蓋掉 repo 版，所以一起改；原檔備份在 `~/.agents/skill-backups/20261113-self-invoke/`。影響：其他 repo 也會自動呼叫這兩個 Skill；重新安裝全域 Skill 會蓋掉這個修改。
+  - Claude Code memory `delegate-to-sonnet` 改成新流程。
+- Agent 判斷：`code-review` 修完要重跑到沒問題，並沿用「同一問題兩次修不好就收回主 session」，因為 implement-spec 原文只修一輪、沒有確認修好。

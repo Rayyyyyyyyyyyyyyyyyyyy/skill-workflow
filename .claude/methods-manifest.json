@@ -260,7 +260,9 @@
         "wayfinder",
         "writing-for-agents"
       ],
-      "adaptations": [],
+      "adaptations": [
+        "implement-spec, retro: removed `disable-model-invocation: true` so the agent can invoke them (user request 2026-11-13)"
+      ],
       "license": "LICENSE copied into each skill folder"
     },
     "skill:impeccable": {
@@ -403,7 +405,7 @@
     ".claude/skills/implement/SKILL.md": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
     ".claude/skills/implement/agents/openai.yaml": "8970a8596ade0c28ab427f41a4ea242d6bdf6186c59ebf55e1238dbecaab79dc",
     ".claude/skills/implement-spec/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    ".claude/skills/implement-spec/SKILL.md": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d",
+    ".claude/skills/implement-spec/SKILL.md": "564089f91afcfae0fb2d988f84b03335e301157716e093cff33eea64e6242ce2",
     ".claude/skills/implement-spec/agents/openai.yaml": "fd41efb42c60c96320d6531be7e4bf15cbf5518cd652d57dff27ccffa46988e9",
     ".claude/skills/improve-codebase-architecture/HTML-REPORT.md": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
     ".claude/skills/improve-codebase-architecture/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
@@ -422,7 +424,7 @@
     ".claude/skills/prototype/agents/openai.yaml": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc",
     ".claude/skills/research/SKILL.md": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
     ".claude/skills/retro/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
-    ".claude/skills/retro/SKILL.md": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696",
+    ".claude/skills/retro/SKILL.md": "d39f65cfd1027788ac2ff9e9aa6caa555d9dd2e6e9d3eaea4c28cf493a45cdff",
     ".claude/skills/retro/agents/openai.yaml": "cb6fb9d7e6b4be5975f41f6def1dd00a1255bad5d9b02696b124c924a8b8745c",
     ".claude/skills/setup-matt-pocock-skills/LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
     ".claude/skills/setup-matt-pocock-skills/SKILL.md": "b01e05bfe8c323171275c6ceec78b12f1bd4c62dfd26c2cfe8be806d3883f1ed",

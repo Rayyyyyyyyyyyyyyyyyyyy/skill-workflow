@@ -23,13 +23,13 @@ Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 
 | `humanizer` | Skill 工具 | Rewrite, edit, and polish AI-generated or stiff text so it sounds natural, specific, and human while preserving meaning. Use for copywritin… |
 | `impeccable` | Skill 工具 | Use to design, redesign, critique, audit, polish or animate a frontend: websites, landing pages, dashboards, app UI, components, native iOS… |
 | `implement` | 讀檔 | Implement a piece of work based on a spec or set of tickets. |
-| `implement-spec` | 讀檔 | Implement the result of /to-spec and /to-tickets in code. |
+| `implement-spec` | Skill 工具 | Implement the result of /to-spec and /to-tickets in code. |
 | `improve-codebase-architecture` | 讀檔 | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick. |
 | `ponytail` | Skill 工具 | Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. Use on any coding t… |
 | `pr` | Skill 工具 | Use when writing a PR body. |
 | `prototype` | Skill 工具 | Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right… |
 | `research` | Skill 工具 | Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants… |
-| `retro` | 讀檔 | Conduct a retrospective on a coding session. |
+| `retro` | Skill 工具 | Conduct a retrospective on a coding session. |
 | `setup-matt-pocock-skills` | 讀檔 | Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before f… |
 | `tdd` | Skill 工具 | Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integrat… |
 | `teach` | 讀檔 | Teach the user a new skill or concept, within this workspace. |

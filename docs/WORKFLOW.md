@@ -58,16 +58,19 @@
 
 除了上面這些，其他判斷都由你自己決定，並在 LOG.md 記下理由。
 
-### 切細派工（壓低交辦與交付成本）
+### 切規格與派工（`to-spec` → `to-tickets` → `implement-spec`）
 
-主 session 負責想清楚與切細，執行交給 sonnet；驗收不可省略，而且 reviewer 的模型要比執行者高一級（執行 sonnet，驗收 opus）。
+主 session 負責想清楚與切細，執行交給 sonnet，審查用比執行者高一級的 opus。
 
-1. **切票**：主 session 照 `to-tickets` 的格式，把工作切成 `projects/<slug>/issues/NN-<slug>.md`，必填欄位與本 repo 的例外見 [docs/agents/issue-tracker.md](agents/issue-tracker.md)。每張票只完成一個可驗證的行為，必須自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行、看結果就知道 PASS／FAIL）、被哪張票擋住。票一定要寫成檔案才能派工。
+1. **切規格與票**：主 session 用 `to-spec` 寫 `projects/<slug>/spec.md`，再用 `to-tickets` 切成 `projects/<slug>/issues/NN-<slug>.md`。必填欄位與本 repo 的例外見 [docs/agents/issue-tracker.md](agents/issue-tracker.md)。每張票只完成一個可驗證的行為，而且要自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行，看結果就知道 PASS／FAIL）、被哪張票擋住。
 2. **明確度關卡**：執行者不必再做判斷就能完成的票，才可以派出去。需要取捨、設計或問使用者的，留在主 session 解決（必要時用 `grilling`），解決後再寫進票。一批票切完後、第一次派工前，開一個全新的 subagent（`model: "sonnet"`），只給它這批票檔的路徑，請它回答：每張票要做什麼、有哪些地方它必須猜。它得猜的地方就補進票裡，補到沒有為止再派工。一批測一次，不逐票測；只問哪裡要猜，不請它審設計。
-3. **派工**：只派沒有被擋住的票。派工訊息只寫票檔路徑和工作目錄，不重抄內容：`Agent(subagent_type: "implementer")`（角色預設 `model: sonnet`）。彼此獨立的票可以平行派。
-4. **回報要短**：commit hash、跑過的驗收指令和結果、沒驗證的部分。不貼整份 diff 或完整 log。
-5. **逐票驗收（必做）**：每張票交付後，開 `reviewer`（角色預設 `model: opus`，比 implementer 高一級；跟實作不同的上下文），只給它票檔路徑和 commit，逐條判 PASS／FAIL／UNKNOWN。FAIL 就把理由附在票裡重派；同一張票失敗兩次，收回主 session 重新切票或自己處理。
-6. 全部的票都 PASS 之後，照第 5 節對整個完成線做最後一次獨立驗收。
+3. **實作**：用 `implement-spec` 做完整份規格，issue tracker 就是上面那份文件。本 repo 的例外：
+   - implementer subagent 用 `Agent(subagent_type: "implementer")`（角色預設 `model: sonnet`），派工訊息只寫票檔路徑、工作目錄和整合 branch，不重抄內容。回報要短：commit hash、跑過的驗收指令和結果、沒驗證的部分。
+   - 整合 branch 開在成果所在的 repo；成果在 `workspace/` 時就是 `project/<slug>`。
+   - 票沒有程式碼（例如文件）時不必用 `tdd`，照票上的驗收指令驗。
+   - draft PR 屬於對外寫入，先問使用者；開的話用 `pr` 寫 PR 說明。
+   - 最後的 `code-review` 兩個審查 subagent 都用 `model: "opus"`。它找到的問題交給一個 implementer 修，修完再跑一次 `code-review`，直到沒有要修的問題；同一個問題修了兩次還在，就收回主 session 處理。
+4. 全部的票完成、`code-review` 沒有要修的問題之後，照第 5 節對整個完成線做最後一次獨立驗收。
 
 ## 5. 獨立驗收
 
@@ -77,6 +80,7 @@
 
 - 每推進一段，就在 LOG.md 追加一筆：做了什麼、證據在哪、下一步是什麼。換 session 或換電腦時從這裡接續。
 - 專案收尾時在 LOG.md 記兩個數字：這個專案裡使用者被問了幾次（Agent 主動停下來問的次數，不算使用者自己發話），以及獨立驗收 FAIL 了幾輪。這是判斷這套方法好不好用的依據。
+- 接著用 `retro` 回顧這個專案的 session，把改進候選依嚴重度列給使用者。屬於這套方法本身的，照 CLAUDE.md「方法凍結」處理。
 - 收尾回報要分成三類：已完成並驗證、已完成但未驗證、未做。每一類都寫清楚原因。
 - 事實、推論、假設要分開標示（[P00](../runtime-reference/policies/P00-GROUNDED-ANSWER.md)）。
 
