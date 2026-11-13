@@ -2,7 +2,7 @@
 
 - 原文：https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/（2026-10-13，作者是 Anthropic EM，帶過 Claude.ai、Cowork、Claude Code Desktop）
 - 社群把它做成的 Skill：`robonuggets/be-ambitious`（https://www.skills.sh/robonuggets/be-ambitious/be-ambitious），沒有安裝，只參考它的規則。
-- 2026-11-13 讀原文後，依它修改了 `docs/WORKFLOW.md`；修改紀錄在 `projects/workflow-autonomy/LOG.md`。
+- 2026-11-13 讀原文後，依它修改了 `docs/WORKFLOW.md`；修改紀錄在 `docs/METHOD_LOG.md`。
 
 ## 原文重點
 

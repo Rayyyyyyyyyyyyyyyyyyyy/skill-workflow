@@ -9,7 +9,7 @@
 
 成果放哪裡：屬於別的 repo 就直接在那個 repo 開 branch 做，紀錄留在這裡的 Project 資料夾；沒有既有 repo 就放 `projects/<slug>/workspace/`。
 
-紀錄 commit 在哪：Project 不是這個 repo 的方法本身，不論成果在別的 repo 還是在 `workspace/`，開工前都先開 worktree：`git worktree add ../skill-workflow-project-<slug> -b project/<slug>`（branch 已存在就去掉 `-b`），`projects/<slug>/` 的修改和 commit 都在那裡做，不要 commit 到 `main`。要 push 也只推 `project/<slug>`；專案結束後用 `git worktree remove` 清掉 worktree，再刪掉本機和遠端的 `project/<slug>` branch，把最後一個 commit 和收尾的兩個數字（第 6 節；分輪做的每一輪各記一組）記進 `projects/workflow-autonomy/LOG.md`，因為 branch 刪掉後專案自己的 LOG 就不在了。主目錄一直停在 `main`，只放方法本身的修改（`CLAUDE.md`、`docs/`、`.claude/`、`scripts/` 等），可以直接 commit，push 到 main 前先問。哪個位置由改的檔案決定，不必等使用者說要隔離。
+紀錄 commit 在哪：Project 不是這個 repo 的方法本身，不論成果在別的 repo 還是在 `workspace/`，開工前都先開 worktree：`git worktree add ../skill-workflow-project-<slug> -b project/<slug>`（branch 已存在就去掉 `-b`），`projects/<slug>/` 的修改和 commit 都在那裡做，不要 commit 到 `main`。要 push 也只推 `project/<slug>`；專案結束後用 `git worktree remove` 清掉 worktree，再刪掉本機和遠端的 `project/<slug>` branch，把最後一個 commit 和收尾的兩個數字（第 6 節；分輪做的每一輪各記一組）記進 `docs/METHOD_LOG.md`，因為 branch 刪掉後專案自己的 LOG 就不在了。主目錄一直停在 `main`，只放方法本身的修改（`CLAUDE.md`、`docs/`、`.claude/`、`scripts/` 等），可以直接 commit，push 到 main 前先問。哪個位置由改的檔案決定，不必等使用者說要隔離。
 
 ## 2. 判斷是哪一種輸入
 

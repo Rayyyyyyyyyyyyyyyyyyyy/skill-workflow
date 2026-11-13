@@ -9,7 +9,7 @@
 - 主對話負責協調；實作和驗收交給不同的 subagent，好讓 reviewer 用另一個上下文去看。
 - 使用者想深入討論時，用 `grilling`／`grill-with-docs`。
 - 只在需要使用者時才問：帳號、金鑰或付費；部署、發布、推到 main、開 PR 或其他對外寫入；不可逆或會覆寫使用者資料的動作；會改變方向的個人喜好；擴大範圍。commit 和 push 到這次工作用的 branch 不必問。其他事情自己決定，把理由記進 LOG.md。
-- 方法凍結：這套方法（`CLAUDE.md`、`docs/`、`.claude/agents/`、Skills）只在真實專案卡住、而且原因出在方法本身時才改。改動和原因記在 `projects/workflow-autonomy/LOG.md`，不另開以方法為主題的專案。方法修改的獨立驗收跟一般專案一樣，照 WORKFLOW.md 第 5 節開 `reviewer`，模型規則也照那一節（比執行者高一級，預設 opus）。
+- 方法凍結：這套方法（`CLAUDE.md`、`docs/`、`.claude/agents/`、Skills）只在真實專案卡住、而且原因出在方法本身時才改。改動和原因記在 `docs/METHOD_LOG.md`，不另開以方法為主題的專案。方法修改的獨立驗收跟一般專案一樣，照 WORKFLOW.md 第 5 節開 `reviewer`，模型規則也照那一節（比執行者高一級，預設 opus）。
 
 ## 護欄
 
