@@ -26,7 +26,7 @@
 
 ## 換 session 時保存什麼
 
-雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。外部 repo 專案的紀錄推到 `project/<slug>` branch。舊 Project 照資料夾裡現有的文件接續，不要重建或覆寫。
+雲端容器用完就會回收，所以重要的東西都要 commit 並 push：成果、`PROJECT.md`、`LOG.md`。所有 Project 的成果與紀錄都推到 `project/<slug>` branch，不進 `main`。舊 Project 照資料夾裡現有的文件接續，不要重建或覆寫。
 
 ## 新增 Skill 或角色
 
