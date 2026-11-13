@@ -8,11 +8,12 @@
 |---|---|
 | 收到想法、要接續專案、要回報進度 | [method/WORKFLOW.md](method/WORKFLOW.md) |
 | 新電腦或雲端 clone 第一次開工 | [method/CLAUDE_CLOUD.md](method/CLAUDE_CLOUD.md) |
-| 挑 Skill 和角色 | [method/CATALOG.md](method/CATALOG.md) |
+| 挑 Skill 和角色 | [method/CATALOG.md](method/CATALOG.md)（由 `scripts/sync_methods.py` 產生，不要手改） |
 | 寫 spec、切票，或 Skill 要找 issue tracker | [method/agents/issue-tracker.md](method/agents/issue-tracker.md)；triage 標籤看 `method/agents/triage-labels.md`，領域文件看 `method/agents/domain.md` |
 | 回報時分清楚事實、推論和假設 | [method/policies/P00-GROUNDED-ANSWER.md](method/policies/P00-GROUNDED-ANSWER.md) |
 | 某條規則為什麼這樣改、已結案專案的最後 commit | [records/METHOD_LOG.md](records/METHOD_LOG.md) |
-| 某個專案的目標、完成線和進度 | 先用 `git branch -a --list '*project/*'` 找出 `project/<slug>`，再讀那個 branch 上的 `projects/<slug>/PROJECT.md` 和 `LOG.md` |
+| 方法改動參考過的外部文章 | `records/references/`（例如 [rieseberg-ambition.md](records/references/rieseberg-ambition.md)：完成線的外部判準與四問從這裡來） |
+| 接續某個專案：目標、完成線和進度 | 先用 `git branch -a --list '*project/*'` 找出 `project/<slug>`，再讀那個 branch 上的 `projects/<slug>/PROJECT.md` 和 `LOG.md` |
 
 ## 資料夾分工
 
