@@ -29,6 +29,10 @@ Create a new file under `projects/<slug>/` (creating the directory if needed).
 
 Read the file at the referenced path. The user will normally pass the path or the issue number directly.
 
+## When a skill says "resolve the ticket" or "close the work"
+
+Set the ticket's `Status:` line to `done` and append a line under `## Comments` with the commit that resolves it. `implement-spec` step 8 uses this.
+
 ## Wayfinding operations
 
 Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.

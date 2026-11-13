@@ -157,3 +157,9 @@
 ## 2026-11-13 METHOD_LOG 定位為純紀錄；CLAUDE_CLOUD 補已結案專案
 - 使用者指示：CLAUDE_CLOUD 的缺口「要補」；舊條目「紀錄就是迭代過程中的歷史吧？要嘛刪掉要嘛純紀錄，執行不會去碰到舊的規則就好」。
 - 檔頭加一行聲明這份是歷史、不是規則，舊條目不改。`docs/CLAUDE_CLOUD.md` 第一次開始第 3 步補：已結案專案的 branch 已刪，最後 commit 與收尾數字查這份。
+
+## 2026-11-13 補 implement-spec 例外的三個缺口
+- opus reviewer 驗收 `9749ad7`：7 PASS、0 FAIL、0 UNKNOWN。它的條件外發現有三點會讓執行者需要猜，屬於上一筆修改的缺口，補上：
+  - `docs/agents/issue-tracker.md`：新增一般票怎麼結案（`Status: done`，在 `## Comments` 記 commit）。
+  - WORKFLOW 第 4 節：draft PR 標成 ready for review 也是對外寫入，另外先問；成果在 `workspace/` 時，merger subagent 在 `../skill-workflow-project-<slug>` worktree 裡合併。
+- 第四點（issue-tracker.md「cannot be dispatched or reviewed」）沒改：`code-review` 的 Spec 審查仍要讀票檔，這句話還成立。
