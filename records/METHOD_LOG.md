@@ -174,3 +174,4 @@
 - 更新路徑：`scripts/check_portability.py`、`scripts/sync_methods.py`、`tests/test_portability.py`、WORKFLOW、CLAUDE_CLOUD、issue-tracker.md、README（文件表加 `method/`、`records/`）、manifest 的一則 note、rieseberg 參考檔、本檔檔頭。舊條目裡的路徑不改，由檔頭說明。
 - Agent 判斷：`projects/<slug>/` 不搬進 `records/`。它在 `project/<slug>` branch 上，同時放 spec、票和 `workspace/` 成果，不只是紀錄；搬家的話，WORKFLOW、issue-tracker、memory 都要跟著改，效益不大。
 - opus reviewer 驗收 `55dbcc1`：3 PASS、3 FAIL。FAIL：CLAUDE.md 找不到 `records/references/`；memory `project-records-off-main` 還寫舊路徑；本條目漏列 CATALOG 的變動、檔頭漏列 `docs/references/`。都已修正，另外在 CLAUDE.md 補回「CATALOG 不要手改」，並在 WORKFLOW 第 1 節註明舊專案的 `records/` 是專案自己的子目錄，不是根目錄那個。
+- 第 2 輪（`2c952b1`）：4 PASS、0 FAIL、0 UNKNOWN，條件外發現無。
