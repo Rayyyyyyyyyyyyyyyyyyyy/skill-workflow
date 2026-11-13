@@ -31,6 +31,6 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -q     # 測試�
 
 ## 架構要點
 
-- `projects/<slug>/PROJECT.md`、`LOG.md`：每個 Project 的目標、完成線、工具、授權、決策與進度。換 session 時從這兩個檔案接續。成果在外部 repo 的專案，紀錄 commit 在本 repo 的 `project/<slug>` branch，不進 `main`。
+- `projects/<slug>/PROJECT.md`、`LOG.md`：每個 Project 的目標、完成線、工具、授權、決策與進度。換 session 時從這兩個檔案接續。成果在外部 repo 的專案，紀錄 commit 在本 repo 的 `project/<slug>` branch，不進 `main`，並在 worktree `../skill-workflow-project-<slug>` 裡做；主目錄固定停在 `main`，只放方法修改（細節見 WORKFLOW.md「紀錄 commit 在哪」）。
 - `library/CATALOG.md`、`library/agents/INDEX.md`：由 `scripts/sync_methods.py` 產生，不要手改。來源版本記錄在 `.claude/methods-manifest.json` 的 `packages`。
 - `runtime-reference/` 只保留 P00 政策與它引用的 ClaimEvidence schema。

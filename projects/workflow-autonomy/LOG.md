@@ -68,3 +68,8 @@
 - 起因：template-upgrade 的紀錄被 commit 到本 repo `main`（3 個本機 commit，未 push）。使用者：「但那跟skill-workflow這個repo本體沒有關係呀 只是利用了方法工具，但更新的目標repo另有其他 要push也是另開branch」，並要求「不只要在記憶，也要更新在workflow的方法步驟裡」。
 - 處理：3 個 commit 移到本機 branch `project/template-upgrade`，`main` 退回 `origin/main`（`4161ce1`）。
 - 方法修改：`docs/WORKFLOW.md` 接案第 1 步加看 `project/*` branch，新增「紀錄 commit 在哪」；`docs/CLAUDE_CLOUD.md` 外部 repo 與保存兩段、`CLAUDE.md` 架構要點同步。
+
+## 2026-11-13 主目錄固定停在 main，專案紀錄改用 worktree
+- 起因：主目錄停在 `project/template-upgrade`，使用者每次想改 main 都得特別說要隔離。使用者同意改成 worktree，並等 template-upgrade 結束才執行。
+- 處理：template-upgrade 已完成並 push（`project/template-upgrade` 的 `94f7c8a`），主目錄切回 `main`。
+- 方法修改：`docs/WORKFLOW.md`「紀錄 commit 在哪」改成外部專案紀錄在 `../skill-workflow-project-<slug>` worktree 做；主目錄只放方法修改，可直接 commit，push 前先問。`CLAUDE.md` 架構要點同步。`docs/CLAUDE_CLOUD.md` 不改，因為雲端 session 每次都是新 clone，直接切 branch 就好。

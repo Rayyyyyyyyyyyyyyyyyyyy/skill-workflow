@@ -9,7 +9,7 @@
 
 成果放哪裡：屬於別的 repo 就直接在那個 repo 開 branch 做，紀錄留在這裡的 Project 資料夾；沒有既有 repo 就放 `projects/<slug>/workspace/`。
 
-紀錄 commit 在哪：成果在別的 repo 時，這裡只是借用方法，紀錄跟這個 repo 本身無關，所以開工前先在這個 repo 切到 `project/<slug>` branch，`projects/<slug>/` 的 commit 都放在那裡，不要 commit 到 `main`。要 push 也只推 `project/<slug>`。`main` 只放方法本身的修改。
+紀錄 commit 在哪：成果在別的 repo 時，這裡只是借用方法，紀錄跟這個 repo 本身無關，所以開工前先開 worktree：`git worktree add ../skill-workflow-project-<slug> -b project/<slug>`（branch 已存在就去掉 `-b`），`projects/<slug>/` 的修改和 commit 都在那裡做，不要 commit 到 `main`。要 push 也只推 `project/<slug>`；專案結束後用 `git worktree remove` 清掉。主目錄一直停在 `main`，只放方法本身的修改（`CLAUDE.md`、`docs/`、`.claude/`、`scripts/` 等），可以直接 commit，push 到 main 前先問。哪個位置由改的檔案決定，不必等使用者說要隔離。
 
 ## 2. 判斷是哪一種輸入
 
