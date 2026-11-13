@@ -1,5 +1,7 @@
 # 方法修改紀錄
 
+歷史紀錄，不是規則：舊條目裡的規則、待辦和「未處理」都可能已被後面的條目取代。執行時以 `CLAUDE.md`、`docs/WORKFLOW.md` 為準；這裡只用來查某條規則為什麼這樣改，以及已結案專案的最後 commit 與收尾數字。
+
 ## 2026-11-08
 - 讀了 WORKFLOW、AGENTS、roles.json、playbooks 和 projects/ 的所有紀錄，找出跟使用者理想不合的地方（見 PROJECT.md「診斷」）。
 - 從上游 clone 固定版本：mattpocock/skills@59db609、agency-agents@4e3ac3c、impeccable@924bbd1。複製 15 份 Matt Skill（各附 LICENSE）、impeccable，以及 282 個 agency 角色到 `library/agents/`。282 這個數字跟原電腦盤點記錄的數量相同。
@@ -151,3 +153,7 @@
   - `implement-spec`、`retro` 拿掉 `disable-model-invocation: true`（manifest 的 mattpocock `adaptations` 記下）。全域 `~/.claude/skills/` 的同名兩份會蓋掉 repo 版，所以一起改；原檔備份在 `~/.agents/skill-backups/20261113-self-invoke/`。影響：其他 repo 也會自動呼叫這兩個 Skill；重新安裝全域 Skill 會蓋掉這個修改。
   - Claude Code memory `delegate-to-sonnet` 改成新流程。
 - Agent 判斷：`code-review` 修完要重跑到沒問題，並沿用「同一問題兩次修不好就收回主 session」，因為 implement-spec 原文只修一輪、沒有確認修好。
+
+## 2026-11-13 METHOD_LOG 定位為純紀錄；CLAUDE_CLOUD 補已結案專案
+- 使用者指示：CLAUDE_CLOUD 的缺口「要補」；舊條目「紀錄就是迭代過程中的歷史吧？要嘛刪掉要嘛純紀錄，執行不會去碰到舊的規則就好」。
+- 檔頭加一行聲明這份是歷史、不是規則，舊條目不改。`docs/CLAUDE_CLOUD.md` 第一次開始第 3 步補：已結案專案的 branch 已刪，最後 commit 與收尾數字查這份。

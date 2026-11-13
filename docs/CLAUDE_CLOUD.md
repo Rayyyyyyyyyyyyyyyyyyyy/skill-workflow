@@ -6,7 +6,7 @@
 
 1. 在 Claude Code 選這個 repo，並選含最新整理的 branch。本機還沒推送的修改，雲端看不到。
 2. 讀 `CLAUDE.md`，再讀 `docs/WORKFLOW.md`。
-3. 在 repo 根目錄執行 `python3 scripts/check_portability.py`，然後用 `git branch -a --list '*project/*'` 找出各 Project 的 branch（`main` 上沒有 `projects/`），讀那個 branch 上的 `projects/<slug>/PROJECT.md` 與 `LOG.md`，掌握目前進度。
+3. 在 repo 根目錄執行 `python3 scripts/check_portability.py`，然後用 `git branch -a --list '*project/*'` 找出各 Project 的 branch（`main` 上沒有 `projects/`），讀那個 branch 上的 `projects/<slug>/PROJECT.md` 與 `LOG.md`，掌握目前進度。已結案的專案 branch 已刪除，最後一個 commit 與收尾數字記在 `docs/METHOD_LOG.md`。
 
 `.claude/skills/` 底下的 Skills 會自動發現。專業角色不在 repo 裡，雲端通常沒有；需要時照 README「另外安裝」裝進 `~/.claude/agents/`，裝不了就只用 `.claude/agents/` 的原生角色。在 Claude Projects 裡開的 cloud thread 可能不會載入 repo Skills，這時就直接讀 `.claude/skills/<name>/SKILL.md`。
 
