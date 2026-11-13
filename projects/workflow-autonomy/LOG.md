@@ -76,3 +76,4 @@
 - 補充（同日）：使用者同意把規則擴大到所有 Project，成果放在 `workspace/` 的也一樣，一律走 `project/<slug>` worktree，main 只放方法。WORKFLOW.md、CLAUDE.md 同步修改。
 - 檢查 main 是否只放方法：刪掉 `.gitattributes`，它唯一的規則指向已刪除的 `projects/skills-inventory`。
 - 刪除遠端 branch：`chore/merge-entry-cleanup`、`ft/workflow-cleanup`、`claude/inspiring-feynman-ied4yc`（三個都已全部進 main）。另依使用者指示放棄 nihongo-dojo-ios-app，刪除 `claude/nhk-n3-1-app-design-48gcth`（最後一個 commit 是 `a4ff394`，紀錄沒有進 main；外部 repo `nihongo-dojo-app` 沒動）。
+- 依使用者指示刪除 `project/template-upgrade`（最後一個 commit 是 `94f7c8a`，只有 `projects/template-upgrade/` 的紀錄；程式碼在 `Rayyyyyyyyyyyyyyyyyyyy/template`）。規則補充：專案結束後刪掉 worktree 和 `project/<slug>` branch，最後一個 commit 記在這裡。
