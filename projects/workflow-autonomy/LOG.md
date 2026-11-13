@@ -113,3 +113,4 @@
 ## 2026-11-13 方法修改的驗收改回 sonnet
 - 使用者指示：「拿掉fable modal的調用好了，統一原本回到的review流程」。`CLAUDE.md`「方法凍結」那一條改成：方法修改的獨立驗收照 WORKFLOW.md 第 5 節開 `reviewer`（`model: "sonnet"`），不再用 Fable。同日稍早「方法修改改由 Fable 驗收」那一節作廢。
 - 上一節（同名 Skill、收尾數字，`81a7c66`）的 Fable 驗收在這個指示之前已送出並跑完：6 PASS、1 FAIL。FAIL 是上一節對 `~/.claude/agents/` 的描述不精確（把 4 個 `impeccable-*` 也算成 11-11 寫入的角色檔），已改正。同時依它的備註補上第 3 輪票 35 的逐票 FAIL，並在全域三個 Skill 的轉向那一行註明路徑從 repo 根目錄算。這些修正和本節的 `CLAUDE.md` 修改改送 sonnet reviewer。
+- sonnet reviewer 驗收 `41e2b34`、`6f1a162`：5 PASS、0 FAIL、0 UNKNOWN。
