@@ -6,7 +6,7 @@
 ## Skills（`.claude/skills/`）
 
 「呼叫」欄寫「Skill 工具」的，直接用 Skill 工具呼叫；寫「讀檔」的，這個 Skill 關掉了模型自動呼叫，要直接完整讀 `.claude/skills/<名稱>/SKILL.md` 再照做（使用者也可以自己打 `/名稱`）。
-Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 issue tracker 設定已經寫在 `docs/agents/`：票放在 `projects/<slug>/` 的本機 Markdown，不必另跑 setup-matt-pocock-skills。
+Matt 工程系列（to-spec、to-tickets、triage、wayfinder、implement）的 issue tracker 設定已經寫在 `method/agents/`：票放在 `projects/<slug>/` 的本機 Markdown，不必另跑 setup-matt-pocock-skills。
 
 | Skill | 呼叫 | 用途 |
 |---|---|---|

@@ -36,11 +36,11 @@ def check(root: Path) -> list[str]:
             actual = hashlib.sha256(local_file(relative).read_bytes()).hexdigest()
             if actual != expected:
                 errors.append(f"method checksum mismatch: {relative}")
-        catalog = local_file("library/CATALOG.md").read_text()
+        catalog = local_file("method/CATALOG.md").read_text()
         for skill in sorted((root / ".claude/skills").glob("*/SKILL.md")):
             if f"`{skill.parent.name}`" not in catalog:
                 errors.append(f"skill missing from catalog (run scripts/sync_methods.py): {skill.parent.name}")
-        for relative in ("CLAUDE.md", "docs/WORKFLOW.md", "docs/CLAUDE_CLOUD.md"):
+        for relative in ("CLAUDE.md", "method/WORKFLOW.md", "method/CLAUDE_CLOUD.md"):
             local_file(relative)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         errors.append(str(exc))

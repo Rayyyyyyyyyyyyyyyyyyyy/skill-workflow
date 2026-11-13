@@ -2,7 +2,7 @@
 
 - 原文：https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/（2026-10-13，作者是 Anthropic EM，帶過 Claude.ai、Cowork、Claude Code Desktop）
 - 社群把它做成的 Skill：`robonuggets/be-ambitious`（https://www.skills.sh/robonuggets/be-ambitious/be-ambitious），沒有安裝，只參考它的規則。
-- 2026-11-13 讀原文後，依它修改了 `docs/WORKFLOW.md`；修改紀錄在 `docs/METHOD_LOG.md`。
+- 2026-11-13 讀原文後，依它修改了 `method/WORKFLOW.md`；修改紀錄在 `records/METHOD_LOG.md`。
 
 ## 原文重點
 
@@ -24,7 +24,7 @@
 
 ## 對應到本 repo 的修改
 
-| 原文 | `docs/WORKFLOW.md` |
+| 原文 | `method/WORKFLOW.md` |
 |---|---|
 | Altitude：目標背後的目標 | 第 2 節：完成線寫使用者原話範圍內的結果；往上一層的版本當選項問使用者 |
 | Depth：四問 prompt、外部判準 | 第 2 節：每條完成線都要有外部判準，並用四問挖深；PROJECT.md 格式 |

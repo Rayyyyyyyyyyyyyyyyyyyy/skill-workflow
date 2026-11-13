@@ -1,6 +1,6 @@
 # 方法修改紀錄
 
-歷史紀錄，不是規則：舊條目裡的規則、待辦和「未處理」都可能已被後面的條目取代。執行時以 `CLAUDE.md`、`docs/WORKFLOW.md` 為準；這裡只用來查某條規則為什麼這樣改，以及已結案專案的最後 commit 與收尾數字。
+歷史紀錄，不是規則：舊條目裡的規則、待辦和「未處理」都可能已被後面的條目取代。執行時以 `CLAUDE.md` 和 `method/` 為準；2026-11-13 以前的條目用的是舊路徑（`docs/WORKFLOW.md`、`docs/agents/`、`library/CATALOG.md`、`runtime-reference/`、`docs/METHOD_LOG.md`），現在分別在 `method/` 和 `records/`。這裡只用來查某條規則為什麼這樣改，以及已結案專案的最後 commit 與收尾數字。
 
 ## 2026-11-08
 - 讀了 WORKFLOW、AGENTS、roles.json、playbooks 和 projects/ 的所有紀錄，找出跟使用者理想不合的地方（見 PROJECT.md「診斷」）。
@@ -163,3 +163,13 @@
   - `docs/agents/issue-tracker.md`：新增一般票怎麼結案（`Status: done`，在 `## Comments` 記 commit）。
   - WORKFLOW 第 4 節：draft PR 標成 ready for review 也是對外寫入，另外先問；成果在 `workspace/` 時，merger subagent 在 `../skill-workflow-project-<slug>` worktree 裡合併。
 - 第四點（issue-tracker.md「cannot be dispatched or reviewed」）沒改：`code-review` 的 Spec 審查仍要讀票檔，這句話還成立。
+
+## 2026-11-13 方法和紀錄分開放；CLAUDE.md 改成指引
+- 使用者指示：「方法就是方法放在方法的資料夾／紀錄就是紀錄 放在紀錄的資料夾／claude.md指向要寫好指引」。
+- 搬家（`git mv`，內容不變）：
+  - `method/`：`docs/WORKFLOW.md`、`docs/CLAUDE_CLOUD.md`、`docs/agents/`、`library/CATALOG.md`、`runtime-reference/policies/`、`runtime-reference/contracts/`（P00 引用 `contracts/` 的相對位置不變）。
+  - `records/`：`docs/METHOD_LOG.md`、`docs/references/rieseberg-ambition.md`（改放 `records/references/`）。
+  - 刪掉 `library/README.md`，它只是指向 CATALOG 的索引，CLAUDE.md 已經取代它。`docs/`、`library/`、`runtime-reference/` 都不存在了。
+- `CLAUDE.md` 改寫：新增「往哪裡找」（什麼時候讀哪個檔）和「資料夾分工」；原本的「架構要點」併進這兩節；「方法凍結」裡的方法範圍改成本檔、`method/`、`.claude/agents/`、Skills，`records/` 不算方法。依 `setup-matt-pocock-skills` 的慣例，issue tracker 的指引也寫進 CLAUDE.md。
+- 更新路徑：`scripts/check_portability.py`、`scripts/sync_methods.py`、`tests/test_portability.py`、WORKFLOW、CLAUDE_CLOUD、issue-tracker.md、README（文件表加 `method/`、`records/`）、manifest 的一則 note、rieseberg 參考檔、本檔檔頭。舊條目裡的路徑不改，由檔頭說明。
+- Agent 判斷：`projects/<slug>/` 不搬進 `records/`。它在 `project/<slug>` branch 上，同時放 spec、票和 `workspace/` 成果，不只是紀錄；搬家的話，WORKFLOW、issue-tracker、memory 都要跟著改，效益不大。

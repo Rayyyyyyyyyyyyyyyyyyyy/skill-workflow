@@ -18,7 +18,7 @@
 
 ## 工具
 
-- [library/CATALOG.md](library/CATALOG.md)：Skills 與原生角色的目錄。
+- [method/CATALOG.md](method/CATALOG.md)：Skills 與原生角色的目錄。
 - `.claude/skills/`：Matt Pocock 系列、impeccable、ui-ux-pro-max、design-taste-frontend、humanizer、ponytail 等。
 - 專業角色：[agency-agents](https://github.com/msitarzewski/agency-agents) 約 280 個，裝在全域 `~/.claude/agents/`，不在 repo 裡。
 
@@ -57,9 +57,11 @@
 
 | 路徑 | 用途 |
 |---|---|
-| [CLAUDE.md](CLAUDE.md) | 入口、護欄與常用命令 |
-| [docs/WORKFLOW.md](docs/WORKFLOW.md) | 三種輸入、推進迴圈、驗收、紀錄格式 |
-| [docs/CLAUDE_CLOUD.md](docs/CLAUDE_CLOUD.md) | 雲端與新電腦接手 |
+| [CLAUDE.md](CLAUDE.md) | 入口：護欄、往哪裡找、常用命令 |
+| [method/](method/) | 方法：流程、工具目錄、issue tracker 設定、P00 政策 |
+| [method/WORKFLOW.md](method/WORKFLOW.md) | 三種輸入、推進迴圈、驗收、紀錄格式 |
+| [method/CLAUDE_CLOUD.md](method/CLAUDE_CLOUD.md) | 雲端與新電腦接手 |
+| [records/](records/) | 紀錄：方法修改的歷史、已結案專案的最後 commit、參考資料。不是規則 |
 | `projects/<slug>/`（在 `project/<slug>` branch，不在 `main`） | 每個 Project 的目標、完成線、進度與成果 |
 
 ```sh

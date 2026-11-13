@@ -9,7 +9,7 @@
 
 成果放哪裡：屬於別的 repo 就直接在那個 repo 開 branch 做，紀錄留在這裡的 Project 資料夾；沒有既有 repo 就放 `projects/<slug>/workspace/`。
 
-紀錄 commit 在哪：Project 不是這個 repo 的方法本身，不論成果在別的 repo 還是在 `workspace/`，開工前都先開 worktree：`git worktree add ../skill-workflow-project-<slug> -b project/<slug>`（branch 已存在就去掉 `-b`），`projects/<slug>/` 的修改和 commit 都在那裡做，不要 commit 到 `main`。要 push 也只推 `project/<slug>`；專案結束後用 `git worktree remove` 清掉 worktree，再刪掉本機和遠端的 `project/<slug>` branch，把最後一個 commit 和收尾的兩個數字（第 6 節；分輪做的每一輪各記一組）記進 `docs/METHOD_LOG.md`，因為 branch 刪掉後專案自己的 LOG 就不在了。主目錄一直停在 `main`，只放方法本身的修改（`CLAUDE.md`、`docs/`、`.claude/`、`scripts/` 等），可以直接 commit，push 到 main 前先問。哪個位置由改的檔案決定，不必等使用者說要隔離。
+紀錄 commit 在哪：Project 不是這個 repo 的方法本身，不論成果在別的 repo 還是在 `workspace/`，開工前都先開 worktree：`git worktree add ../skill-workflow-project-<slug> -b project/<slug>`（branch 已存在就去掉 `-b`），`projects/<slug>/` 的修改和 commit 都在那裡做，不要 commit 到 `main`。要 push 也只推 `project/<slug>`；專案結束後用 `git worktree remove` 清掉 worktree，再刪掉本機和遠端的 `project/<slug>` branch，把最後一個 commit 和收尾的兩個數字（第 6 節；分輪做的每一輪各記一組）記進 `records/METHOD_LOG.md`，因為 branch 刪掉後專案自己的 LOG 就不在了。主目錄一直停在 `main`，只放方法本身的修改（`CLAUDE.md`、`method/`、`records/`、`.claude/`、`scripts/` 等），可以直接 commit，push 到 main 前先問。哪個位置由改的檔案決定，不必等使用者說要隔離。
 
 ## 2. 判斷是哪一種輸入
 
@@ -27,7 +27,7 @@
 
 ## 3. 挑工具
 
-讀 [library/CATALOG.md](../library/CATALOG.md)，挑出這次用得上的 Skills 與角色。目錄裡標「讀檔」的 Skill，直接完整讀它的 SKILL.md 再照做。專業角色看 session 的 subagent 類型清單（全域安裝在 `~/.claude/agents/`，清單上就有名稱和一行說明）。挑好的工具和挑選理由寫進 PROJECT.md 的「工具」欄。做到一半發現需要新工具就加上去，同樣記下理由。
+讀 [CATALOG.md](CATALOG.md)，挑出這次用得上的 Skills 與角色。目錄裡標「讀檔」的 Skill，直接完整讀它的 SKILL.md 再照做。專業角色看 session 的 subagent 類型清單（全域安裝在 `~/.claude/agents/`，清單上就有名稱和一行說明）。挑好的工具和挑選理由寫進 PROJECT.md 的「工具」欄。做到一半發現需要新工具就加上去，同樣記下理由。
 
 使用角色的方式：
 - **原生角色**（`.claude/agents/`）：直接當 subagent 類型開。
@@ -62,7 +62,7 @@
 
 主 session 負責想清楚與切細，執行交給 sonnet，審查用比執行者高一級的 opus。
 
-1. **切規格與票**：主 session 用 `to-spec` 寫 `projects/<slug>/spec.md`，再用 `to-tickets` 切成 `projects/<slug>/issues/NN-<slug>.md`。必填欄位與本 repo 的例外見 [docs/agents/issue-tracker.md](agents/issue-tracker.md)。每張票只完成一個可驗證的行為，而且要自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行，看結果就知道 PASS／FAIL）、被哪張票擋住。
+1. **切規格與票**：主 session 用 `to-spec` 寫 `projects/<slug>/spec.md`，再用 `to-tickets` 切成 `projects/<slug>/issues/NN-<slug>.md`。必填欄位與本 repo 的例外見 [method/agents/issue-tracker.md](agents/issue-tracker.md)。每張票只完成一個可驗證的行為，而且要自足：要做什麼、可能碰到的範圍、不做什麼、驗收指令（可直接執行，看結果就知道 PASS／FAIL）、被哪張票擋住。
 2. **明確度關卡**：執行者不必再做判斷就能完成的票，才可以派出去。需要取捨、設計或問使用者的，留在主 session 解決（必要時用 `grilling`），解決後再寫進票。一批票切完後、第一次派工前，開一個全新的 subagent（`model: "sonnet"`），只給它這批票檔的路徑，請它回答：每張票要做什麼、有哪些地方它必須猜。它得猜的地方就補進票裡，補到沒有為止再派工。一批測一次，不逐票測；只問哪裡要猜，不請它審設計。
 3. **實作**：用 `implement-spec` 做完整份規格，issue tracker 就是上面那份文件。本 repo 的例外：
    - implementer subagent 用 `Agent(subagent_type: "implementer")`（角色預設 `model: sonnet`），派工訊息只寫票檔路徑、工作目錄和整合 branch，不重抄內容。回報要短：commit hash、跑過的驗收指令和結果、沒驗證的部分。
@@ -82,7 +82,7 @@
 - 專案收尾時在 LOG.md 記兩個數字：這個專案裡使用者被問了幾次（Agent 主動停下來問的次數，不算使用者自己發話），以及獨立驗收 FAIL 了幾輪。這是判斷這套方法好不好用的依據。
 - 接著用 `retro` 回顧這個專案的 session，把改進候選依嚴重度列給使用者。屬於這套方法本身的，照 CLAUDE.md「方法凍結」處理。
 - 收尾回報要分成三類：已完成並驗證、已完成但未驗證、未做。每一類都寫清楚原因。
-- 事實、推論、假設要分開標示（[P00](../runtime-reference/policies/P00-GROUNDED-ANSWER.md)）。
+- 事實、推論、假設要分開標示（[P00](policies/P00-GROUNDED-ANSWER.md)）。
 
 ## PROJECT.md 格式
 

@@ -234,7 +234,7 @@
       "origin": "installed ask-matt",
       "upstream_sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c",
       "adaptations": [
-        "Route through library/CATALOG.md and the docs/WORKFLOW.md modes."
+        "Route through method/CATALOG.md and the method/WORKFLOW.md modes."
       ]
     },
     "skills:mattpocock": {

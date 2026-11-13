@@ -20,12 +20,12 @@ class PortabilityTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name) / "fresh clone"
         self.root.mkdir()
-        for name in (".claude", "library", "scripts"):
+        for name in (".claude", "scripts"):
             shutil.copytree(REPO / name, self.root / name, ignore=shutil.ignore_patterns("__pycache__"))
         shutil.copy2(REPO / "CLAUDE.md", self.root / "CLAUDE.md")
-        (self.root / "docs").mkdir()
-        for name in ("WORKFLOW.md", "CLAUDE_CLOUD.md"):
-            shutil.copy2(REPO / "docs" / name, self.root / "docs" / name)
+        (self.root / "method").mkdir()
+        for name in ("WORKFLOW.md", "CLAUDE_CLOUD.md", "CATALOG.md"):
+            shutil.copy2(REPO / "method" / name, self.root / "method" / name)
 
     def test_moved_bundle_passes_without_personal_install(self):
         home = Path(self.temp.name) / "empty-home"
