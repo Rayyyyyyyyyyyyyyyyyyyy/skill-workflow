@@ -109,3 +109,7 @@
   - 6 個原生角色的 frontmatter 與 WORKFLOW 一致（只有 implementer 指定 `model: sonnet`）；`reviewer.md` 與 WORKFLOW 第 5 節的證據標準一致。
   - `library/agents/` 282 個角色檔加 INDEX；方法文件 68 個檔的相對連結 0 個失效。
   - 仍未處理：manifest 裡 ponytail 的 `fixed_evidence.path` 指向已刪的檔案；`implement-spec`、`retro`、`pr` 還沒實際跑過。
+
+## 2026-11-13 方法修改的驗收改回 sonnet
+- 使用者指示：「拿掉fable modal的調用好了，統一原本回到的review流程」。`CLAUDE.md`「方法凍結」那一條改成：方法修改的獨立驗收照 WORKFLOW.md 第 5 節開 `reviewer`（`model: "sonnet"`），不再用 Fable。同日稍早「方法修改改由 Fable 驗收」那一節作廢。
+- 上一節（同名 Skill、收尾數字）送出的 Fable 驗收在跑完前中止，沒有結果；改送 sonnet reviewer。
