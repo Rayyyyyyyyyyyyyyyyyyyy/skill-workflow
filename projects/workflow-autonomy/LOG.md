@@ -90,3 +90,22 @@
 
 ## 2026-11-13 方法修改改由 Fable 驗收
 - 使用者指示：「用fable 只限於做把關推進workflow方法的優化迭代」。`CLAUDE.md`「方法凍結」那一條補上：方法修改的獨立驗收用 `reviewer` 加 `model: "fable"`，一般專案照舊用 sonnet。
+
+## 2026-11-13 檢驗方法：同名 Skill 被全域版蓋掉；補記專案收尾數字
+- 起因：使用者以 `/ask-matt 檢驗repo的方法` 要求檢驗，之後指示「第1點和第2點都修 也檢查其他」。方法凍結由使用者明確要求覆蓋。
+- 發現 1：`/ask-matt` 載入的是 `~/.claude/skills/ask-matt`（Matt 原版），不是 repo 版。個人 Skill 會蓋掉同名的專案 Skill。內容不同的有 6 個。處理（都在使用者電腦的全域目錄，不在 repo；原檔備份在 `~/.agents/skill-backups/20261113-shadow-fix/`）：
+  - `impeccable`（全域 4.6.0）、`setup-matt-pocock-skills`（全域是較舊的版本）：換成 repo 版，`diff -rq` 確認相同。
+  - `ask-matt`、`grill-me`、`grill-with-docs`：repo 版是為這個 repo 改寫的，全域的原版別的 repo 還要用，所以不覆蓋；在全域版 frontmatter 後加一行「repo 有同名 SKILL.md 就改讀 repo 版」。
+  - `ui-ux-pro-max`：全域版只差在腳本路徑寫絕對路徑，不必換；但它寫 `python`，這台電腦只有 `python3`，指令會失敗。改成 `python3`，實跑 `search.py` 有輸出。
+  - 限制：重新安裝全域 Skill 會把這些修改蓋掉；`check_portability.py` 不檢查 Claude 的 Skill 發現，抓不到。
+- 發現 2：template-upgrade 的收尾數字只在已刪除的 `project/template-upgrade`（`94f7c8a`，目前是本機懸空 commit）。補記在這裡：
+  - 第 1 輪（票 01–11）：使用者被問 2 次；逐票驗收 FAIL 0 輪，獨立驗收 FAIL 0 輪。
+  - 第 2 輪（票 12–31）：使用者被問 0 次；FAIL 輪 2 次（都是票 28）。
+  - 第 3 輪（深色首頁）與合併發佈：該專案 LOG 沒有記數字。
+  - 這些都發生在 11-13 的 Rieseberg 修改之前，可以當那次修改的對照基準。
+- 方法修改：`docs/WORKFLOW.md` 第 1 節，刪 branch 時把收尾的兩個數字連同最後一個 commit 記到這裡。
+- 檢查過、沒有改的：
+  - `~/.claude/agents/` 又有 287 個角色檔（11-11 13:55 寫入，晚於同日的刪除）：272 個與 `library/agents/` 相同、10 個不同、`engineering-electrical-engineer.md` 不在 library。來源不明，等使用者決定。
+  - 6 個原生角色的 frontmatter 與 WORKFLOW 一致（只有 implementer 指定 `model: sonnet`）；`reviewer.md` 與 WORKFLOW 第 5 節的證據標準一致。
+  - `library/agents/` 282 個角色檔加 INDEX；方法文件 68 個檔的相對連結 0 個失效。
+  - 仍未處理：manifest 裡 ponytail 的 `fixed_evidence.path` 指向已刪的檔案；`implement-spec`、`retro`、`pr` 還沒實際跑過。
