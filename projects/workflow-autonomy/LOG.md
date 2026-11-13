@@ -114,3 +114,8 @@
 - 使用者指示：「拿掉fable modal的調用好了，統一原本回到的review流程」。`CLAUDE.md`「方法凍結」那一條改成：方法修改的獨立驗收照 WORKFLOW.md 第 5 節開 `reviewer`（`model: "sonnet"`），不再用 Fable。同日稍早「方法修改改由 Fable 驗收」那一節作廢。
 - 上一節（同名 Skill、收尾數字，`81a7c66`）的 Fable 驗收在這個指示之前已送出並跑完：6 PASS、1 FAIL。FAIL 是上一節對 `~/.claude/agents/` 的描述不精確（把 4 個 `impeccable-*` 也算成 11-11 寫入的角色檔），已改正。同時依它的備註補上第 3 輪票 35 的逐票 FAIL，並在全域三個 Skill 的轉向那一行註明路徑從 repo 根目錄算。這些修正和本節的 `CLAUDE.md` 修改改送 sonnet reviewer。
 - sonnet reviewer 驗收 `41e2b34`、`6f1a162`：5 PASS、0 FAIL、0 UNKNOWN。
+
+## 2026-11-13 reviewer 的模型比執行者高一級
+- 使用者指示：「review 的agent modal 要用比執行的agent modal更高級」。上一節「驗收改回 sonnet」由這一節取代；Fable 仍然不用。
+- 方法修改：`.claude/agents/reviewer.md` frontmatter 加 `model: opus`（implementer 維持 `model: sonnet`）；`docs/WORKFLOW.md` 切細派工開頭、逐票驗收、第 5 節寫明規則；`CLAUDE.md`「方法凍結」那一條改成照第 5 節。明確度關卡的 subagent 維持 sonnet，因為它模擬的是執行者會不會需要猜。
+- Agent 判斷：主 session 自己動手的修改也用預設的 opus。主 session 跑在比 opus 更高的模型時，這種情況 reviewer 不會比執行者高；照規則要嚴格成立，就把修改切票交給 implementer 做。
