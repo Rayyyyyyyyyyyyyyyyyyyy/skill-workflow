@@ -133,3 +133,11 @@
 - 原本放在 `projects/workflow-autonomy/LOG.md`。專案已結案，`PROJECT.md` 刪除（內容可用 `git show 035fdb7^:projects/workflow-autonomy/PROJECT.md` 取回）。
 - 原因：`projects/<slug>/` 依 WORKFLOW.md 只放在 `project/<slug>` branch，這個資料夾是 `main` 上唯一的例外。搬家後 `main` 上沒有 `projects/`，規則也就沒有例外了。
 - 更新了 CLAUDE.md、WORKFLOW.md、`docs/references/rieseberg-ambition.md` 的引用。
+
+## 2026-11-13 全面檢查後修正三處過時引用
+- 使用者要求「完整檢查一次repo的方法」，檢查後指示「1到3點都修」。檢查結果：`check_portability.py` PASS、`sync_methods.py` 無變動、測試 3 個 OK、方法文件無失效連結（只有 Skill／角色範例裡的假連結）、模型規則一致、全域同名 Skill 差異與 11-13 記載相符。
+- 修正：
+  - `docs/CLAUDE_CLOUD.md` 第一次開始第 3 步：`main` 上已沒有 `projects/`，改成先用 `git branch -a --list '*project/*'` 找 branch，再讀那個 branch 上的 PROJECT.md 與 LOG.md。
+  - `README.md` 文件表：`projects/<slug>/` 註明在 `project/<slug>` branch。
+  - `.claude/methods-manifest.json` ponytail `fixed_evidence`：原檔在 `4cebdb2` 刪除，改成 `git_show: 4cebdb2^:<path>`，實測 `git show` 的 sha256 與記錄相符；`review_commit`（`b9c7e23`）已不在本機 repo，拿掉。
+- 仍未處理：`implement-spec`、`retro`、`pr` 還沒實際跑過。
